@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-About this site
+This site has been developed to share knowledge on using open-source tools for environmental systems analysis. It does not aim to create new content but point to various sources to get to know the tools and to get started.
 
-```{r}
-1 + 1
-```
+Feel free to contact me at adeline.jerome@chalmers.se if you have suggestions for contributions or changes.
