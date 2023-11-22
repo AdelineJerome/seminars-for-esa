@@ -1,5 +1,5 @@
 ---
-title: "seminars-for-esa"
+title: "Seminars for ESA"
 ---
 
 This site has been developed to share knowledge on using open-source tools for environmental systems analysis.

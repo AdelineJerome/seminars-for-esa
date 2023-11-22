@@ -5,6 +5,8 @@ project:
 website:
   title: "seminars-for-esa"
   navbar:
+    background: light
+    title: false
     left:
       - href: index.qmd
         text: Home
