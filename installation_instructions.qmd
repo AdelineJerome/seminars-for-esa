@@ -8,7 +8,7 @@ For this seminar, you should have the Activity Browser running on your computer 
 
 1.  If not already done, install Python and a Python environment manager,
 2.  Install or update the Activity Browser,
-3.  Create a project with ecoinvent 3.9.1 cutoff installed.
+3.  Create a project with ecoinvent 3.9.1 cutoff.
 
 ## Installing Python with Anaconda
 
@@ -16,10 +16,9 @@ If you already have Python installed, skip this step. Otherwise, [follow this li
 
 ### (Optional - Mamba)
 
-If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. 
-For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
+If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
 
-```
+```         
 conda install -c conda-forge mamba
 ```
 
@@ -30,11 +29,11 @@ Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow
 ## Create an LCA project on the AB
 
 Follow the [instructions on this page](https://github.com/LCA-ActivityBrowser/activity-browser#getting-started) to:
-- check that the AB starts on your computer,
-- create a new project: 
-	- on the tab "Project", click on the button "+ New" and name the project (e.g., "ab_demo"),
-	- under "Databases", click on the button "Add default data (biosphere flows and impact categories)". This takes a few minutes.
-	- import the ecoinvent 3.9.1 cutoff database:
-		- Download from the AB (easiest): click on the button "Import", then "Import remote data (download)", "ecoinvent (requires login)", use the [[ESA login for ecoinvent]], and then select version 3.9.1 and the system model "cutoff". The import takes a few minutes (longer than the step before).
-		- Otherwise, on [ecoquery from ecoinvent](https://ecoquery.ecoinvent.org/3.9.1/cutoff/files) download the 7z file "ecoinvent 3.9.3_cutoff_ecoSpold02.7z". On the AB, click on the button "Import", and then select "Import local data", "Local 7z-archive of ecospold2 files" and select the downloaded file.
 
+- check that the AB starts on your computer,
+- create a new project:
+    - on the tab "Project", click on the button "+ New" and name the project (e.g., "ab_demo"), 
+    - under "Databases", click on the button "Add default data (biosphere flows and impact categories)". This takes a few minutes. 
+    - import the ecoinvent 3.9.1 cutoff database: 
+        - Download from the AB (easiest): click on the button "Import", then "Import remote data (download)", "ecoinvent (requires login)", use the \[\[ESA login for ecoinvent\]\], and then select version 3.9.1 and the system model "cutoff". The import takes a few minutes (longer than the step before). 
+        - Otherwise, on [ecoquery from ecoinvent](https://ecoquery.ecoinvent.org/3.9.1/cutoff/files) download the 7z file "ecoinvent 3.9.3_cutoff_ecoSpold02.7z". On the AB, click on the button "Import", and then select "Import local data", "Local 7z-archive of ecospold2 files" and select the downloaded file.
