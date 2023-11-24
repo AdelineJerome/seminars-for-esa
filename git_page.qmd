@@ -2,8 +2,21 @@
 title: "Git and GitHub"
 ---
 
-::: {.callout-caution}
+
+
+::: callout-caution
 ## Work in progress
 
 This section is still in development!
 :::
+
+# Material to get started
+
+## Handbooks
+
+- [Let's Git started](https://happygitwithr.com/) contains information to use Git for R on RStudio but most of the information are applicable for other applications as well.
+
+
+## Courses
+
+- The course *Reproducible Research in R* has a [section on Git](https://r-cubed-intro.rostools.org/sessions/version-control) which I recommend to understand why and how to do proper version control with Git.

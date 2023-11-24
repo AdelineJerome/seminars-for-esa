@@ -17,7 +17,7 @@ If you already have Python installed, skip this step. Otherwise, [follow this li
 
 ## Installing the Activity Browser
 
-Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow the [instructions for installing](https://github.com/LCA-ActivityBrowser/activity-browser#installation) the Activity Browser, using the section *The thorough way*. Eventually, if you have mamba installed, use mamba to install the AB.
+Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow the [instructions for installing](https://github.com/LCA-ActivityBrowser/activity-browser#installation) the Activity Browser, using the section *The thorough way*.
 
 ## Create an LCA project on the AB
 

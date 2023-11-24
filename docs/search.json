@@ -67,14 +67,14 @@
     "href": "seminar_ab.html",
     "title": "Code-along with the AB",
     "section": "",
-    "text": "For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update the Activity Browser,\nCreate a project with ecoinvent 3.9.1 cutoff.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the instructions for installing the Activity Browser, using the section The thorough way. Eventually, if you have mamba installed, use mamba to install the AB.\n\n\n\nFollow the instructions on this page to:\n\ncheck that the AB starts on your computer,\ncreate a new project:\n\non the tab “Project”, click on the button “+ New” and name the project (e.g., “ab_demo”),\nunder “Databases”, click on the button “Add default data (biosphere flows and impact categories)”. This takes a few minutes.\nimport the ecoinvent 3.9.1 cutoff database:\n\nDownload from the AB (easiest): click on the button “Import”, then “Import remote data (download)”, “ecoinvent (requires login)”, use the [[ESA login for ecoinvent]], and then select version 3.9.1 and the system model “cutoff”. The import takes a few minutes (longer than the step before).\nOtherwise, on ecoquery from ecoinvent download the 7z file “ecoinvent 3.9.3_cutoff_ecoSpold02.7z”. On the AB, click on the button “Import”, and then select “Import local data”, “Local 7z-archive of ecospold2 files” and select the downloaded file."
+    "text": "For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update the Activity Browser,\nCreate a project with ecoinvent 3.9.1 cutoff.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the instructions for installing the Activity Browser, using the section The thorough way.\n\n\n\nFollow the instructions on this page to:\n\ncheck that the AB starts on your computer,\ncreate a new project:\n\non the tab “Project”, click on the button “+ New” and name the project (e.g., “ab_demo”),\nunder “Databases”, click on the button “Add default data (biosphere flows and impact categories)”. This takes a few minutes.\nimport the ecoinvent 3.9.1 cutoff database:\n\nDownload from the AB (easiest): click on the button “Import”, then “Import remote data (download)”, “ecoinvent (requires login)”, use the [[ESA login for ecoinvent]], and then select version 3.9.1 and the system model “cutoff”. The import takes a few minutes (longer than the step before).\nOtherwise, on ecoquery from ecoinvent download the 7z file “ecoinvent 3.9.3_cutoff_ecoSpold02.7z”. On the AB, click on the button “Import”, and then select “Import local data”, “Local 7z-archive of ecospold2 files” and select the downloaded file."
   },
   {
     "objectID": "seminar_brightway.html",
     "href": "seminar_brightway.html",
     "title": "Code-along with Brightway",
     "section": "",
-    "text": "For this seminar, you should have a working Brightway environment on your computer. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update Brightway.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+    "text": "For this seminar, you should have a working Brightway environment on your computer. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update Brightway.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the instructions for installing Brightway."
   },
   {
     "objectID": "seminar_brightway.html#sec-seminar-brightway-python",
@@ -89,5 +89,26 @@
     "title": "Code-along with Brightway",
     "section": "Installing the Activity Browser",
     "text": "Installing the Activity Browser\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "seminar_git.html",
+    "href": "seminar_git.html",
+    "title": "Introduction to Git",
+    "section": "",
+    "text": "If you want to try to save your work with Git during the seminar:\n\nInstall Git on your computer,\nCreate a GitHub account if you want to have your work saved on the cloud.\n\n\n\nFor Windows, download and install Git Bash.\nFor other distributions, download and install Git here.\n\n\n\nWhen you want to backup your work on the cloud with Git, your code is sent to a GitHub repository. For this, you need to create a GitHub account. Remember the email to you use to create your account!"
+  },
+  {
+    "objectID": "git_page.html#handbooks",
+    "href": "git_page.html#handbooks",
+    "title": "Git and GitHub",
+    "section": "Handbooks",
+    "text": "Handbooks\n\nLet’s Git started contains information to use Git for R on RStudio but most of the information are applicable for other applications as well."
+  },
+  {
+    "objectID": "git_page.html#courses",
+    "href": "git_page.html#courses",
+    "title": "Git and GitHub",
+    "section": "Courses",
+    "text": "Courses\n\nThe course Reproducible Research in R has a section on Git which I recommend to understand why and how to do proper version control with Git."
   }
 ]
