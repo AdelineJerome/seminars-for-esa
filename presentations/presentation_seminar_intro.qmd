@@ -1,0 +1,100 @@
+---
+title: "Introduction to LCA with the AB and Brightway"
+format: 
+    revealjs:
+        incremental: false
+---
+
+# Why
+
+-   Reproducibility and transparency
+
+-   Easier to update with new data
+
+-   Greater flexibility
+
+-   Version control with Git for backup, change-tracking and collaboration
+
+-   Less room for errors
+
+-   Quicker to update
+
+-   Access in the future
+
+# What
+
+## Python
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_python.svg){width=100%}
+:::
+
+::: {.column width="40%"}
+
+:::
+
+::::
+
+
+## Python packages
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_packages.svg){width=100%}
+:::
+
+::: {.column width="40%"}
+
+Examples:
+
+- pandas for data tables manipulation,
+- matplotlib for figures,
+- ...
+:::
+
+::::
+
+
+## Brightway
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_brightway.svg){width=100%}
+:::
+
+::: {.column width="40%"}
+
+:::
+
+::::
+
+
+## Code editor
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_editor.svg){width=100%}
+:::
+
+::: {.column width="40%"}
+Examples:
+
+- Jupyter
+- Spider
+- PyCharm
+- Visual Studio Code
+- ...
+:::
+
+::::
+
+## The Activity Browser
+
+
+![](images/seminar_bright_explanation_ab.svg){width=100%}
+

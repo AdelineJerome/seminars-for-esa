@@ -110,5 +110,40 @@
     "title": "Git and GitHub",
     "section": "Courses",
     "text": "Courses\n\nThe course Reproducible Research in R has a section on Git which I recommend to understand why and how to do proper version control with Git."
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#python",
+    "href": "presentations/presentation_seminar_intro.html#python",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Python",
+    "text": "Python"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#python-packages",
+    "href": "presentations/presentation_seminar_intro.html#python-packages",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Python packages",
+    "text": "Python packages\n\n\n\n\nExamples:\n. . .\n\npandas for data tables manipulation,\nmatplotlib for figures,\n…"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#brightway",
+    "href": "presentations/presentation_seminar_intro.html#brightway",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Brightway",
+    "text": "Brightway"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#code-editor",
+    "href": "presentations/presentation_seminar_intro.html#code-editor",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Code editor",
+    "text": "Code editor\n\n\n\n\nExamples:\n\nJupyter\nSpider\nPyCharm\nVisual Studio Code\n…"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#the-activity-browser",
+    "href": "presentations/presentation_seminar_intro.html#the-activity-browser",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser"
   }
 ]
