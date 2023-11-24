@@ -1,0 +1,7 @@
+---
+title: "Python"
+---
+
+# Introduction
+
+[Python](https://en.wikipedia.org/wiki/Python_(programming_language)) is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications). 
