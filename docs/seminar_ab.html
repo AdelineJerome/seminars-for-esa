@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! - About</title>
+<title>Welcome! - Code-along with the AB</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">About</h1>
+      <h1 class="quarto-secondary-nav-title">Code-along with the AB</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./seminar_ab.html" class="sidebar-item-text sidebar-link">Code-along with the AB</a>
+  <a href="./seminar_ab.html" class="sidebar-item-text sidebar-link active">Code-along with the AB</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">About</a>
+  <a href="./about.html" class="sidebar-item-text sidebar-link">About</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -185,14 +185,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-seminar-installation-tasks" id="toc-pre-seminar-installation-tasks" class="nav-link active" data-scroll-target="#pre-seminar-installation-tasks">Pre-seminar installation tasks</a>
+  <ul class="collapse">
+  <li><a href="#installing-python-with-anaconda" id="toc-installing-python-with-anaconda" class="nav-link" data-scroll-target="#installing-python-with-anaconda">Installing Python with Anaconda</a>
+  <ul class="collapse">
+  <li><a href="#optional---mamba" id="toc-optional---mamba" class="nav-link" data-scroll-target="#optional---mamba">(Optional - Mamba)</a></li>
+  </ul></li>
+  <li><a href="#installing-the-activity-browser" id="toc-installing-the-activity-browser" class="nav-link" data-scroll-target="#installing-the-activity-browser">Installing the Activity Browser</a></li>
+  <li><a href="#create-an-lca-project-on-the-ab" id="toc-create-an-lca-project-on-the-ab" class="nav-link" data-scroll-target="#create-an-lca-project-on-the-ab">Create an LCA project on the AB</a></li>
+  </ul></li>
+  <li><a href="#seminar-content" id="toc-seminar-content" class="nav-link" data-scroll-target="#seminar-content">Seminar content</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">About</h1>
+<h1 class="title d-none d-lg-block">Code-along with the AB</h1>
 </div>
 
 
@@ -207,9 +222,63 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This site has been developed to share knowledge on using open-source tools for environmental systems analysis. It does not aim to create new content but point to various sources to get to know the tools and to get started.</p>
+<section id="pre-seminar-installation-tasks" class="level1">
+<h1>Pre-seminar installation tasks</h1>
+<p>For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:</p>
+<ol type="1">
+<li>If not already done, install Python and a Python environment manager,</li>
+<li>Install or update the Activity Browser,</li>
+<li>Create a project with ecoinvent 3.9.1 cutoff.</li>
+</ol>
+<section id="installing-python-with-anaconda" class="level2">
+<h2 class="anchored" data-anchor-id="installing-python-with-anaconda">Installing Python with Anaconda</h2>
+<p>If you already have Python installed, skip this step. Otherwise, <a href="https://www.anaconda.com/download/">follow this link</a> to download Anaconda. Follow the installation instructions of the installer.</p>
+<section id="optional---mamba" class="level3">
+<h3 class="anchored" data-anchor-id="optional---mamba">(Optional - Mamba)</h3>
+<p>If you think that you will use Python in the future, I recommend installing and using <a href="https://mamba.readthedocs.io/en/latest/index.html">Mamba</a>. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended <a href="https://anaconda.org/conda-forge/mamba">here</a>:</p>
+<pre><code>conda install -c conda-forge mamba</code></pre>
+</section>
+</section>
+<section id="installing-the-activity-browser" class="level2">
+<h2 class="anchored" data-anchor-id="installing-the-activity-browser">Installing the Activity Browser</h2>
+<p>Open an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the <a href="https://github.com/LCA-ActivityBrowser/activity-browser#installation">instructions for installing</a> the Activity Browser, using the section <em>The thorough way</em>. Eventually, if you have mamba installed, use mamba to install the AB.</p>
+</section>
+<section id="create-an-lca-project-on-the-ab" class="level2">
+<h2 class="anchored" data-anchor-id="create-an-lca-project-on-the-ab">Create an LCA project on the AB</h2>
+<p>Follow the <a href="https://github.com/LCA-ActivityBrowser/activity-browser#getting-started">instructions on this page</a> to:</p>
+<ul>
+<li>check that the AB starts on your computer,</li>
+<li>create a new project:
+<ul>
+<li>on the tab “Project”, click on the button “+ New” and name the project (e.g., “ab_demo”),</li>
+<li>under “Databases”, click on the button “Add default data (biosphere flows and impact categories)”. This takes a few minutes.</li>
+<li>import the ecoinvent 3.9.1 cutoff database:
+<ul>
+<li>Download from the AB (easiest): click on the button “Import”, then “Import remote data (download)”, “ecoinvent (requires login)”, use the [[ESA login for ecoinvent]], and then select version 3.9.1 and the system model “cutoff”. The import takes a few minutes (longer than the step before).</li>
+<li>Otherwise, on <a href="https://ecoquery.ecoinvent.org/3.9.1/cutoff/files">ecoquery from ecoinvent</a> download the 7z file “ecoinvent 3.9.3_cutoff_ecoSpold02.7z”. On the AB, click on the button “Import”, and then select “Import local data”, “Local 7z-archive of ecospold2 files” and select the downloaded file.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="seminar-content" class="level1">
+<h1>Seminar content</h1>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Work in progress
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is still in development!</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

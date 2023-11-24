@@ -1,0 +1,5 @@
+---
+title: "Contribute"
+---
+
+The content of this website is in development. Feel free to [contact me](contact.qmd) if you have suggestions for contributions or changes.

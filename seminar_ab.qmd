@@ -1,8 +1,8 @@
 ---
-title: "Installation instructions"
+title: "Code-along with the AB"
 ---
 
-# Seminar on December 1st - Using the AB
+# Pre-seminar installation tasks
 
 For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:
 
@@ -14,13 +14,6 @@ For this seminar, you should have the Activity Browser running on your computer 
 
 If you already have Python installed, skip this step. Otherwise, [follow this link](https://www.anaconda.com/download/) to download Anaconda. Follow the installation instructions of the installer.
 
-### (Optional - Mamba)
-
-If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
-
-```         
-conda install -c conda-forge mamba
-```
 
 ## Installing the Activity Browser
 
@@ -37,3 +30,12 @@ Follow the [instructions on this page](https://github.com/LCA-ActivityBrowser/ac
     -   import the ecoinvent 3.9.1 cutoff database:
         -   Download from the AB (easiest): click on the button "Import", then "Import remote data (download)", "ecoinvent (requires login)", use the \[\[ESA login for ecoinvent\]\], and then select version 3.9.1 and the system model "cutoff". The import takes a few minutes (longer than the step before).
         -   Otherwise, on [ecoquery from ecoinvent](https://ecoquery.ecoinvent.org/3.9.1/cutoff/files) download the 7z file "ecoinvent 3.9.3_cutoff_ecoSpold02.7z". On the AB, click on the button "Import", and then select "Import local data", "Local 7z-archive of ecospold2 files" and select the downloaded file.
+
+
+# Seminar content
+
+::: {.callout-caution}
+## Work in progress
+
+This section is still in development!
+:::

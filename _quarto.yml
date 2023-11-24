@@ -3,16 +3,34 @@ project:
   output-dir: docs
 
 website:
-  title: "seminars-for-esa"
-  navbar:
-    background: light
-    title: false
-    left:
+  title: "Welcome!"
+  sidebar:
+    style: "docked"
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/AdelineJerome/seminars-for-esa
+    contents:
       - href: index.qmd
         text: Home
-      - href: installation_instructions.qmd
-        text: Installation guide
-      - about.qmd
+      - section: "Doing LCA"
+        contents:
+          - ab_page.qmd
+          - brightway_page.qmd
+      - href: git_page.qmd
+        text: Save your work - Git
+      - section: "Seminars"
+        contents:
+          - seminar_intro.qmd
+          - seminar_ab.qmd
+          - seminar_brightway.qmd
+          - seminar_git.qmd
+      - section: "More"
+        contents:
+          - about.qmd
+          - contribute.qmd
+          - contact.qmd
+
 
 format:
   html:

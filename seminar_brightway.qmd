@@ -1,0 +1,30 @@
+---
+title: "Code-along with Brightway"
+---
+
+# Pre-seminar installation tasks
+
+For this seminar, you should have a working Brightway environment on your computer. For this, you need to:
+
+1.  If not already done, [install](seminar_brightway.qmd#installing-python-with-anaconda) Python and a Python environment manager,
+2.  [Install](seminar_brightway.qmd#installing-brightway) or update Brightway.
+
+## Installing Python with Anaconda
+
+If you already have Python installed, skip this step. Otherwise, [follow this link](https://www.anaconda.com/download/) to download Anaconda. Follow the installation instructions of the installer.
+
+### (Optional - Mamba)
+
+If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
+
+```         
+conda install -c conda-forge mamba
+```
+
+## Installing Brightway
+
+::: callout-caution
+## Work in progress
+
+This section is still in development!
+:::

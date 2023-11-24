@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Seminars for ESA",
     "section": "",
-    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis.\n\nSeminar series in November - December 2023\nPlease follow the installation instructions to be able to participate in the seminars."
+    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis. For an overview of tools developed for the field of industrial ecology, have a look at this dashboard.\nA seminar series is soon to be held:\n\nAn introduction also available on Zoom on November 27,\nA first code-along seminar for doing a first LCA on the Activity Browser on December 1st,\nAnother code-along seminar for doing a first LCA on Brightway on December 7,\nAn introduction to Git on December 7."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis. It does not aim to create new content but point to various sources to get to know the tools and to get started.\nFeel free to contact me at adeline.jerome@chalmers.se if you have suggestions for contributions or changes."
+    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis. It does not aim to create new content but point to various sources to get to know the tools and to get started."
   },
   {
     "objectID": "installation_instructions.html",
@@ -19,5 +19,75 @@
     "title": "Installation instructions",
     "section": "",
     "text": "For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update the Activity Browser,\nCreate a project with ecoinvent 3.9.1 cutoff.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the instructions for installing the Activity Browser, using the section The thorough way. Eventually, if you have mamba installed, use mamba to install the AB.\n\n\n\nFollow the instructions on this page to:\n\ncheck that the AB starts on your computer,\ncreate a new project:\n\non the tab “Project”, click on the button “+ New” and name the project (e.g., “ab_demo”),\nunder “Databases”, click on the button “Add default data (biosphere flows and impact categories)”. This takes a few minutes.\nimport the ecoinvent 3.9.1 cutoff database:\n\nDownload from the AB (easiest): click on the button “Import”, then “Import remote data (download)”, “ecoinvent (requires login)”, use the [[ESA login for ecoinvent]], and then select version 3.9.1 and the system model “cutoff”. The import takes a few minutes (longer than the step before).\nOtherwise, on ecoquery from ecoinvent download the 7z file “ecoinvent 3.9.3_cutoff_ecoSpold02.7z”. On the AB, click on the button “Import”, and then select “Import local data”, “Local 7z-archive of ecospold2 files” and select the downloaded file."
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute",
+    "section": "",
+    "text": "The content of this website is in development. Feel free to contact me if you have suggestions for contributions or changes."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "This website has been created by Adeline Jerome, PhD student at the division of Environmental Systems Analysis at Chalmers University of Technology.\n\nContact information\nLinkedIn\nGitHub"
+  },
+  {
+    "objectID": "seminar_intro.html",
+    "href": "seminar_intro.html",
+    "title": "Introduction to the AB and Brightway",
+    "section": "",
+    "text": "Work in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "ab_page.html",
+    "href": "ab_page.html",
+    "title": "LCA with the AB",
+    "section": "",
+    "text": "Work in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "brightway_page.html",
+    "href": "brightway_page.html",
+    "title": "LCA with Brightway",
+    "section": "",
+    "text": "Work in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "git_page.html",
+    "href": "git_page.html",
+    "title": "Git and GitHub",
+    "section": "",
+    "text": "Work in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "seminar_ab.html",
+    "href": "seminar_ab.html",
+    "title": "Code-along with the AB",
+    "section": "",
+    "text": "For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update the Activity Browser,\nCreate a project with ecoinvent 3.9.1 cutoff.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the instructions for installing the Activity Browser, using the section The thorough way. Eventually, if you have mamba installed, use mamba to install the AB.\n\n\n\nFollow the instructions on this page to:\n\ncheck that the AB starts on your computer,\ncreate a new project:\n\non the tab “Project”, click on the button “+ New” and name the project (e.g., “ab_demo”),\nunder “Databases”, click on the button “Add default data (biosphere flows and impact categories)”. This takes a few minutes.\nimport the ecoinvent 3.9.1 cutoff database:\n\nDownload from the AB (easiest): click on the button “Import”, then “Import remote data (download)”, “ecoinvent (requires login)”, use the [[ESA login for ecoinvent]], and then select version 3.9.1 and the system model “cutoff”. The import takes a few minutes (longer than the step before).\nOtherwise, on ecoquery from ecoinvent download the 7z file “ecoinvent 3.9.3_cutoff_ecoSpold02.7z”. On the AB, click on the button “Import”, and then select “Import local data”, “Local 7z-archive of ecospold2 files” and select the downloaded file."
+  },
+  {
+    "objectID": "seminar_brightway.html",
+    "href": "seminar_brightway.html",
+    "title": "Code-along with Brightway",
+    "section": "",
+    "text": "For this seminar, you should have a working Brightway environment on your computer. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update Brightway.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "seminar_brightway.html#sec-seminar-brightway-python",
+    "href": "seminar_brightway.html#sec-seminar-brightway-python",
+    "title": "Code-along with Brightway",
+    "section": "Installing Python with Anaconda",
+    "text": "Installing Python with Anaconda\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n(Optional - Mamba)\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba"
+  },
+  {
+    "objectID": "seminar_brightway.html#installing-the-activity-browser",
+    "href": "seminar_brightway.html#installing-the-activity-browser",
+    "title": "Code-along with Brightway",
+    "section": "Installing the Activity Browser",
+    "text": "Installing the Activity Browser\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
   }
 ]

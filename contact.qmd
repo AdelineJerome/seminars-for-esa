@@ -1,0 +1,9 @@
+---
+title: "Contact"
+---
+
+This website has been created by Adeline Jerome, PhD student at the division of Environmental Systems Analysis at Chalmers University of Technology. 
+
+- [Contact information](https://www.chalmers.se/en/persons/jeromea/)
+- [LinkedIn](https://www.linkedin.com/in/adeline-jerome/)
+- [GitHub](https://github.com/AdelineJerome)

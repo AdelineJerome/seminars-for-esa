@@ -2,8 +2,13 @@
 title: "Seminars for ESA"
 ---
 
-This site has been developed to share knowledge on using open-source tools for environmental systems analysis.
+This site has been developed to share knowledge on using open-source tools for environmental systems analysis. For an overview of tools developed for the field of industrial ecology, have a look at [this dashboard](https://github.com/IndEcol/Dashboard).
 
-# Seminar series in November - December 2023
+A seminar series is soon to be held:
 
-Please follow the [installation instructions](installation_instructions.qmd) to be able to participate in the seminars.
+- An [introduction](seminar_intro.qmd) also available on Zoom on November 27,
+- A first [code-along seminar](seminar_ab.qmd) for doing a first LCA on the Activity Browser on December 1st,
+- Another [code-along seminar](seminar_brightway.qmd) for doing a first LCA on Brightway on December 7,
+- An [introduction to Git](seminar_git.qmd) on December 7.
+
+
