@@ -6,9 +6,9 @@ title: "Code-along with the AB"
 
 For this seminar, you should have the Activity Browser running on your computer and a project with ecoinvent open. For this, you need to:
 
-1.  If not already done, install Python and a Python environment manager,
-2.  Install or update the Activity Browser,
-3.  Create a project with ecoinvent 3.9.1 cutoff.
+1.  If not already done, [install](seminar_ab.qmd#installing-python-with-anaconda) Python and a Python environment manager,
+2.  [Install](seminar_ab.qmd#installing-the-activity-browser) or update the Activity Browser,
+3.  [Create a project](seminar_ab.qmd#create-an-lca-project-on-the-ab) with ecoinvent 3.9.1 cutoff.
 
 ## Installing Python with Anaconda
 
