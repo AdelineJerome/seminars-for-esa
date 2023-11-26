@@ -123,7 +123,7 @@
     "href": "presentations/presentation_seminar_intro.html#python-packages",
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "Python packages",
-    "text": "Python packages\n\n\n\n\nExamples:\n. . .\n\npandas for data tables manipulation,\nmatplotlib for figures,\n…"
+    "text": "Python packages\n\n\n\n\nExamples:\n\npandas for data tables manipulation,\nmatplotlib for figures,\n…"
   },
   {
     "objectID": "presentations/presentation_seminar_intro.html#brightway",
@@ -145,5 +145,40 @@
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "The Activity Browser",
     "text": "The Activity Browser"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#reproducibility-and-transparency",
+    "href": "presentations/presentation_seminar_intro.html#reproducibility-and-transparency",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Reproducibility and transparency",
+    "text": "Reproducibility and transparency\n\n\nFor understanding what you did\nFor the others to understand what you did\nFor you/others to use the same methodology"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#easier-to-update",
+    "href": "presentations/presentation_seminar_intro.html#easier-to-update",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Easier to update",
+    "text": "Easier to update\n\n\nLess room for error when updating data inputs\nAutomatic update of the whole work\nUpdate/change ecoinvent (the background database)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#greater-flwxibility",
+    "href": "presentations/presentation_seminar_intro.html#greater-flwxibility",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Greater flwxibility",
+    "text": "Greater flwxibility"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#easier-version-control",
+    "href": "presentations/presentation_seminar_intro.html#easier-version-control",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Easier version control",
+    "text": "Easier version control"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#easier-version-control-with-git",
+    "href": "presentations/presentation_seminar_intro.html#easier-version-control-with-git",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Easier version control with Git",
+    "text": "Easier version control with Git\n\n\nChange-tracking\nBackup\nCollaboration"
   }
 ]

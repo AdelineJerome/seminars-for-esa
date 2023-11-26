@@ -7,94 +7,98 @@ format:
 
 # Why
 
--   Reproducibility and transparency
+![](images/seminar_bright_workflow.svg){width="95%"}
+## Greater flexibility
 
--   Easier to update with new data
+::: {.incremental}
+- Specific LCA methodological choices
+- Connection to other tools (e.g., IAM, statistics, ML)
+:::
 
--   Greater flexibility
 
--   Version control with Git for backup, change-tracking and collaboration
+## Reproducibility and transparency
 
--   Less room for errors
+::: {.incremental}
+- For understanding what you did
+- For the others to understand what you did
+- For you/others to use the same methodology
+:::
 
--   Quicker to update
+## Easier to update
 
--   Access in the future
+::: {.incremental}
+- Less room for error when updating data inputs
+- Automatic update of the whole work
+- Update/change ecoinvent (the background database)
+:::
+
+## Easier version control with Git
+
+::: {.incremental}
+- Change-tracking
+- Backup
+- Collaboration
+:::
+
 
 # What
 
 ## Python
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-![](images/seminar_bright_explanation_python.svg){width=100%}
+![](images/seminar_bright_explanation_python.svg){width="100%"}
 :::
 
 ::: {.column width="40%"}
-
 :::
-
-::::
-
+:::
 
 ## Python packages
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-![](images/seminar_bright_explanation_packages.svg){width=100%}
+![](images/seminar_bright_explanation_packages.svg){width="100%"}
 :::
 
 ::: {.column width="40%"}
-
 Examples:
 
-- pandas for data tables manipulation,
-- matplotlib for figures,
-- ...
+-   pandas for data tables manipulation,
+-   matplotlib for figures,
+-   ...
 :::
-
-::::
-
+:::
 
 ## Brightway
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-![](images/seminar_bright_explanation_brightway.svg){width=100%}
+![](images/seminar_bright_explanation_brightway.svg){width="100%"}
 :::
 
 ::: {.column width="40%"}
-
 :::
-
-::::
-
+:::
 
 ## Code editor
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-![](images/seminar_bright_explanation_editor.svg){width=100%}
+![](images/seminar_bright_explanation_editor.svg){width="100%"}
 :::
 
 ::: {.column width="40%"}
 Examples:
 
-- Jupyter
-- Spider
-- PyCharm
-- Visual Studio Code
-- ...
+-   Jupyter
+-   Spider
+-   PyCharm
+-   Visual Studio Code
+-   ...
 :::
-
-::::
+:::
 
 ## The Activity Browser
 
-
-![](images/seminar_bright_explanation_ab.svg){width=100%}
-
+![](images/seminar_bright_explanation_ab.svg){width="100%"}
