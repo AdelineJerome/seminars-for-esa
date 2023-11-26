@@ -111,8 +111,7 @@ Examples:
 ::: {.incremental}
 - Fast calculations
 - Parameters in the inventory
-- Uncertainty distributions in the inventory
-- Monte-Carlo simulation
+- Uncertainty analysis (Monte-Carlo simulation)
 :::
 
 ## Brightway
@@ -128,4 +127,16 @@ And extensions for:
 - *Still in development:* collaborative work on the same LCA model on a server
 :::
 
+
 ## The Activity Browser
+
+Similar to brightway but more user friendly. Advanced tasks:
+
+::: {.incremental}
+- Use of scenarios
+- Visualization tools (Sankey diagram)
+- Plugin for prospective background databases with *premise*
+:::
+
+
+# Combine brightway and the Activity Browser?

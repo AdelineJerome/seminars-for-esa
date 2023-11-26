@@ -186,13 +186,20 @@
     "href": "presentations/presentation_seminar_intro.html#brightway-1",
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "Brightway",
-    "text": "Brightway\n\n\nFast calculations\nParameters in the inventory\nUncertainty distributions in the inventory\nMonte-Carlo simulation"
+    "text": "Brightway\n\n\nFast calculations\nParameters in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
   },
   {
     "objectID": "presentations/presentation_seminar_intro.html#brightway-2",
     "href": "presentations/presentation_seminar_intro.html#brightway-2",
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "Brightway",
-    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective foreground databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model"
+    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective foreground databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#the-activity-browser-1",
+    "href": "presentations/presentation_seminar_intro.html#the-activity-browser-1",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser\nSimilar to brightway but more user friendly. Advanced tasks:\n\n\nUse of scenarios\nVisualization tools (Sankey diagram)\nPlugin for prospective background databases with premise"
   }
 ]
