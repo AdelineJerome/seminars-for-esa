@@ -2,7 +2,19 @@
 title: "Introduction to the AB and Brightway"
 ---
 
-::: {.callout-caution}
+
+
+> [**Link to the slides**](../presentations/presentation_seminar_intro.html)
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" height="300" width="500" style="border:2px solid black;" src="../presentations/presentation_seminar_intro.html"></iframe>
+```
+
+</div>
+
+::: callout-caution
 ## Work in progress
 
 This section is still in development!

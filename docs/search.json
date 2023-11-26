@@ -39,7 +39,7 @@
     "href": "seminar_intro.html",
     "title": "Introduction to the AB and Brightway",
     "section": "",
-    "text": "Work in progress\n\n\n\nThis section is still in development!"
+    "text": "Link to the slides\n\n\n\n\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
   },
   {
     "objectID": "ab_page.html",
@@ -229,5 +229,40 @@
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "My ideal workflow",
     "text": "My ideal workflow"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#get-help",
+    "href": "presentations/presentation_seminar_intro.html#get-help",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Get help",
+    "text": "Get help\n\n\nFrom your colleagues 👋\nFrom ChatGPT\nFrom the documentation or user manual\nFrom the community:\n\nOn mail distribution lists on groups.io\nOn Stackoverflow\nOn GitHub (for bugs)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#main-source-of-information",
+    "href": "presentations/presentation_seminar_intro.html#main-source-of-information",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Main source of information",
+    "text": "Main source of information\nGo to the GiHub pages (the AB, brightway) to find updated information or links to:\n\nInstall the tools,\nLearn how to use it,\nFind examples."
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#website-to-gather-tips-and-resources",
+    "href": "presentations/presentation_seminar_intro.html#website-to-gather-tips-and-resources",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Website to gather tips and resources",
+    "text": "Website to gather tips and resources\nSeminars for ESA as an initial resource.\nYou are welcome to contribute!"
+  },
+  {
+    "objectID": "python.html",
+    "href": "python.html",
+    "title": "Python",
+    "section": "",
+    "text": "Introduction\nPython is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications)."
+  },
+  {
+    "objectID": "rstat.html",
+    "href": "rstat.html",
+    "title": "R and RStudio",
+    "section": "",
+    "text": "Introduction"
   }
 ]
