@@ -6,9 +6,7 @@ This site has been developed to share knowledge on using open-source tools for e
 
 A seminar series is soon to be held:
 
-- An [introduction](seminar_intro.qmd) also available on Zoom on November 27,
-- A first [code-along seminar](seminar_ab.qmd) for doing a first LCA on the Activity Browser on December 1st,
-- Another [code-along seminar](seminar_brightway.qmd) for doing a first LCA on Brightway on December 7,
-- An [introduction to Git](seminar_git.qmd) on December 7.
-
-
+-   An [introduction](seminar_intro.qmd) also available on Zoom on November 27,
+-   A first [code-along seminar](seminar_ab.qmd) for doing a first LCA on the Activity Browser on December 1st,
+-   Another [code-along seminar](seminar_brightway.qmd) for doing a first LCA on Brightway on December 7,
+-   An [introduction to Git](seminar_git.qmd) on December 7.
