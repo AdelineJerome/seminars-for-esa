@@ -11,7 +11,7 @@ format:
 ## Greater flexibility
 
 ::: {.incremental}
-- Specific LCA methodological choices
+- Non-standard LCA methodological choices
 - Connection to other tools (e.g., IAM, statistics, ML)
 :::
 
@@ -102,3 +102,30 @@ Examples:
 ## The Activity Browser
 
 ![](images/seminar_bright_explanation_ab.svg){width="100%"}
+
+
+# Features with the tools
+
+## Brightway
+
+::: {.incremental}
+- Fast calculations
+- Parameters in the inventory
+- Uncertainty distributions in the inventory
+- Monte-Carlo simulation
+:::
+
+## Brightway
+
+And extensions for:
+
+::: {.incremental}
+- Regionalization with *bw2regional*
+- Temporal distributions in the inventory and for characterization factors with *temporalis*
+- Prospective foreground databases based on IAM with *premise*
+- Global sensitivity analysis with *lca_algebraic*
+
+- *Still in development:* collaborative work on the same LCA model on a server
+:::
+
+## The Activity Browser
