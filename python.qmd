@@ -4,4 +4,41 @@ title: "Python"
 
 # Introduction
 
-[Python](https://en.wikipedia.org/wiki/Python_(programming_language)) is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications). 
+[Python](https://en.wikipedia.org/wiki/Python_(programming_language)) is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications).
+
+It is, among others, an object-oriented language, meaning that *objects* with *attributes* are manipulated. For instance, for doing an LCA, possible objects and their attributes are:
+
+- a process: name, unit, location, etc.
+- a flow: sending process, receiving process, quantity, uncertainty, etc.
+- an impact category method: name, unit, list of characterization factors, etc.
+
+Then, functions or *methods* are available to manipulate the objects.
+
+For a given project, not all objects available for Python are necessary. For instance, objects for doing an LCA are not necessary when doing machine learning, and vice versa. Python is organised in *packages*, i.e., groups of objects and functions usually developed for a specific application.
+
+
+# Installation
+
+One of the easiest way to get started with Python is to install Anaconda. [Follow this link](https://www.anaconda.com/download/) to download Anaconda. Then, follow the installation instructions of the installer.
+
+## (Optional - Mamba)
+
+If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
+
+```         
+conda install -c conda-forge mamba
+```
+
+
+# Managing Python virtual environments
+
+A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd) with specific versions which might not be the latest. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
+
+Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)).
+
+
+# Resources
+
+Online books:
+
+- [Python for Data Analysis](https://wesmckinney.com/book/)

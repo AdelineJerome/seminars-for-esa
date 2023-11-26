@@ -13,6 +13,10 @@ website:
     contents:
       - href: index.qmd
         text: Home
+      - section: "Programming languages"
+        contents:
+          - python.qmd
+          - rstat.qmd
       - section: "Doing LCA"
         contents:
           - ab_page.qmd

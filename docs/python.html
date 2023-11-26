@@ -102,12 +102,32 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Doing LCA</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Programming languages</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./python.html" class="sidebar-item-text sidebar-link active">Python</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rstat.html" class="sidebar-item-text sidebar-link">R and RStudio</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Doing LCA</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ab_page.html" class="sidebar-item-text sidebar-link">LCA with the AB</a>
@@ -127,12 +147,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Seminars</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Seminars</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./seminar_intro.html" class="sidebar-item-text sidebar-link">Introduction to the AB and Brightway</a>
@@ -157,12 +177,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">More</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">More</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about.html" class="sidebar-item-text sidebar-link">About</a>
@@ -190,6 +210,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a>
+  <ul class="collapse">
+  <li><a href="#optional---mamba" id="toc-optional---mamba" class="nav-link" data-scroll-target="#optional---mamba">(Optional - Mamba)</a></li>
+  </ul></li>
+  <li><a href="#managing-python-virtual-environments" id="toc-managing-python-virtual-environments" class="nav-link" data-scroll-target="#managing-python-virtual-environments">Managing Python virtual environments</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -216,6 +242,35 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications).</p>
+<p>It is, among others, an object-oriented language, meaning that <em>objects</em> with <em>attributes</em> are manipulated. For instance, for doing an LCA, possible objects and their attributes are:</p>
+<ul>
+<li>a process: name, unit, location, etc.</li>
+<li>a flow: sending process, receiving process, quantity, uncertainty, etc.</li>
+<li>an impact category method: name, unit, list of characterization factors, etc.</li>
+</ul>
+<p>Then, functions or <em>methods</em> are available to manipulate the objects.</p>
+<p>For a given project, not all objects available for Python are necessary. For instance, objects for doing an LCA are not necessary when doing machine learning, and vice versa. Python is organised in <em>packages</em>, i.e., groups of objects and functions usually developed for a specific application.</p>
+</section>
+<section id="installation" class="level1">
+<h1>Installation</h1>
+<p>One of the easiest way to get started with Python is to install Anaconda. <a href="https://www.anaconda.com/download/">Follow this link</a> to download Anaconda. Then, follow the installation instructions of the installer.</p>
+<section id="optional---mamba" class="level2">
+<h2 class="anchored" data-anchor-id="optional---mamba">(Optional - Mamba)</h2>
+<p>If you think that you will use Python in the future, I recommend installing and using <a href="https://mamba.readthedocs.io/en/latest/index.html">Mamba</a>. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended <a href="https://anaconda.org/conda-forge/mamba">here</a>:</p>
+<pre><code>conda install -c conda-forge mamba</code></pre>
+</section>
+</section>
+<section id="managing-python-virtual-environments" class="level1">
+<h1>Managing Python virtual environments</h1>
+<p>A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the <a href="./ab_page.html">Activity Browser</a> uses <a href="./brightway_page.html">brightway</a> with specific versions which might not be the latest. If one wants to work both with the Activity Browser <em>and</em> the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.</p>
+<p>Here is the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">full documentation</a> for managing Python environments with conda (available with <a href="./python.html#installation">Anaconda</a>).</p>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<p>Online books:</p>
+<ul>
+<li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a></li>
+</ul>
 
 
 </section>

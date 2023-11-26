@@ -256,7 +256,7 @@
     "href": "python.html",
     "title": "Python",
     "section": "",
-    "text": "Introduction\nPython is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications)."
+    "text": "Python is a programming language that can be used for many purposes (e.g., data manipulations, calculations, machine learning, graphical user interfaces, web applications).\nIt is, among others, an object-oriented language, meaning that objects with attributes are manipulated. For instance, for doing an LCA, possible objects and their attributes are:\n\na process: name, unit, location, etc.\na flow: sending process, receiving process, quantity, uncertainty, etc.\nan impact category method: name, unit, list of characterization factors, etc.\n\nThen, functions or methods are available to manipulate the objects.\nFor a given project, not all objects available for Python are necessary. For instance, objects for doing an LCA are not necessary when doing machine learning, and vice versa. Python is organised in packages, i.e., groups of objects and functions usually developed for a specific application."
   },
   {
     "objectID": "rstat.html",
@@ -264,5 +264,12 @@
     "title": "R and RStudio",
     "section": "",
     "text": "Introduction"
+  },
+  {
+    "objectID": "python.html#optional---mamba",
+    "href": "python.html#optional---mamba",
+    "title": "Python",
+    "section": "(Optional - Mamba)",
+    "text": "(Optional - Mamba)\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba"
   }
 ]
