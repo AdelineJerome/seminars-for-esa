@@ -7,7 +7,8 @@ format:
 
 # Why
 
-![](images/seminar_bright_workflow.svg){width="95%"}
+![](images/seminar_bright_workflow.svg){width="100%"}
+
 ## Greater flexibility
 
 ::: {.incremental}
@@ -140,3 +141,26 @@ Similar to brightway but more user friendly. Advanced tasks:
 
 
 # Combine brightway and the Activity Browser?
+
+## Yes you can!
+
+![](images/seminar_bright_combine_bright_ab.svg){width="100%"}
+
+## My initial workflow
+
+![](images/seminar_bright_my_workflow_intermediate.svg){width="100%"}
+
+## My ideal workflow
+
+![](images/seminar_bright_my_workflow_advanced.svg){width="100%"}
+
+# Tips for easier work
+
+Especially when working with brightway:
+
+::: {.incremental}
+- Document what you do with comments and text (markdown cells)
+- Use descriptive names for your variables (e.g., not `n` but `transportation_to_factory_distance_km`)
+- Use Google and ChatGPT as somebody probably thought of this calculation step, copy/paste chunks of code!
+- NEVER update brightway/the AB on your working environment, create a new environment!
+:::

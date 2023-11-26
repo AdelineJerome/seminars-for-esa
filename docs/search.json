@@ -201,5 +201,33 @@
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "The Activity Browser",
     "text": "The Activity Browser\nSimilar to brightway but more user friendly. Advanced tasks:\n\n\nUse of scenarios\nVisualization tools (Sankey diagram)\nPlugin for prospective background databases with premise"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#yes-you-can",
+    "href": "presentations/presentation_seminar_intro.html#yes-you-can",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Yes you can!",
+    "text": "Yes you can!"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#greater-flexibility",
+    "href": "presentations/presentation_seminar_intro.html#greater-flexibility",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Greater flexibility",
+    "text": "Greater flexibility\n\n\nNon-standard LCA methodological choices\nConnection to other tools (e.g., IAM, statistics, ML)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#my-initial-workflow",
+    "href": "presentations/presentation_seminar_intro.html#my-initial-workflow",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "My initial workflow",
+    "text": "My initial workflow"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html#my-ideal-workflow",
+    "href": "presentations/presentation_seminar_intro.html#my-ideal-workflow",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "My ideal workflow",
+    "text": "My ideal workflow"
   }
 ]
