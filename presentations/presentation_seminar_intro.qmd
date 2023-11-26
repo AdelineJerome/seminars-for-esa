@@ -5,6 +5,17 @@ format:
         incremental: false
 ---
 
+# Link to the slides
+
+::: columns
+::: {.column width="50%"}
+![](images/qrcode_link_presentation_intro.png)
+:::
+
+::: {.column width="50%"}
+:::
+:::
+
 # Why
 
 ![](images/seminar_bright_workflow.svg){width="100%"}
