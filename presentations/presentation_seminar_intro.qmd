@@ -7,14 +7,10 @@ format:
 
 # Link to the slides
 
-::: columns
-::: {.column width="50%"}
-![](images/qrcode_link_presentation_intro.png)
-:::
+Find the slides at [adelinejerome.github.io/seminars-for-esa/seminar_intro.html](adelinejerome.github.io/seminars-for-esa/seminar_intro.html)
 
-::: {.column width="50%"}
-:::
-:::
+![](images/qrcode_link_presentation_intro.png)
+
 
 # Why
 
