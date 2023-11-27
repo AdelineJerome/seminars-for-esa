@@ -8,14 +8,13 @@ title: "Python"
 
 It is, among others, an object-oriented language, meaning that *objects* with *attributes* are manipulated. For instance, for doing an LCA, possible objects and their attributes are:
 
-- a process: name, unit, location, etc.
-- a flow: sending process, receiving process, quantity, uncertainty, etc.
-- an impact category method: name, unit, list of characterization factors, etc.
+-   a process: name, unit, location, etc.
+-   a flow: sending process, receiving process, quantity, uncertainty, etc.
+-   an impact category method: name, unit, list of characterization factors, etc.
 
 Then, functions or *methods* are available to manipulate the objects.
 
 For a given project, not all objects available for Python are necessary. For instance, objects for doing an LCA are not necessary when doing machine learning, and vice versa. Python is organised in *packages*, i.e., groups of objects and functions usually developed for a specific application.
-
 
 # Installation
 
@@ -29,16 +28,20 @@ If you think that you will use Python in the future, I recommend installing and 
 conda install -c conda-forge mamba
 ```
 
-
 # Managing Python virtual environments
 
 A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd) with specific versions which might not be the latest. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
 
 Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)).
 
-
 # Resources
 
 Online books:
 
-- [Python for Data Analysis](https://wesmckinney.com/book/)
+-   [Python for Data Analysis](https://wesmckinney.com/book/)
+
+::: callout-caution
+## Work in progress
+
+This section is still in development!
+:::
