@@ -2,7 +2,6 @@
 title: "Introduction to the AB and Brightway"
 ---
 
-
 <div>
 
 ```{=html}
@@ -12,5 +11,3 @@ title: "Introduction to the AB and Brightway"
 </div>
 
 > [**Link to the slides**](presentations/presentation_seminar_intro.html)
-
-

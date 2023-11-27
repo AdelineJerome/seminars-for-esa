@@ -271,5 +271,12 @@
     "title": "Python",
     "section": "(Optional - Mamba)",
     "text": "(Optional - Mamba)\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro.html",
+    "href": "presentations/presentation_seminar_intro.html",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "",
+    "text": "Find the slides at adelinejerome.github.io/seminars-for-esa/seminar_intro.html"
   }
 ]

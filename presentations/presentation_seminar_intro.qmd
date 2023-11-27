@@ -11,43 +11,40 @@ Find the slides at [adelinejerome.github.io/seminars-for-esa/seminar_intro.html]
 
 ![](images/qrcode_link_presentation_intro.png)
 
-
 # Why
 
 ![](images/seminar_bright_workflow.svg){width="100%"}
 
 ## Greater flexibility
 
-::: {.incremental}
-- Non-standard LCA methodological choices
-- Connection to other tools (e.g., IAM, statistics, ML)
+::: incremental
+-   Non-standard LCA methodological choices
+-   Connection to other tools (e.g., IAM, statistics, ML)
 :::
-
 
 ## Reproducibility and transparency
 
-::: {.incremental}
-- For understanding what you did
-- For the others to understand what you did
-- For you/others to use the same methodology
+::: incremental
+-   For understanding what you did
+-   For the others to understand what you did
+-   For you/others to use the same methodology
 :::
 
 ## Easier to update
 
-::: {.incremental}
-- Less room for error when updating data inputs
-- Automatic update of the whole work
-- Update/change ecoinvent (the background database)
+::: incremental
+-   Less room for error when updating data inputs
+-   Automatic update of the whole work
+-   Update/change ecoinvent (the background database)
 :::
 
 ## Easier version control with Git
 
-::: {.incremental}
-- Change-tracking
-- Backup
-- Collaboration
+::: incremental
+-   Change-tracking
+-   Backup
+-   Collaboration
 :::
-
 
 # What
 
@@ -111,41 +108,41 @@ Examples:
 
 ![](images/seminar_bright_explanation_ab.svg){width="100%"}
 
-
 # Features with the tools
 
 ## Brightway
 
-::: {.incremental}
-- Fast calculations
-- Parameters in the inventory
-- Uncertainty analysis (Monte-Carlo simulation)
+::: incremental
+-   Fast calculations
+-   Parameters in the inventory
+-   Uncertainty analysis (Monte-Carlo simulation)
 :::
 
 ## Brightway
 
 And extensions for:
 
-::: {.incremental}
-- Regionalization with *bw2regional*
-- Temporal distributions in the inventory and for characterization factors with *temporalis*
-- Prospective foreground databases based on IAM with *premise*
-- Global sensitivity analysis with *lca_algebraic*
+::: incremental
+-   Regionalization with *bw2regional*
 
-- *Still in development:* collaborative work on the same LCA model on a server
+-   Temporal distributions in the inventory and for characterization factors with *temporalis*
+
+-   Prospective foreground databases based on IAM with *premise*
+
+-   Global sensitivity analysis with *lca_algebraic*
+
+-   *Still in development:* collaborative work on the same LCA model on a server
 :::
-
 
 ## The Activity Browser
 
 Similar to brightway but more user friendly. Advanced tasks:
 
-::: {.incremental}
-- Use of scenarios
-- Visualization tools (Sankey diagram)
-- Plugin for prospective background databases with *premise*
+::: incremental
+-   Use of scenarios
+-   Visualization tools (Sankey diagram)
+-   Plugin for prospective background databases with *premise*
 :::
-
 
 # Combine brightway and the Activity Browser?
 
@@ -165,34 +162,34 @@ Similar to brightway but more user friendly. Advanced tasks:
 
 Especially when working with brightway:
 
-::: {.incremental}
-- Document what you do with comments and text (markdown cells)
-- Use descriptive names for your variables (e.g., not `n` but `transportation_to_factory_distance_km`)
-- Use Google and ChatGPT as somebody probably thought of this calculation step, copy/paste chunks of code!
-- NEVER update brightway/the AB on your working environment, create a new environment!
+::: incremental
+-   Document what you do with comments and text (markdown cells)
+-   Use descriptive names for your variables (e.g., not `n` but `transportation_to_factory_distance_km`)
+-   Use Google and ChatGPT as somebody probably thought of this calculation step, copy/paste chunks of code!
+-   NEVER update brightway/the AB on your working environment, create a new environment!
 :::
 
 # Tips to get started
 
 ## Get help
 
-::: {.incremental}
-- From your colleagues 👋
-- From ChatGPT
-- From the documentation or user manual
-- From the community:
-	- On mail distribution lists on groups.io
-	- On Stackoverflow
-	- On GitHub (for bugs)
+::: incremental
+-   From your colleagues 👋
+-   From ChatGPT
+-   From the documentation or user manual
+-   From the community:
+    -   On mail distribution lists on groups.io
+    -   On Stackoverflow
+    -   On GitHub (for bugs)
 :::
 
 ## Main source of information
 
 Go to the GiHub pages ([the AB](https://github.com/LCA-ActivityBrowser/activity-browser), [brightway](https://github.com/brightway-lca)) to find updated information or links to:
 
-- Install the tools,
-- Learn how to use it,
-- Find examples.
+-   Install the tools,
+-   Learn how to use it,
+-   Find examples.
 
 ## Website to gather tips and resources
 
