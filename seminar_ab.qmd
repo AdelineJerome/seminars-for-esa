@@ -120,6 +120,15 @@ Create the following scenarios:
 
 ### Bonus - Future electricity mixes scenarios
 
+Scenarios about the future Swedish electricity mix can be found [in this report](https://www.iva.se/publicerat/rapport-sveriges-framtida-elproduktion/). The scenarios can be summarised as:
 
+| Source   | Default | More solar and wind | More bio fuel | New nuclear plants | More hydro |
+| -------- | ------- | ------------------- | ------------- | ------------------ | ---------- |
+| Hydro    | 0.40    | 0.41                | 0.41          | 0.41               | 0.53       |
+| Wind     | 0.12    | 0.34                | 0.25          | 0.12               | 0.22       |
+| Solar    | 0.03       | 0.09                | 0.03           | 0.03               | 0.03       |
+| Bio fuel | 0.03    | 0.16                | 0.31          | 0.13               | 0.22       |
+| Nuclear  | 0.39    | 0                   | 0             | 0.31               | 0          |
+| Import   | 0.03    | 0                   | 0             | 0                  | 0           |
 
 > [Download the solution](resources/scenario_table_electricity.xlsx)
