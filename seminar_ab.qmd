@@ -32,8 +32,57 @@ Follow the [instructions on this page](https://github.com/LCA-ActivityBrowser/ac
 
 # Seminar content
 
+<div>
+
+```{=html}
+<iframe class="slide-deck" height="300" width="500" style="border:2px solid black;" src="presentations/presentation_seminar_ab.html"></iframe>
+```
+
+</div>
+
+> [**Link to the slides**](presentations/presentation_seminar_ab.html)
+
+
+## Introduction to Python environment management
+
+The information presented is available [here](python.qmd#managing-python-virtual-environments).
+
+
+## Introduction to the AB
+
 ::: callout-caution
 ## Work in progress
 
 This section is still in development!
 :::
+
+## First LCA with the AB
+
+As an example, we will reproduce a simplified version of the results in [Jerome et al. (2023)](https://doi.org/10.1016/j.resconrec.2023.107038). All the data are from the article and the supplementary information. The aim is the compare the LCA results for motors with different energy efficiency, and with and without their use extension with repair.
+
+### LCA model construction
+
+**Create a new database** by clicking on the button "+ New" besides "Databases". Name your database, e.g., `motor_case`.
+
+The first activity that we will use is electricity production. Go to your ecoinvent database, search for the *market for electricity, high voltage* for Sweden (SE). Right click on the activity and choose "Duplicate activity to new location" to duplicate the activity to your new database.
+
+**Create parameters** in the tab "Parameters". Create the following project parameters:
+
+| Name                    | Value | Description                                     |
+| ----------------------- | ----- | ----------------------------------------------- |
+| ```steel_unalloyed```   | 26600 | Quantity (kg) of unalloyed steel in the motor   |
+| ```steel_low_alloyed``` | 4100  | Quantity (kg) of low alloyed steel in the motor |
+| ```copper```            | 3600  | Quantity (kg) of copper in the motor            |
+| ```insulation```        | 400   | Quantity (kg) of insulation in the motor        |
+| ```output_power```      | 16000 | Output power (kW) of the motor                  |
+| ```op_hours```          | 8400  | Duration (hours) of operating time per year     |
+| ```lifetime```          | 20    | Lifetime (years) of the motor                   |
+| ```efficiency```                        |  0.973     |     Efficiency of the motor                                            |
+
+
+To **create new activities**, right click on the name of your new database and select "+ Add new activity". Create the following activities:
+
+1. *motor production* with:
+    - ```steel_unalloyed``` of *market for steel, unalloyed - GLO*
+    - ```steel_low_alloyed``` of *market for steel, low-alloyed - GLO*
+

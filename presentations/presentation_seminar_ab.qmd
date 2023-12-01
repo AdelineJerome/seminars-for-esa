@@ -1,0 +1,28 @@
+---
+title: "Code-alond seminar with the AB"
+format: revealjs
+---
+
+
+# Python environments
+
+![](images/seminar_bright_explanation_environments.svg)
+
+See commands [here](python.qmd#managing-python-virtual-environments)
+
+# Structure in the AB
+
+![](images/seminar_bright_ab_structure_project.svg)
+
+# Structure in the AB
+
+![](images/seminar_bright_ab_structure_activity.svg)
+
+
+# First LCA with the AB
+
+Aim: compare the LCA results for motors with different efficiency and their impact with and without repair
+
+## System to be modelled
+
+![](images/seminar_bright_system_example.svg)
