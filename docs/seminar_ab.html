@@ -35,10 +35,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,6 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="./">Welcome!</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/AdelineJerome/seminars-for-esa" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -215,7 +218,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#installing-the-activity-browser" id="toc-installing-the-activity-browser" class="nav-link" data-scroll-target="#installing-the-activity-browser">Installing the Activity Browser</a></li>
   <li><a href="#create-an-lca-project-on-the-ab" id="toc-create-an-lca-project-on-the-ab" class="nav-link" data-scroll-target="#create-an-lca-project-on-the-ab">Create an LCA project on the AB</a></li>
   </ul></li>
-  <li><a href="#seminar-content" id="toc-seminar-content" class="nav-link" data-scroll-target="#seminar-content">Seminar content</a></li>
+  <li><a href="#seminar-content" id="toc-seminar-content" class="nav-link" data-scroll-target="#seminar-content">Seminar content</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-python-environment-management" id="toc-introduction-to-python-environment-management" class="nav-link" data-scroll-target="#introduction-to-python-environment-management">Introduction to Python environment management</a></li>
+  <li><a href="#introduction-to-the-ab" id="toc-introduction-to-the-ab" class="nav-link" data-scroll-target="#introduction-to-the-ab">Introduction to the AB</a></li>
+  <li><a href="#first-lca-with-the-ab" id="toc-first-lca-with-the-ab" class="nav-link" data-scroll-target="#first-lca-with-the-ab">First LCA with the AB</a>
+  <ul class="collapse">
+  <li><a href="#lca-model-construction" id="toc-lca-model-construction" class="nav-link" data-scroll-target="#lca-model-construction">LCA model construction</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -275,6 +286,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="seminar-content" class="level1">
 <h1>Seminar content</h1>
+<div>
+<iframe class="slide-deck" height="300" width="500" style="border:2px solid black;" src="presentations/presentation_seminar_ab.html"></iframe>
+</div>
+<blockquote class="blockquote">
+<p><a href="presentations/presentation_seminar_ab.html"><strong>Link to the slides</strong></a></p>
+</blockquote>
+<section id="introduction-to-python-environment-management" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-python-environment-management">Introduction to Python environment management</h2>
+<p>The information presented is available <a href="./python.html#managing-python-virtual-environments">here</a>.</p>
+</section>
+<section id="introduction-to-the-ab" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-ab">Introduction to the AB</h2>
 <div class="callout-caution callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -288,8 +311,83 @@ Work in progress
 <p>This section is still in development!</p>
 </div>
 </div>
+</section>
+<section id="first-lca-with-the-ab" class="level2">
+<h2 class="anchored" data-anchor-id="first-lca-with-the-ab">First LCA with the AB</h2>
+<p>As an example, we will reproduce a simplified version of the results in <a href="https://doi.org/10.1016/j.resconrec.2023.107038">Jerome et al.&nbsp;(2023)</a>. All the data are from the article and the supplementary information. The aim is the compare the LCA results for motors with different energy efficiency, and with and without their use extension with repair.</p>
+<section id="lca-model-construction" class="level3">
+<h3 class="anchored" data-anchor-id="lca-model-construction">LCA model construction</h3>
+<p><strong>Create a new database</strong> by clicking on the button “+ New” besides “Databases”. Name your database, e.g., <code>motor_case</code>.</p>
+<p>The first activity that we will use is electricity production. Go to your ecoinvent database, search for the <em>market for electricity, high voltage</em> for Sweden (SE). Right click on the activity and choose “Duplicate activity to new location” to duplicate the activity to your new database.</p>
+<p><strong>Create parameters</strong> in the tab “Parameters”. Create the following project parameters:</p>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 6%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>steel_unalloyed</code></td>
+<td>26600</td>
+<td>Quantity (kg) of unalloyed steel in the motor</td>
+</tr>
+<tr class="even">
+<td><code>steel_low_alloyed</code></td>
+<td>4100</td>
+<td>Quantity (kg) of low alloyed steel in the motor</td>
+</tr>
+<tr class="odd">
+<td><code>copper</code></td>
+<td>3600</td>
+<td>Quantity (kg) of copper in the motor</td>
+</tr>
+<tr class="even">
+<td><code>insulation</code></td>
+<td>400</td>
+<td>Quantity (kg) of insulation in the motor</td>
+</tr>
+<tr class="odd">
+<td><code>output_power</code></td>
+<td>16000</td>
+<td>Output power (kW) of the motor</td>
+</tr>
+<tr class="even">
+<td><code>op_hours</code></td>
+<td>8400</td>
+<td>Duration (hours) of operating time per year</td>
+</tr>
+<tr class="odd">
+<td><code>lifetime</code></td>
+<td>20</td>
+<td>Lifetime (years) of the motor</td>
+</tr>
+<tr class="even">
+<td><code>efficiency</code></td>
+<td>0.973</td>
+<td>Efficiency of the motor</td>
+</tr>
+</tbody>
+</table>
+<p>To <strong>create new activities</strong>, right click on the name of your new database and select “+ Add new activity”. Create the following activities:</p>
+<ol type="1">
+<li><em>motor production</em> with:
+<ul>
+<li><code>steel_unalloyed</code> of <em>market for steel, unalloyed - GLO</em></li>
+<li><code>steel_low_alloyed</code> of <em>market for steel, low-alloyed - GLO</em></li>
+</ul></li>
+</ol>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -313,6 +411,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

@@ -313,5 +313,40 @@
     "title": "Python",
     "section": "Create a new environment",
     "text": "Create a new environment\nTo create a new environment called my_env, use:\nconda create -n my_env\nThis environment will then be empty (i.e., no python installed). To install an environment directly with a specific package package_name, use:\nconda create -n my_env package_name"
+  },
+  {
+    "objectID": "seminar_ab.html#introduction-to-environment-management",
+    "href": "seminar_ab.html#introduction-to-environment-management",
+    "title": "Code-along with the AB",
+    "section": "Introduction to environment management",
+    "text": "Introduction to environment management\nThe information presented is available here\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "seminar_ab.html#introduction-to-python-environment-management",
+    "href": "seminar_ab.html#introduction-to-python-environment-management",
+    "title": "Code-along with the AB",
+    "section": "Introduction to Python environment management",
+    "text": "Introduction to Python environment management\nThe information presented is available here."
+  },
+  {
+    "objectID": "seminar_ab.html#introduction-to-the-ab",
+    "href": "seminar_ab.html#introduction-to-the-ab",
+    "title": "Code-along with the AB",
+    "section": "Introduction to the AB",
+    "text": "Introduction to the AB\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_ab.html#system-to-be-modelled",
+    "href": "presentations/presentation_seminar_ab.html#system-to-be-modelled",
+    "title": "Code-alond seminar with the AB",
+    "section": "System to be modelled",
+    "text": "System to be modelled"
+  },
+  {
+    "objectID": "seminar_ab.html#first-lca-with-the-ab",
+    "href": "seminar_ab.html#first-lca-with-the-ab",
+    "title": "Code-along with the AB",
+    "section": "First LCA with the AB",
+    "text": "First LCA with the AB\nAs an example, we will reproduce a simplified version of the results in Jerome et al. (2023). All the data are from the article and the supplementary information. The aim is the compare the LCA results for motors with different energy efficiency, and with and without their use extension with repair.\n\nLCA model construction\nCreate a new database by clicking on the button “+ New” besides “Databases”. Name your database, e.g., motor_case.\nThe first activity that we will use is electricity production. Go to your ecoinvent database, search for the market for electricity, high voltage for Sweden (SE). Right click on the activity and choose “Duplicate activity to new location” to duplicate the activity to your new database.\nCreate parameters in the tab “Parameters”. Create the following project parameters:\n\n\n\n\n\n\n\n\nName\nValue\nDescription\n\n\n\n\nsteel_unalloyed\n26600\nQuantity (kg) of unalloyed steel in the motor\n\n\nsteel_low_alloyed\n4100\nQuantity (kg) of low alloyed steel in the motor\n\n\ncopper\n3600\nQuantity (kg) of copper in the motor\n\n\ninsulation\n400\nQuantity (kg) of insulation in the motor\n\n\noutput_power\n16000\nOutput power (kW) of the motor\n\n\nop_hours\n8400\nDuration (hours) of operating time per year\n\n\nlifetime\n20\nLifetime (years) of the motor\n\n\nefficiency\n0.973\nEfficiency of the motor\n\n\n\nTo create new activities, right click on the name of your new database and select “+ Add new activity”. Create the following activities:\n\nmotor production with:\n\nsteel_unalloyed of market for steel, unalloyed - GLO\nsteel_low_alloyed of market for steel, low-alloyed - GLO"
   }
 ]
