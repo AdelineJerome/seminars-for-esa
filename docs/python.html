@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -35,10 +98,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,6 +150,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="./">Welcome!</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/AdelineJerome/seminars-for-esa" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -214,8 +280,17 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#optional---mamba" id="toc-optional---mamba" class="nav-link" data-scroll-target="#optional---mamba">(Optional - Mamba)</a></li>
   </ul></li>
-  <li><a href="#managing-python-virtual-environments" id="toc-managing-python-virtual-environments" class="nav-link" data-scroll-target="#managing-python-virtual-environments">Managing Python virtual environments</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#managing-python-virtual-environments" id="toc-managing-python-virtual-environments" class="nav-link" data-scroll-target="#managing-python-virtual-environments">Managing Python virtual environments</a>
+  <ul class="collapse">
+  <li><a href="#navigating-between-environments" id="toc-navigating-between-environments" class="nav-link" data-scroll-target="#navigating-between-environments">Navigating between environments</a></li>
+  <li><a href="#create-a-new-environment" id="toc-create-a-new-environment" class="nav-link" data-scroll-target="#create-a-new-environment">Create a new environment</a></li>
+  <li><a href="#managing-packages" id="toc-managing-packages" class="nav-link" data-scroll-target="#managing-packages">Managing packages</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <ul class="collapse">
+  <li><a href="#cheatsheets" id="toc-cheatsheets" class="nav-link" data-scroll-target="#cheatsheets">Cheatsheets</a></li>
+  <li><a href="#handbooks" id="toc-handbooks" class="nav-link" data-scroll-target="#handbooks">Handbooks</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -257,20 +332,60 @@ ul.task-list li input[type="checkbox"] {
 <section id="optional---mamba" class="level2">
 <h2 class="anchored" data-anchor-id="optional---mamba">(Optional - Mamba)</h2>
 <p>If you think that you will use Python in the future, I recommend installing and using <a href="https://mamba.readthedocs.io/en/latest/index.html">Mamba</a>. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended <a href="https://anaconda.org/conda-forge/mamba">here</a>:</p>
-<pre><code>conda install -c conda-forge mamba</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>conda install <span class="op">-</span>c conda<span class="op">-</span>forge mamba</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="managing-python-virtual-environments" class="level1">
 <h1>Managing Python virtual environments</h1>
 <p>A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the <a href="./ab_page.html">Activity Browser</a> uses <a href="./brightway_page.html">brightway</a> with specific versions which might not be the latest. If one wants to work both with the Activity Browser <em>and</em> the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.</p>
-<p>Here is the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">full documentation</a> for managing Python environments with conda (available with <a href="./python.html#installation">Anaconda</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="presentations/images/seminar_bright_explanation_environments.svg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Schematic represntation of two Python environments.</figcaption><p></p>
+</figure>
+</div>
+<p>Here is the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">full documentation</a> for managing Python environments with conda (available with <a href="./python.html#installation">Anaconda</a>). I summarise below the few commands that are useful on a regular basis. All of them are to be written on an Anaconda prompt.</p>
+<section id="navigating-between-environments" class="level2">
+<h2 class="anchored" data-anchor-id="navigating-between-environments">Navigating between environments</h2>
+<p>To print the <strong>list of installed environment</strong>, use:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda info <span class="op">--</span>envs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To <strong>activate</strong> an environment, i.e., to use a specific environment, use:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>conda activate my_env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace <code>my_env</code> with the name of the environment that you want to use. You can see that the environment is activated by having its name in parenthesis. You can have several environments running in parallel (e.g., one for brightway and one for the Activity browser). For that, open several Anaconda prompts and activate different environments in each.</p>
+<p>To <strong>deactivate</strong> or exit an environment, use:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>conda deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="resources" class="level1">
-<h1>Resources</h1>
-<p>Online books:</p>
-<ul>
-<li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a></li>
-</ul>
+<section id="create-a-new-environment" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-environment">Create a new environment</h2>
+<p>To <strong>create a new environment</strong> called <code>my_env</code>, use:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>conda create <span class="op">-</span>n my_env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This environment will then be empty (i.e., no python installed). To install an environment directly with a specific package <code>package_name</code>, use:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>conda create <span class="op">-</span>n my_env package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="managing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="managing-packages">Managing packages</h2>
+<p>The name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the <strong>list of packages</strong> installed in your environment, use:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>conda <span class="bu">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is often very useful when you report an error or bug! People can see which version of the packages might cause the error.</p>
+<p>To get the <strong>Python version</strong> that is used by the environment, use:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">--</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can <strong>install a package</strong>, here <code>package_name</code> with:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>conda install package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or <strong>update a package</strong> with:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>conda update package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For installing and updating packages/environments, you can use <code>mamba</code> by replacing <code>conda</code> with <code>mamba</code> in the code above.</p>
+</div>
+</div>
 <div class="callout-caution callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -284,8 +399,26 @@ Work in progress
 <p>This section is still in development!</p>
 </div>
 </div>
+</section>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<section id="cheatsheets" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheets">Cheatsheets</h2>
+<p>Very useful for beginners (or not!) to have an overview of available commands:</p>
+<ul>
+<li>For data wrangling with <a href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf">pandas</a></li>
+<li>For generating figures with <a href="https://matplotlib.org/cheatsheets/">matplotlib</a></li>
+</ul>
+</section>
+<section id="handbooks" class="level2">
+<h2 class="anchored" data-anchor-id="handbooks">Handbooks</h2>
+<ul>
+<li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -309,6 +442,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

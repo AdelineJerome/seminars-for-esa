@@ -38,7 +38,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+        light: cosmo
+        dark: superhero
     css: styles.css
     toc: true
 

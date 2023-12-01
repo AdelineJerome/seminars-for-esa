@@ -24,7 +24,7 @@ One of the easiest way to get started with Python is to install Anaconda. [Follo
 
 If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
 
-```         
+```python   
 conda install -c conda-forge mamba
 ```
 
@@ -32,16 +32,83 @@ conda install -c conda-forge mamba
 
 A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd) with specific versions which might not be the latest. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
 
-Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)).
+![Schematic represntation of two Python environments.](presentations/images/seminar_bright_explanation_environments.svg){width="100%"}
 
-# Resources
+Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)). I summarise below the few commands that are useful on a regular basis. All of them are to be written on an Anaconda prompt.
 
-Online books:
+## Navigating between environments
 
--   [Python for Data Analysis](https://wesmckinney.com/book/)
+To print the **list of installed environment**, use:
+```python
+conda info --envs
+```
+
+To **activate** an environment, i.e., to use a specific environment, use:
+```python
+conda activate my_env
+```
+Replace `my_env` with the name of the environment that you want to use. You can see that the environment is activated by having its name in parenthesis. You can have several environments running in parallel (e.g., one for brightway and one for the Activity browser). For that, open several Anaconda prompts and activate different environments in each.
+
+To **deactivate** or exit an environment, use:
+```python
+conda deactivate
+```
+
+## Create a new environment
+
+To **create a new environment** called `my_env`, use:
+```python
+conda create -n my_env
+```
+This environment will then be empty (i.e., no python installed). To install an environment directly with a specific package `package_name`, use:
+```python
+conda create -n my_env package_name
+```
+
+
+## Managing packages
+
+The name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the **list of packages** installed in your environment, use:
+```python
+conda list
+```
+This is often very useful when you report an error or bug! People can see which version of the packages might cause the error.
+
+To get the **Python version** that is used by the environment, use:
+```python
+python --version
+```
+
+You can **install a package**, here `package_name` with:
+```python
+conda install package_name
+```
+Or **update a package** with:
+```python
+conda update package_name
+```
+
+::: {.callout-note}
+For installing and updating packages/environments, you can use `mamba` by replacing `conda` with `mamba` in the code above.
+:::
 
 ::: callout-caution
 ## Work in progress
 
 This section is still in development!
 :::
+
+
+# Resources
+
+## Cheatsheets
+
+Very useful for beginners (or not!) to have an overview of available commands:
+
+- For data wrangling with [pandas](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+- For generating figures with [matplotlib](https://matplotlib.org/cheatsheets/)
+
+## Handbooks
+
+-   [Python for Data Analysis](https://wesmckinney.com/book/)
+

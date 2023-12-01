@@ -278,5 +278,40 @@
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "",
     "text": "Find the slides at adelinejerome.github.io/seminars-for-esa/seminar_intro.html"
+  },
+  {
+    "objectID": "python.html#navigating-between-environments",
+    "href": "python.html#navigating-between-environments",
+    "title": "Python",
+    "section": "Navigating between environments",
+    "text": "Navigating between environments\nTo print the list of installed environment, use:\nconda info --envs\nTo activate an environment, i.e., to use a specific environment, use:\nconda activate my_env\nReplace my_env with the name of the environment that you want to use. You can see that the environment is activated by having its name in parenthesis. You can have several environments running in parallel (e.g., one for brightway and one for the Activity browser). For that, open several Anaconda prompts and activate different environments in each.\nTo deactivate or exit an environment, use:\nconda deactivate"
+  },
+  {
+    "objectID": "python.html#managing-packages",
+    "href": "python.html#managing-packages",
+    "title": "Python",
+    "section": "Managing packages",
+    "text": "Managing packages\nThe name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the list of packages installed in your environment, use:\nconda list\nThis is often very useful when you report an error or bug! People can see which version of the packages might cause the error.\nTo get the Python version that is used by the environment, use:\npython --version\nYou can install a package, here package_name with:\nconda install package_name\nOr update a package with:\nconda update package_name\n\n\n\n\n\n\nNote\n\n\n\nFor installing and updating packages/environments, you can use mamba by replacing conda with mamba in the code above.\n\n\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+  },
+  {
+    "objectID": "python.html#cheatsheets",
+    "href": "python.html#cheatsheets",
+    "title": "Python",
+    "section": "Cheatsheets",
+    "text": "Cheatsheets\nVery useful for beginners (or not!) to have an overview of available commands:\n\nFor data wrangling with pandas\nFor generating figures with matplotlib"
+  },
+  {
+    "objectID": "python.html#handbooks",
+    "href": "python.html#handbooks",
+    "title": "Python",
+    "section": "Handbooks",
+    "text": "Handbooks\n\nPython for Data Analysis"
+  },
+  {
+    "objectID": "python.html#create-a-new-environment",
+    "href": "python.html#create-a-new-environment",
+    "title": "Python",
+    "section": "Create a new environment",
+    "text": "Create a new environment\nTo create a new environment called my_env, use:\nconda create -n my_env\nThis environment will then be empty (i.e., no python installed). To install an environment directly with a specific package package_name, use:\nconda create -n my_env package_name"
   }
 ]
