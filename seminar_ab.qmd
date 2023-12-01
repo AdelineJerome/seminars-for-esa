@@ -42,7 +42,7 @@ Follow the [instructions on this page](https://github.com/LCA-ActivityBrowser/ac
 
 > [**Link to the slides**](presentations/presentation_seminar_ab.html)
 
-## Introduction to Python environment management
+## Introduction to Python environment
 
 The information presented is available [here](python.qmd#managing-python-virtual-environments).
 
@@ -97,6 +97,8 @@ To **create new activities**, right click on the name of your new database and s
     -   `insulation` kg of *treatment of waste plastic, mixture, municipal incineration with fly ash extraction - CH*
     -   `0.04*copper` kg of *treatment of copper in car shredder residue, municipal incineration with fly ash extraction - CH*
 
+> Download the database solution [as an Excel file](resources/database_ab_motor_case.xlsx) or [as a brightway package](resources/database_ab_motor_case.bw2package)
+
 ### Motor efficiency scenarios
 
 In the tab "Parameters", select the tab "Scenarios". Click on the button "Export parameter-scenarios" to download the Excel file format for generating scenarios.
@@ -114,6 +116,10 @@ Create the following scenarios:
 | lifetime          | 20             | 20              | 40                    | 40                     |
 | efficiency        | 0,973          | 0,9835          | 0,973                 | 0,9835                 |
 
-
+> [Download the solution](resources/scenario_table_motor.xlsx)
 
 ### Bonus - Future electricity mixes scenarios
+
+
+
+> [Download the solution](resources/scenario_table_electricity.xlsx)
