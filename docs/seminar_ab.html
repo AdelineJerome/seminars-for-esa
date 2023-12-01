@@ -225,6 +225,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#first-lca-with-the-ab" id="toc-first-lca-with-the-ab" class="nav-link" data-scroll-target="#first-lca-with-the-ab">First LCA with the AB</a>
   <ul class="collapse">
   <li><a href="#lca-model-construction" id="toc-lca-model-construction" class="nav-link" data-scroll-target="#lca-model-construction">LCA model construction</a></li>
+  <li><a href="#motor-efficiency-scenarios" id="toc-motor-efficiency-scenarios" class="nav-link" data-scroll-target="#motor-efficiency-scenarios">Motor efficiency scenarios</a></li>
+  <li><a href="#bonus---future-electricity-mixes-scenarios" id="toc-bonus---future-electricity-mixes-scenarios" class="nav-link" data-scroll-target="#bonus---future-electricity-mixes-scenarios">Bonus - Future electricity mixes scenarios</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -322,9 +324,9 @@ Work in progress
 <p><strong>Create parameters</strong> in the tab “Parameters”. Create the following project parameters:</p>
 <table class="table">
 <colgroup>
-<col style="width: 30%">
-<col style="width: 6%">
-<col style="width: 62%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 52%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -378,12 +380,116 @@ Work in progress
 </table>
 <p>To <strong>create new activities</strong>, right click on the name of your new database and select “+ Add new activity”. Create the following activities:</p>
 <ol type="1">
-<li><em>motor production</em> with:
+<li><em>motor production</em>, producing 1 unit of motor, with:
 <ul>
-<li><code>steel_unalloyed</code> of <em>market for steel, unalloyed - GLO</em></li>
-<li><code>steel_low_alloyed</code> of <em>market for steel, low-alloyed - GLO</em></li>
+<li><code>steel_unalloyed</code> kg of <em>market for steel, unalloyed - GLO</em></li>
+<li><code>steel_low_alloyed</code> kg of <em>market for steel, low-alloyed - GLO</em></li>
+<li><code>copper</code> kg of <em>market for copper, cathode - GLO</em></li>
+<li><code>insulation</code> kg of <em>market for epoxy resin, liquid - RER</em></li>
+<li>3600 kWh of electricity from the duplicated electricity activity</li>
+</ul></li>
+<li><em>motor testing</em>, producing 1 unit of motor, tested, with:
+<ul>
+<li>1 unit of motor from <em>motor production</em></li>
+<li>16000 kWh of electricity from the duplicated electricity activity</li>
+</ul></li>
+<li><em>motor use</em>, producing 1 unit of motor, used, with:
+<ul>
+<li>1 unit of motor, tested from <em>motor testing</em></li>
+<li>electricity from the duplicated electricity activity and using the formula <code>output_power*op_hours*lifetime*(1/efficiency-1)</code> for having only the energy losses during the use of the motor</li>
+</ul></li>
+<li><em>motor EoL treatment</em>, producing 1 unit of motor, treated, with:
+<ul>
+<li>1 unit of motor, used from <em>motor use</em></li>
+<li><code>0.041*(steel_unalloyed+steel_low_alloyed+copper+insulation)</code> of electricity from the duplicated electricity activity</li>
+<li><code>insulation</code> kg of <em>treatment of waste plastic, mixture, municipal incineration with fly ash extraction - CH</em></li>
+<li><code>0.04*copper</code> kg of <em>treatment of copper in car shredder residue, municipal incineration with fly ash extraction - CH</em></li>
 </ul></li>
 </ol>
+</section>
+<section id="motor-efficiency-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="motor-efficiency-scenarios">Motor efficiency scenarios</h3>
+<p>In the tab “Parameters”, select the tab “Scenarios”. Click on the button “Export parameter-scenarios” to download the Excel file format for generating scenarios.</p>
+<p>Create the following scenarios:</p>
+<table class="table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 23%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>low_efficiency</th>
+<th>high_efficiency</th>
+<th>repair_low_efficiency</th>
+<th>repair_high_efficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>steel_unalloyed</td>
+<td>26600</td>
+<td>18000</td>
+<td>26600</td>
+<td>18000</td>
+</tr>
+<tr class="even">
+<td>steel_low_alloyed</td>
+<td>4100</td>
+<td>9200</td>
+<td>4100</td>
+<td>9200</td>
+</tr>
+<tr class="odd">
+<td>copper</td>
+<td>3600</td>
+<td>3800</td>
+<td>5400</td>
+<td>5700</td>
+</tr>
+<tr class="even">
+<td>insulation</td>
+<td>400</td>
+<td>300</td>
+<td>600</td>
+<td>450</td>
+</tr>
+<tr class="odd">
+<td>output_power</td>
+<td>16000</td>
+<td>16000</td>
+<td>16000</td>
+<td>16000</td>
+</tr>
+<tr class="even">
+<td>op_hours</td>
+<td>8400</td>
+<td>8400</td>
+<td>8400</td>
+<td>8400</td>
+</tr>
+<tr class="odd">
+<td>lifetime</td>
+<td>20</td>
+<td>20</td>
+<td>40</td>
+<td>40</td>
+</tr>
+<tr class="even">
+<td>efficiency</td>
+<td>0,973</td>
+<td>0,9835</td>
+<td>0,973</td>
+<td>0,9835</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bonus---future-electricity-mixes-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="bonus---future-electricity-mixes-scenarios">Bonus - Future electricity mixes scenarios</h3>
 
 
 </section>

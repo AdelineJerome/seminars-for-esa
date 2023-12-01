@@ -42,11 +42,9 @@ Follow the [instructions on this page](https://github.com/LCA-ActivityBrowser/ac
 
 > [**Link to the slides**](presentations/presentation_seminar_ab.html)
 
-
 ## Introduction to Python environment management
 
 The information presented is available [here](python.qmd#managing-python-virtual-environments).
-
 
 ## Introduction to the AB
 
@@ -68,21 +66,54 @@ The first activity that we will use is electricity production. Go to your ecoinv
 
 **Create parameters** in the tab "Parameters". Create the following project parameters:
 
-| Name                    | Value | Description                                     |
-| ----------------------- | ----- | ----------------------------------------------- |
-| ```steel_unalloyed```   | 26600 | Quantity (kg) of unalloyed steel in the motor   |
-| ```steel_low_alloyed``` | 4100  | Quantity (kg) of low alloyed steel in the motor |
-| ```copper```            | 3600  | Quantity (kg) of copper in the motor            |
-| ```insulation```        | 400   | Quantity (kg) of insulation in the motor        |
-| ```output_power```      | 16000 | Output power (kW) of the motor                  |
-| ```op_hours```          | 8400  | Duration (hours) of operating time per year     |
-| ```lifetime```          | 20    | Lifetime (years) of the motor                   |
-| ```efficiency```                        |  0.973     |     Efficiency of the motor                                            |
-
+| Name                | Value | Description                                     |
+|-----------------|-----------------|--------------------------------------|
+| `steel_unalloyed`   | 26600 | Quantity (kg) of unalloyed steel in the motor   |
+| `steel_low_alloyed` | 4100  | Quantity (kg) of low alloyed steel in the motor |
+| `copper`            | 3600  | Quantity (kg) of copper in the motor            |
+| `insulation`        | 400   | Quantity (kg) of insulation in the motor        |
+| `output_power`      | 16000 | Output power (kW) of the motor                  |
+| `op_hours`          | 8400  | Duration (hours) of operating time per year     |
+| `lifetime`          | 20    | Lifetime (years) of the motor                   |
+| `efficiency`        | 0.973 | Efficiency of the motor                         |
 
 To **create new activities**, right click on the name of your new database and select "+ Add new activity". Create the following activities:
 
-1. *motor production* with:
-    - ```steel_unalloyed``` of *market for steel, unalloyed - GLO*
-    - ```steel_low_alloyed``` of *market for steel, low-alloyed - GLO*
+1.  *motor production*, producing 1 unit of motor, with:
+    -   `steel_unalloyed` kg of *market for steel, unalloyed - GLO*
+    -   `steel_low_alloyed` kg of *market for steel, low-alloyed - GLO*
+    -   `copper` kg of *market for copper, cathode - GLO*
+    -   `insulation` kg of *market for epoxy resin, liquid - RER*
+    -   3600 kWh of electricity from the duplicated electricity activity
+2.  *motor testing*, producing 1 unit of motor, tested, with:
+    -   1 unit of motor from *motor production*
+    -   16000 kWh of electricity from the duplicated electricity activity
+3.  *motor use*, producing 1 unit of motor, used, with:
+    -   1 unit of motor, tested from *motor testing*
+    -   electricity from the duplicated electricity activity and using the formula `output_power*op_hours*lifetime*(1/efficiency-1)` for having only the energy losses during the use of the motor
+4.  *motor EoL treatment*, producing 1 unit of motor, treated, with:
+    -   1 unit of motor, used from *motor use*
+    -   `0.041*(steel_unalloyed+steel_low_alloyed+copper+insulation)` of electricity from the duplicated electricity activity
+    -   `insulation` kg of *treatment of waste plastic, mixture, municipal incineration with fly ash extraction - CH*
+    -   `0.04*copper` kg of *treatment of copper in car shredder residue, municipal incineration with fly ash extraction - CH*
 
+### Motor efficiency scenarios
+
+In the tab "Parameters", select the tab "Scenarios". Click on the button "Export parameter-scenarios" to download the Excel file format for generating scenarios.
+
+Create the following scenarios:
+
+| Name              | low_efficiency | high_efficiency | repair_low_efficiency | repair_high_efficiency |
+| ----------------- | -------------- | --------------- | --------------------- | ---------------------- |
+| steel_unalloyed   | 26600          | 18000           | 26600                 | 18000                  |
+| steel_low_alloyed | 4100           | 9200            | 4100                  | 9200                   |
+| copper            | 3600           | 3800            | 5400                  | 5700                   |
+| insulation        | 400            | 300             | 600                   | 450                    |
+| output_power      | 16000          | 16000           | 16000                 | 16000                  |
+| op_hours          | 8400           | 8400            | 8400                  | 8400                   |
+| lifetime          | 20             | 20              | 40                    | 40                     |
+| efficiency        | 0,973          | 0,9835          | 0,973                 | 0,9835                 |
+
+
+
+### Bonus - Future electricity mixes scenarios
