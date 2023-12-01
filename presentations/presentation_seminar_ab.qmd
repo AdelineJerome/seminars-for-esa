@@ -3,7 +3,6 @@ title: "Code-alond seminar with the AB"
 format: revealjs
 ---
 
-
 # Python environments
 
 ![](images/seminar_bright_explanation_environments.svg)
@@ -17,7 +16,6 @@ See commands [here](python.qmd#managing-python-virtual-environments)
 # Structure in the AB
 
 ![](images/seminar_bright_ab_structure_activity.svg)
-
 
 # First LCA with the AB
 
