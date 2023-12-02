@@ -23,7 +23,7 @@ conda install -c conda-forge mamba
 
 ## Installing Brightway
 
-Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/installation.html#) Brightway.
+Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/index.html) Brightway.
 
 # Seminar content
 
