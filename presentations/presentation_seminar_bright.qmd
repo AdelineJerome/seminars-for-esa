@@ -1,0 +1,28 @@
+---
+title: "Code-along seminar with brightway"
+format: revealjs
+---
+
+# Structure in brightway
+
+![](images/seminar_bright_ab_structure_project.svg) 
+
+
+# Structure in brightway
+
+![](images/seminar_bright_brightway_structure_activities.svg)
+
+
+# Types of exchanges
+
+![](images/seminar_bright_brightway_type_exchanges.svg)
+
+
+# First LCA with brightway
+
+Aim: compare the LCA results for motors with different efficiency and their impact with and without repair
+
+
+## System to be modelled
+
+![](images/seminar_bright_system_example.svg)

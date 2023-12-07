@@ -27,8 +27,27 @@ Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow
 
 # Seminar content
 
-::: callout-caution
-## Work in progress
+## Slides
 
-This section is still in development!
-:::
+<div>
+
+```{=html}
+<iframe class="slide-deck" height="300" width="500" style="border:2px solid black;" src="presentations/presentation_seminar_bright.html"></iframe>
+```
+
+</div>
+
+> [**Link to the slides**](presentations/presentation_seminar_bright.html)
+
+## Notebooks
+
+For this seminar, the participants write and run code one Jupyter notebooks. These notebooks are available below. 
+
+> [Download the notebook](resources/brightway_seminar.ipynb) for doing a first LCA with brightway
+
+> [Download the notebook](resources/basics_of_python.ipynb) with Python basics
+
+> [Download the notebook solution](resources/brightway_seminar_solution.ipynb) for doing a first LCA with brightway
+
+
+

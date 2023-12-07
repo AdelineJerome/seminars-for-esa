@@ -67,7 +67,7 @@ The first activity that we will use is electricity production. Go to your ecoinv
 **Create parameters** in the tab "Parameters". Create the following project parameters:
 
 | Name                | Value | Description                                     |
-|-----------------|-----------------|--------------------------------------|
+|------------------|------------------|-------------------------------------|
 | `steel_unalloyed`   | 26600 | Quantity (kg) of unalloyed steel in the motor   |
 | `steel_low_alloyed` | 4100  | Quantity (kg) of low alloyed steel in the motor |
 | `copper`            | 3600  | Quantity (kg) of copper in the motor            |
@@ -106,7 +106,7 @@ In the tab "Parameters", select the tab "Scenarios". Click on the button "Export
 Create the following scenarios:
 
 | Name              | low_efficiency | high_efficiency | repair_low_efficiency | repair_high_efficiency |
-| ----------------- | -------------- | --------------- | --------------------- | ---------------------- |
+|---------------|---------------|---------------|---------------|---------------|
 | steel_unalloyed   | 26600          | 18000           | 26600                 | 18000                  |
 | steel_low_alloyed | 4100           | 9200            | 4100                  | 9200                   |
 | copper            | 3600           | 3800            | 5400                  | 5700                   |
@@ -123,12 +123,12 @@ Create the following scenarios:
 Scenarios about the future Swedish electricity mix can be found [in this report](https://www.iva.se/publicerat/rapport-sveriges-framtida-elproduktion/). The scenarios can be summarised as:
 
 | Source   | Default | More solar and wind | More bio fuel | New nuclear plants | More hydro |
-| -------- | ------- | ------------------- | ------------- | ------------------ | ---------- |
+|------------|------------|------------|------------|------------|------------|
 | Hydro    | 0.40    | 0.41                | 0.41          | 0.41               | 0.53       |
 | Wind     | 0.12    | 0.34                | 0.25          | 0.12               | 0.22       |
-| Solar    | 0.03       | 0.09                | 0.03           | 0.03               | 0.03       |
+| Solar    | 0.03    | 0.09                | 0.03          | 0.03               | 0.03       |
 | Bio fuel | 0.03    | 0.16                | 0.31          | 0.13               | 0.22       |
 | Nuclear  | 0.39    | 0                   | 0             | 0.31               | 0          |
-| Import   | 0.03    | 0                   | 0             | 0                  | 0           |
+| Import   | 0.03    | 0                   | 0             | 0                  | 0          |
 
 > [Download the solution](resources/scenario_table_electricity.xlsx)
