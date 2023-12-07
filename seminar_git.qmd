@@ -6,8 +6,8 @@ title: "Introduction to Git"
 
 If you want to try to save your work with Git during the seminar:
 
-1. [Install Git](seminar_git.qmd#installing-git) on your computer,
-2. [Create a GitHub account](seminar_git.qmd#create-a-github-account) if you want to have your work saved on the cloud.
+1.  [Install Git](seminar_git.qmd#installing-git) on your computer,
+2.  [Create a GitHub account](seminar_git.qmd#create-a-github-account) if you want to have your work saved on the cloud.
 
 ## Installing Git
 
@@ -19,12 +19,14 @@ For other distributions, download and install [Git here](https://git-scm.com/dow
 
 When you want to backup your work on the cloud with Git, your code is sent to a GitHub repository. For this, you need to create a [GitHub](https://github.com/) account. Remember the email to you use to create your account!
 
-
-
 # Seminar content
 
-::: callout-caution
-## Work in progress
+<div>
 
-This section is still in development!
-:::
+```{=html}
+<iframe class="slide-deck" height="300" width="500" style="border:2px solid black;" src="presentations/presentation_seminar_git.html"></iframe>
+```
+
+</div>
+
+> [**Link to the slides**](presentations/presentation_seminar_git.html)

@@ -1,0 +1,8 @@
+---
+title: "Seminar on Git"
+format: revealjs
+---
+
+# Terminology
+
+![](images/seminar_bright_git.svg)
