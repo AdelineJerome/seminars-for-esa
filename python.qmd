@@ -24,73 +24,117 @@ One of the easiest way to get started with Python is to install Anaconda. [Follo
 
 If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
 
-```python   
+``` python
 conda install -c conda-forge mamba
 ```
 
-# Managing Python virtual environments
+# Python virtual environments
 
-A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd) with specific versions which might not be the latest. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
+After installing Anaconda, the next step it is to create your working *environment*, i.e., to create a group of packages that you will use. I imagine it as having different boxes stored on a shelf, each one containing the tools that you need for different activities. Creating on Python environment is like creating a new box, and selecting the packages in that environment is like selecting the tools in your box.
 
-![Schematic represntation of two Python environments.](presentations/images/seminar_bright_explanation_environments.svg){width="100%"}
+A Python virtual environment contains a specific version of Python and a list of packages with specific versions. For instance, [brightway](brightway_page.qmd) is one example of packages that you can have in your environment.
 
-Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)). I summarise below the few commands that are useful on a regular basis. All of them are to be written on an Anaconda prompt.
+![Schematic representation of two Python environments.](presentations/images/seminar_bright_explanation_environments.svg){width="100%"}
+
+**But why creating these environments?** Several reasons:
+
+- It is not recommended to install all packages in the same environment due to compatibility issues: One package uses many others to be able to function. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd), but not necessarily the latest version of it. If brightway is updated, the Activity Browser might not function anymore. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
+- To be able to switch between older versions of the packages. For instance, if a project was made 5 years ago, the code that was written might not be able to work with the latest version of Python or other packages. But it can still run on the environment with the old version of the packages at the time of the project.
+
+**How to use environments?** I recommend to use the *Anaconda prompt*, that can be found as any other app on Windows, and to manage environments with writting commands on that prompt. Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)). I summarise below the few commands that are useful on a regular basis.
+
+Otherwise, the *Anaconda navigator* contains an environment management tool.
 
 ## Navigating between environments
 
 To print the **list of installed environment**, use:
-```python
+
+``` python
 conda info --envs
 ```
 
 To **activate** an environment, i.e., to use a specific environment, use:
-```python
+
+``` python
 conda activate my_env
 ```
+
 Replace `my_env` with the name of the environment that you want to use. You can see that the environment is activated by having its name in parenthesis. You can have several environments running in parallel (e.g., one for brightway and one for the Activity browser). For that, open several Anaconda prompts and activate different environments in each.
 
 To **deactivate** or exit an environment, use:
-```python
+
+``` python
 conda deactivate
 ```
 
 ## Create a new environment
 
 To **create a new environment** called `my_env`, use:
-```python
+
+``` python
 conda create -n my_env
 ```
+
 This environment will then be empty (i.e., no python installed). To install an environment directly with a specific package `package_name`, use:
-```python
+
+``` python
 conda create -n my_env package_name
 ```
-
 
 ## Managing packages
 
 The name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the **list of packages** installed in your environment, use:
-```python
+
+``` python
 conda list
 ```
-This is often very useful when you report an error or bug! People can see which version of the packages might cause the error.
+
+This is often very useful when you report an error or bug! People can see which version of the packages might cause the error. This list can be saved in a text file with:
+
+``` python
+conda env export > environment.txt
+```
 
 To get the **Python version** that is used by the environment, use:
-```python
+
+``` python
 python --version
 ```
 
 You can **install a package**, here `package_name` with:
-```python
+
+``` python
 conda install package_name
 ```
+
 Or **update a package** with:
-```python
+
+``` python
 conda update package_name
 ```
 
-::: {.callout-note}
+::: callout-note
 For installing and updating packages/environments, you can use `mamba` by replacing `conda` with `mamba` in the code above.
 :::
+
+## Good practices with environment
+
+From my personal experience, I gathered the following tips.
+
+::: callout-tip
+## Never update a package in a functioning environment!
+
+If one package is updated, there is a risk that compatibility issues with other packages arise. Keep the functioning environment and create another environment with the updated package. If the updated version does not work on a project, the functioning environment is still available for working on the project while the problem is fixed. The environment with the old version can be deleted after being sure that the updated version is functioning.
+:::
+
+
+::: callout-tip
+## Create one environment per project
+
+As explained [above](python.qmd#python-virtual-environments), it is good to have the list of packages and their version which allows a project to work. As the list of useful packages might evolve while the project is developed, create a new environment for each project and save the list of packages and their version in a text file ([see command here](python.qmd#managing-packages)). On another computer, it is then possible to re-create the same environment based on this list.
+:::
+
+# I need help!
 
 ::: callout-caution
 ## Work in progress
@@ -98,17 +142,36 @@ For installing and updating packages/environments, you can use `mamba` by replac
 This section is still in development!
 :::
 
+## How to read errors
+
+## Where to find help
+
+If you do not understand your error and how to solve it:
+
+- Ask a colleague if available!
+- Ask ChatGPT. Give it your error code, and eventually the chuck of code that is problematic if it is not confidential.
+- Ask Google. Somebody probably ran into the same problem and was given a solution.
+- Look at the documentation or user manual.
+- Ask the community if the question has not already been answered. It can be done via:
+    - Stackoverflow,
+    - GitHub (for bugs related to a package).
+
 
 # Resources
 
+::: callout-caution
+## Work in progress
+
+This section is still in development!
+:::
+
 ## Cheatsheets
 
-Very useful for beginners (or not!) to have an overview of available commands:
+Very useful for beginners (or advanced users!) to have an overview of available commands:
 
-- For data wrangling with [pandas](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
-- For generating figures with [matplotlib](https://matplotlib.org/cheatsheets/)
+-   For data wrangling with [pandas](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+-   For generating figures with [matplotlib](https://matplotlib.org/cheatsheets/)
 
 ## Handbooks
 
 -   [Python for Data Analysis](https://wesmckinney.com/book/)
-

@@ -280,11 +280,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#optional---mamba" id="toc-optional---mamba" class="nav-link" data-scroll-target="#optional---mamba">(Optional - Mamba)</a></li>
   </ul></li>
-  <li><a href="#managing-python-virtual-environments" id="toc-managing-python-virtual-environments" class="nav-link" data-scroll-target="#managing-python-virtual-environments">Managing Python virtual environments</a>
+  <li><a href="#python-virtual-environments" id="toc-python-virtual-environments" class="nav-link" data-scroll-target="#python-virtual-environments">Python virtual environments</a>
   <ul class="collapse">
   <li><a href="#navigating-between-environments" id="toc-navigating-between-environments" class="nav-link" data-scroll-target="#navigating-between-environments">Navigating between environments</a></li>
   <li><a href="#create-a-new-environment" id="toc-create-a-new-environment" class="nav-link" data-scroll-target="#create-a-new-environment">Create a new environment</a></li>
   <li><a href="#managing-packages" id="toc-managing-packages" class="nav-link" data-scroll-target="#managing-packages">Managing packages</a></li>
+  <li><a href="#good-practices-with-environment" id="toc-good-practices-with-environment" class="nav-link" data-scroll-target="#good-practices-with-environment">Good practices with environment</a></li>
+  </ul></li>
+  <li><a href="#i-need-help" id="toc-i-need-help" class="nav-link" data-scroll-target="#i-need-help">I need help!</a>
+  <ul class="collapse">
+  <li><a href="#how-to-read-errors" id="toc-how-to-read-errors" class="nav-link" data-scroll-target="#how-to-read-errors">How to read errors</a></li>
+  <li><a href="#where-to-find-help" id="toc-where-to-find-help" class="nav-link" data-scroll-target="#where-to-find-help">Where to find help</a></li>
   </ul></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
   <ul class="collapse">
@@ -335,16 +341,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>conda install <span class="op">-</span>c conda<span class="op">-</span>forge mamba</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="managing-python-virtual-environments" class="level1">
-<h1>Managing Python virtual environments</h1>
-<p>A Python virtual environment contains a specific version of Python and a list of packages with specific versions. It is useful when working with core packages that are dependent on different versions of other packages. As an example, the <a href="./ab_page.html">Activity Browser</a> uses <a href="./brightway_page.html">brightway</a> with specific versions which might not be the latest. If one wants to work both with the Activity Browser <em>and</em> the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.</p>
+<section id="python-virtual-environments" class="level1">
+<h1>Python virtual environments</h1>
+<p>After installing Anaconda, the next step it is to create your working <em>environment</em>, i.e., to create a group of packages that you will use. I imagine it as having different boxes stored on a shelf, each one containing the tools that you need for different activities. Creating on Python environment is like creating a new box, and selecting the packages in that environment is like selecting the tools in your box.</p>
+<p>A Python virtual environment contains a specific version of Python and a list of packages with specific versions. For instance, <a href="./brightway_page.html">brightway</a> is one example of packages that you can have in your environment.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="presentations/images/seminar_bright_explanation_environments.svg" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Schematic represntation of two Python environments.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Schematic representation of two Python environments.</figcaption><p></p>
 </figure>
 </div>
-<p>Here is the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">full documentation</a> for managing Python environments with conda (available with <a href="./python.html#installation">Anaconda</a>). I summarise below the few commands that are useful on a regular basis. All of them are to be written on an Anaconda prompt.</p>
+<p><strong>But why creating these environments?</strong> Several reasons:</p>
+<ul>
+<li>It is not recommended to install all packages in the same environment due to compatibility issues: One package uses many others to be able to function. As an example, the <a href="./ab_page.html">Activity Browser</a> uses <a href="./brightway_page.html">brightway</a>, but not necessarily the latest version of it. If brightway is updated, the Activity Browser might not function anymore. If one wants to work both with the Activity Browser <em>and</em> the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.</li>
+<li>To be able to switch between older versions of the packages. For instance, if a project was made 5 years ago, the code that was written might not be able to work with the latest version of Python or other packages. But it can still run on the environment with the old version of the packages at the time of the project.</li>
+</ul>
+<p><strong>How to use environments?</strong> I recommend to use the <em>Anaconda prompt</em>, that can be found as any other app on Windows, and to manage environments with writting commands on that prompt. Here is the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">full documentation</a> for managing Python environments with conda (available with <a href="./python.html#installation">Anaconda</a>). I summarise below the few commands that are useful on a regular basis.</p>
+<p>Otherwise, the <em>Anaconda navigator</em> contains an environment management tool.</p>
 <section id="navigating-between-environments" class="level2">
 <h2 class="anchored" data-anchor-id="navigating-between-environments">Navigating between environments</h2>
 <p>To print the <strong>list of installed environment</strong>, use:</p>
@@ -366,13 +379,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="managing-packages">Managing packages</h2>
 <p>The name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the <strong>list of packages</strong> installed in your environment, use:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>conda <span class="bu">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This is often very useful when you report an error or bug! People can see which version of the packages might cause the error.</p>
+<p>This is often very useful when you report an error or bug! People can see which version of the packages might cause the error. This list can be saved in a text file with:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>conda env export <span class="op">&gt;</span> environment.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To get the <strong>Python version</strong> that is used by the environment, use:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">--</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">--</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can <strong>install a package</strong>, here <code>package_name</code> with:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>conda install package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>conda install package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or <strong>update a package</strong> with:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>conda update package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>conda update package_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -386,6 +400,40 @@ Note
 <p>For installing and updating packages/environments, you can use <code>mamba</code> by replacing <code>conda</code> with <code>mamba</code> in the code above.</p>
 </div>
 </div>
+</section>
+<section id="good-practices-with-environment" class="level2">
+<h2 class="anchored" data-anchor-id="good-practices-with-environment">Good practices with environment</h2>
+<p>From my personal experience, I gathered the following tips.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Never update a package in a functioning environment!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If one package is updated, there is a risk that compatibility issues with other packages arise. Keep the functioning environment and create another environment with the updated package. If the updated version does not work on a project, the functioning environment is still available for working on the project while the problem is fixed. The environment with the old version can be deleted after being sure that the updated version is functioning.</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Create one environment per project
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As explained <a href="./python.html#python-virtual-environments">above</a>, it is good to have the list of packages and their version which allows a project to work. As the list of useful packages might evolve while the project is developed, create a new environment for each project and save the list of packages and their version in a text file (<a href="./python.html#managing-packages">see command here</a>). On another computer, it is then possible to re-create the same environment based on this list.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="i-need-help" class="level1">
+<h1>I need help!</h1>
 <div class="callout-caution callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -399,13 +447,43 @@ Work in progress
 <p>This section is still in development!</p>
 </div>
 </div>
+<section id="how-to-read-errors" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-errors">How to read errors</h2>
+</section>
+<section id="where-to-find-help" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-find-help">Where to find help</h2>
+<p>If you do not understand your error and how to solve it:</p>
+<ul>
+<li>Ask a colleague if available!</li>
+<li>Ask ChatGPT. Give it your error code, and eventually the chuck of code that is problematic if it is not confidential.</li>
+<li>Ask Google. Somebody probably ran into the same problem and was given a solution.</li>
+<li>Look at the documentation or user manual.</li>
+<li>Ask the community if the question has not already been answered. It can be done via:
+<ul>
+<li>Stackoverflow,</li>
+<li>GitHub (for bugs related to a package).</li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="resources" class="level1">
 <h1>Resources</h1>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Work in progress
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section is still in development!</p>
+</div>
+</div>
 <section id="cheatsheets" class="level2">
 <h2 class="anchored" data-anchor-id="cheatsheets">Cheatsheets</h2>
-<p>Very useful for beginners (or not!) to have an overview of available commands:</p>
+<p>Very useful for beginners (or advanced users!) to have an overview of available commands:</p>
 <ul>
 <li>For data wrangling with <a href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf">pandas</a></li>
 <li>For generating figures with <a href="https://matplotlib.org/cheatsheets/">matplotlib</a></li>

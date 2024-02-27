@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Seminars for ESA",
     "section": "",
-    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis. For an overview of tools developed for the field of industrial ecology, have a look at this dashboard.\nA seminar series is soon to be held:\n\nAn introduction also available on Zoom on November 27,\nA first code-along seminar for doing a first LCA on the Activity Browser on December 1st,\nAnother code-along seminar for doing a first LCA on Brightway on December 7,\nAn introduction to Git on December 7."
+    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis (ESA). For an overview of tools developed for the field of industrial ecology, have a look at this dashboard.\nIt also contains materials for organizing a seminar series on Brightway and the Activity Browser:\n\nAn introduction,\nA first code-along seminar for doing a first LCA on the Activity Browser,\nAnother code-along seminar for doing a first LCA on Brightway,\nAn introduction to Git.\n\nThe content has been developed based on my personal experience as a life cycle assessment (LCA) practitioner. Feel free to contact me if you have suggestions for contributions or changes!"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis. It does not aim to create new content but point to various sources to get to know the tools and to get started."
+    "text": "This site has been developed to share knowledge on using open-source tools for environmental systems analysis (ESA). It does not aim to create new content but point to various sources to get to know the tools and to get started."
   },
   {
     "objectID": "installation_instructions.html",
@@ -291,14 +291,14 @@
     "href": "python.html#managing-packages",
     "title": "Python",
     "section": "Managing packages",
-    "text": "Managing packages\nThe name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the list of packages installed in your environment, use:\nconda list\nThis is often very useful when you report an error or bug! People can see which version of the packages might cause the error.\nTo get the Python version that is used by the environment, use:\npython --version\nYou can install a package, here package_name with:\nconda install package_name\nOr update a package with:\nconda update package_name\n\n\n\n\n\n\nNote\n\n\n\nFor installing and updating packages/environments, you can use mamba by replacing conda with mamba in the code above.\n\n\n\n\n\n\n\n\nWork in progress\n\n\n\nThis section is still in development!"
+    "text": "Managing packages\nThe name of the activated environment is displayed in parenthesis at the beginning of the code line in the Anaconda prompt. To get the list of packages installed in your environment, use:\nconda list\nThis is often very useful when you report an error or bug! People can see which version of the packages might cause the error. This list can be saved in a text file with:\nconda env export > environment.txt\nTo get the Python version that is used by the environment, use:\npython --version\nYou can install a package, here package_name with:\nconda install package_name\nOr update a package with:\nconda update package_name\n\n\n\n\n\n\nNote\n\n\n\nFor installing and updating packages/environments, you can use mamba by replacing conda with mamba in the code above."
   },
   {
     "objectID": "python.html#cheatsheets",
     "href": "python.html#cheatsheets",
     "title": "Python",
     "section": "Cheatsheets",
-    "text": "Cheatsheets\nVery useful for beginners (or not!) to have an overview of available commands:\n\nFor data wrangling with pandas\nFor generating figures with matplotlib"
+    "text": "Cheatsheets\nVery useful for beginners (or advanced users!) to have an overview of available commands:\n\nFor data wrangling with pandas\nFor generating figures with matplotlib"
   },
   {
     "objectID": "python.html#handbooks",
@@ -859,5 +859,33 @@
     "title": "Welcome!",
     "section": "Figures",
     "text": "Figures\n\ndef figure_comparison_scenarios(table_results_scenarios, legend_x_axis):\n    number_methods = 2\n\n    fig, ax = plt.subplots(1, number_methods)\n    x_axis = [i for i in range(len(dict_scenarios))]\n\n    for index in table_results_scenarios.index:\n        ax[index%2].bar(x_axis[index//2], table_results_scenarios.loc[index, \"score\"])\n    \n    fig.tight_layout()\n    for n_fig in range(number_methods):\n        ax[n_fig].grid(True, axis='y', linewidth=0.4)\n        ax[n_fig].set_xticks(x_axis)\n        ax[n_fig].set_xticklabels(legend_x_axis, rotation=90)\n        ax[n_fig].set_ylabel(table_results_scenarios.loc[n_fig, \"unit\"])\n\n    plt.subplots_adjust(wspace=0.3)\n    \n    return plt.show()\n\n\nfigure_comparison_scenarios(table_results_scenarios, list(dict_scenarios.keys()))"
+  },
+  {
+    "objectID": "python.html#but-why-creating-these-environments-several-reasons",
+    "href": "python.html#but-why-creating-these-environments-several-reasons",
+    "title": "Python",
+    "section": "But why creating these environments? Several reasons:",
+    "text": "But why creating these environments? Several reasons:\nIt is useful when working with core packages that are dependent on different versions of other packages. As an example, the Activity Browser uses brightway with specific versions which might not be the latest. If one wants to work both with the Activity Browser and the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.\nHere is the full documentation for managing Python environments with conda (available with Anaconda). I summarise below the few commands that are useful on a regular basis. All of them are to be written on an Anaconda prompt."
+  },
+  {
+    "objectID": "python.html#good-practices-with-environment",
+    "href": "python.html#good-practices-with-environment",
+    "title": "Python",
+    "section": "Good practices with environment",
+    "text": "Good practices with environment\nFrom my personal experience, I gathered the following tips.\n\n\n\n\n\n\nNever update a package in a functioning environment!\n\n\n\nIf one package is updated, there is a risk that compatibility issues with other packages arise. Keep the functioning environment and create another environment with the updated package. If the updated version does not work on a project, the functioning environment is still available for working on the project while the problem is fixed. The environment with the old version can be deleted after being sure that the updated version is functioning.\n\n\n\n\n\n\n\n\nCreate one environment per project\n\n\n\nAs explained above, it is good to have the list of packages and their version which allows a project to work. As the list of useful packages might evolve while the project is developed, create a new environment for each project and save the list of packages and their version in a text file (see command here). On another computer, it is then possible to re-create the same environment based on this list."
+  },
+  {
+    "objectID": "python.html#how-to-read-errors",
+    "href": "python.html#how-to-read-errors",
+    "title": "Python",
+    "section": "How to read errors",
+    "text": "How to read errors"
+  },
+  {
+    "objectID": "python.html#where-to-find-help",
+    "href": "python.html#where-to-find-help",
+    "title": "Python",
+    "section": "Where to find help",
+    "text": "Where to find help\nIf you do not understand your error and how to solve it:\n\nAsk a colleague if available!\nAsk ChatGPT. Give it your error code, and eventually the chuck of code that is problematic if it is not confidential.\nAsk Google. Somebody probably ran into the same problem and was given a solution.\nLook at the documentation or user manual.\nAsk the community if the question has not already been answered. It can be done via:\n\nStackoverflow,\nGitHub (for bugs related to a package)."
   }
 ]
