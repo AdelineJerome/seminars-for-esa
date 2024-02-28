@@ -17,13 +17,13 @@ If you already have Python installed, skip this step. Otherwise, [follow this li
 
 If you think that you will use Python in the future, I recommend installing and using [Mamba](https://mamba.readthedocs.io/en/latest/index.html). It is much faster for "solving environments", i.e., for installing or updating packages, and for creating new environments. For installing it, open an "Anaconda prompt" and use the command recommended [here](https://anaconda.org/conda-forge/mamba):
 
-```         
+``` python
 conda install -c conda-forge mamba
 ```
 
 ## Installing Brightway
 
-Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/index.html) Brightway.
+Open an "Anaconda prompt" (on Windows, you find it in the Start menu) and follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/index.html) Brightway.
 
 # Seminar content
 
@@ -41,13 +41,10 @@ Open an "Anaconda prompt" (on Windows, you find it on the Start menu) and follow
 
 ## Notebooks
 
-For this seminar, the participants write and run code one Jupyter notebooks. These notebooks are available below. 
+For this seminar, the participants write and run code one Jupyter notebooks. These notebooks are available below.
 
 > [Download the notebook](resources/brightway_seminar.ipynb) for doing a first LCA with brightway
 
 > [Download the notebook](resources/basics_of_python.ipynb) with Python basics
 
 > [Download the notebook solution](resources/brightway_seminar_solution.ipynb) for doing a first LCA with brightway
-
-
-

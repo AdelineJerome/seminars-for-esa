@@ -38,8 +38,8 @@ A Python virtual environment contains a specific version of Python and a list of
 
 **But why creating these environments?** Several reasons:
 
-- It is not recommended to install all packages in the same environment due to compatibility issues: One package uses many others to be able to function. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd), but not necessarily the latest version of it. If brightway is updated, the Activity Browser might not function anymore. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
-- To be able to switch between older versions of the packages. For instance, if a project was made 5 years ago, the code that was written might not be able to work with the latest version of Python or other packages. But it can still run on the environment with the old version of the packages at the time of the project.
+-   It is not recommended to install all packages in the same environment due to compatibility issues: One package uses many others to be able to function. As an example, the [Activity Browser](ab_page.qmd) uses [brightway](brightway_page.qmd), but not necessarily the latest version of it. If brightway is updated, the Activity Browser might not function anymore. If one wants to work both with the Activity Browser *and* the latest version of brightway, the easiest solution is to have two virtual environments: one for the Activity Browser and one for brightway.
+-   To be able to switch between older versions of the packages. For instance, if a project was made 5 years ago, the code that was written might not be able to work with the latest version of Python or other packages. But it can still run on the environment with the old version of the packages at the time of the project.
 
 **How to use environments?** I recommend to use the *Anaconda prompt*, that can be found as any other app on Windows, and to manage environments with writting commands on that prompt. Here is the [full documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for managing Python environments with conda (available with [Anaconda](python.qmd#installation)). I summarise below the few commands that are useful on a regular basis.
 
@@ -127,7 +127,6 @@ From my personal experience, I gathered the following tips.
 If one package is updated, there is a risk that compatibility issues with other packages arise. Keep the functioning environment and create another environment with the updated package. If the updated version does not work on a project, the functioning environment is still available for working on the project while the problem is fixed. The environment with the old version can be deleted after being sure that the updated version is functioning.
 :::
 
-
 ::: callout-tip
 ## Create one environment per project
 
@@ -148,14 +147,13 @@ This section is still in development!
 
 If you do not understand your error and how to solve it:
 
-- Ask a colleague if available!
-- Ask ChatGPT. Give it your error code, and eventually the chuck of code that is problematic if it is not confidential.
-- Ask Google. Somebody probably ran into the same problem and was given a solution.
-- Look at the documentation or user manual.
-- Ask the community if the question has not already been answered. It can be done via:
-    - Stackoverflow,
-    - GitHub (for bugs related to a package).
-
+-   Ask a colleague if available!
+-   Ask ChatGPT. Give it your error code, and eventually the chuck of code that is problematic if it is not confidential.
+-   Ask Google. Somebody probably ran into the same problem and was given a solution.
+-   Look at the documentation or user manual.
+-   Ask the community if the question has not already been answered. It can be done via:
+    -   Stackoverflow,
+    -   GitHub (for bugs related to a package).
 
 # Resources
 

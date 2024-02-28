@@ -2,8 +2,39 @@
 title: "LCA with Brightway"
 ---
 
-::: {.callout-caution}
+::: callout-caution
 ## Work in progress
 
 This section is still in development!
 :::
+
+# Installation
+
+1. [Install Python](python.qmd#installation) with Anaconda
+2. Open an "Anaconda prompt" (on Windows, you find it in the Start menu).
+3. Follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/index.html) Brightway.
+
+::: callout-note
+## For installing Brightway 2
+
+If you want to check your model with the [Activity Browser](ab_page.qmd), you currently need to use Brightway 2 and not Brightway 2.5. Instructions for installing Brightway 2 are [available here](https://docs.brightway.dev/en/legacy/content/installation/installation.html#quickstart).
+:::
+
+# Learn how to use it
+
+In the Brightway documentation, [tutorials](https://learn.brightway.dev/) are provided and the notebooks available in the [live demo](https://docs.brightway.dev/projects/live) are also useful to get started.
+
+Courses are regularly provided by the association [Départ de Sentier](https://www.d-d-s.ch/) and the [Brightcon](https://2023.brightcon.link/) annual conference also offers classes and opportunities to learn via interactive presentations and a hackathon.
+
+On this website, there is also a [code-along seminar](seminar_brightway.qmd) to be guided in doing a first LCA with brightway.
+
+# Examples
+
+## In the brightway documentation
+
+- [Here](https://docs.brightway.dev/en/latest/content/examples/index.html) for brightway 2.5
+
+
+## In the literature
+
+- [Notebooks and data](https://doi.org/10.5281/zenodo.7849606) from [Douziech et al. 2023](https://doi.org/10.1111/jiec.13432) for prospective LCA of the energy and heating sector.

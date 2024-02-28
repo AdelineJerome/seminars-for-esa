@@ -74,7 +74,7 @@
     "href": "seminar_brightway.html",
     "title": "Code-along with Brightway",
     "section": "",
-    "text": "For this seminar, you should have a working Brightway environment on your computer. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update Brightway.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it on the Start menu) and follow the instructions for installing Brightway."
+    "text": "For this seminar, you should have a working Brightway environment on your computer. For this, you need to:\n\nIf not already done, install Python and a Python environment manager,\nInstall or update Brightway.\n\n\n\nIf you already have Python installed, skip this step. Otherwise, follow this link to download Anaconda. Follow the installation instructions of the installer.\n\n\nIf you think that you will use Python in the future, I recommend installing and using Mamba. It is much faster for “solving environments”, i.e., for installing or updating packages, and for creating new environments. For installing it, open an “Anaconda prompt” and use the command recommended here:\nconda install -c conda-forge mamba\n\n\n\n\nOpen an “Anaconda prompt” (on Windows, you find it in the Start menu) and follow the instructions for installing Brightway."
   },
   {
     "objectID": "seminar_brightway.html#sec-seminar-brightway-python",
@@ -887,5 +887,19 @@
     "title": "Python",
     "section": "Where to find help",
     "text": "Where to find help\nIf you do not understand your error and how to solve it:\n\nAsk a colleague if available!\nAsk ChatGPT. Give it your error code, and eventually the chuck of code that is problematic if it is not confidential.\nAsk Google. Somebody probably ran into the same problem and was given a solution.\nLook at the documentation or user manual.\nAsk the community if the question has not already been answered. It can be done via:\n\nStackoverflow,\nGitHub (for bugs related to a package)."
+  },
+  {
+    "objectID": "brightway_page.html#in-the-brightway-documentation",
+    "href": "brightway_page.html#in-the-brightway-documentation",
+    "title": "LCA with Brightway",
+    "section": "In the brightway documentation",
+    "text": "In the brightway documentation\n\nHere for brightway 2.5"
+  },
+  {
+    "objectID": "brightway_page.html#in-the-literature",
+    "href": "brightway_page.html#in-the-literature",
+    "title": "LCA with Brightway",
+    "section": "In the literature",
+    "text": "In the literature\n\nNotebooks and data from Douziech et al. 2023 for prospective LCA of the energy and heating sector."
   }
 ]
