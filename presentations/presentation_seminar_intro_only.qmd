@@ -1,0 +1,126 @@
+---
+title: "Introduction the Activity Browser and Brightway"
+format: 
+    revealjs:
+        incremental: false
+---
+
+# Introduction
+
+**Brightway**: Python package, developed for LCA
+
+**Activity Browser**: user interface for brightway
+
+
+
+# What
+
+## Python
+
+::: columns
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_python.svg){width="100%"}
+:::
+
+::: {.column width="40%"}
+:::
+:::
+
+## Python packages
+
+::: columns
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_packages.svg){width="100%"}
+:::
+
+::: {.column width="40%"}
+Examples:
+
+-   pandas for data tables manipulation,
+-   matplotlib for figures,
+-   ...
+:::
+:::
+
+## Brightway
+
+::: columns
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_brightway.svg){width="100%"}
+:::
+
+::: {.column width="40%"}
+:::
+:::
+
+## Code editor
+
+::: columns
+::: {.column width="60%"}
+![](images/seminar_bright_explanation_editor.svg){width="100%"}
+:::
+
+::: {.column width="40%"}
+Examples:
+
+-   Jupyter
+-   Spider
+-   PyCharm
+-   Visual Studio Code
+-   ...
+:::
+:::
+
+## Code editor
+
+![](images/jupyter_lab_view.jpg){width="100%"}
+
+## The Activity Browser
+
+![](images/seminar_bright_explanation_ab.svg){width="100%"}
+
+# Features with the tools
+
+## Brightway
+
+::: incremental
+-   Fast calculations
+-   Parameters in the inventory
+-   Uncertainty analysis (Monte-Carlo simulation)
+:::
+
+## Brightway
+
+And extensions for:
+
+::: incremental
+-   Regionalization with *bw2regional*
+
+-   Temporal distributions in the inventory and for characterization factors with *temporalis*
+
+-   Prospective foreground databases based on IAM with *premise*
+
+-   Global sensitivity analysis with *lca_algebraic*
+
+-   *Still in development:* collaborative work on the same LCA model on a server
+:::
+
+## The Activity Browser
+
+Similar to brightway but more user friendly. Advanced tasks:
+
+::: incremental
+-   Use of scenarios
+-   Visualization tools (Sankey diagram)
+-   Plugin for prospective background databases with *premise*
+:::
+
+## The Activity Browser
+
+![](images/ab_view.jpg){width="100%"}
+
+# Thank you!
+
+Find the slides at [adelinejerome.github.io/seminars-for-esa/seminar_intro.html](adelinejerome.github.io/seminars-for-esa/seminar_intro.html)
+
+![](images/qrcode_link_presentation_intro.png)

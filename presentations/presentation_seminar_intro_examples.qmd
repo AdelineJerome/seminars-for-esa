@@ -191,21 +191,8 @@ Go to the GiHub pages ([the AB](https://github.com/LCA-ActivityBrowser/activity-
 
 You are welcome to contribute!
 
-# Link to the slides
+# Thank you!
 
 Find the slides at [adelinejerome.github.io/seminars-for-esa/seminar_intro.html](adelinejerome.github.io/seminars-for-esa/seminar_intro.html)
 
 ![](images/qrcode_link_presentation_intro.png)
-
-# Thank you!
-
-::: columns
-::: {.column width="50%"}
-Feedback
-
-![](images/qrcode_feedback.png)
-:::
-
-::: {.column width="50%"}
-:::
-:::

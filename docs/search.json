@@ -39,7 +39,7 @@
     "href": "seminar_intro.html",
     "title": "Introduction to the AB and Brightway",
     "section": "",
-    "text": "Link to the slides"
+    "text": "Seminar content\nThe aim of this one-hour presentation is:\n\nTo explain why the Activity Browser and brightway can improve one’s workflow when doing LCA,\nTo introduce the Activity Browser and brightway to an audience which is unfamiliar with coding,\nTo show some examples of workflows using both the Activity Browser and brightway for different levels of coding familiarity,\nAnd to give some tips on how to get started.\n\n\n\n\n\nLink to the slides\n\n\n\nShorter versions of the seminar\nBecause one hour can be daunting, shorter presentations are also available, with a different focus.\nIntroduction to the AB and brightway\n\n\n\n\nLink to the slides"
   },
   {
     "objectID": "ab_page.html",
@@ -901,5 +901,208 @@
     "title": "LCA with Brightway",
     "section": "In the literature",
     "text": "In the literature\n\nNotebooks and data from Douziech et al. 2023 for prospective LCA of the energy and heating sector."
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#python",
+    "href": "presentations/presentation_seminar_intro_only.html#python",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Python",
+    "text": "Python"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#python-packages",
+    "href": "presentations/presentation_seminar_intro_only.html#python-packages",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Python packages",
+    "text": "Python packages\n\n\n\n\nExamples:\n\npandas for data tables manipulation,\nmatplotlib for figures,\n…"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#brightway",
+    "href": "presentations/presentation_seminar_intro_only.html#brightway",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Brightway",
+    "text": "Brightway"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#code-editor",
+    "href": "presentations/presentation_seminar_intro_only.html#code-editor",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Code editor",
+    "text": "Code editor\n\n\n\n\nExamples:\n\nJupyter\nSpider\nPyCharm\nVisual Studio Code\n…"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#the-activity-browser",
+    "href": "presentations/presentation_seminar_intro_only.html#the-activity-browser",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#brightway-1",
+    "href": "presentations/presentation_seminar_intro_only.html#brightway-1",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Brightway",
+    "text": "Brightway\n\n\nFast calculations\nParameters in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#brightway-2",
+    "href": "presentations/presentation_seminar_intro_only.html#brightway-2",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Brightway",
+    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective foreground databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#the-activity-browser-1",
+    "href": "presentations/presentation_seminar_intro_only.html#the-activity-browser-1",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser\nSimilar to brightway but more user friendly. Advanced tasks:\n\n\nUse of scenarios\nVisualization tools (Sankey diagram)\nPlugin for prospective background databases with premise"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#code-editor-1",
+    "href": "presentations/presentation_seminar_intro_only.html#code-editor-1",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "Code editor",
+    "text": "Code editor"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html#the-activity-browser-2",
+    "href": "presentations/presentation_seminar_intro_only.html#the-activity-browser-2",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html",
+    "href": "presentations/presentation_seminar_intro_examples.html",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "",
+    "text": "Find the slides at adelinejerome.github.io/seminars-for-esa/seminar_intro.html"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#greater-flexibility",
+    "href": "presentations/presentation_seminar_intro_examples.html#greater-flexibility",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Greater flexibility",
+    "text": "Greater flexibility\n\n\nNon-standard LCA methodological choices\nConnection to other tools (e.g., IAM, statistics, ML)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#reproducibility-and-transparency",
+    "href": "presentations/presentation_seminar_intro_examples.html#reproducibility-and-transparency",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Reproducibility and transparency",
+    "text": "Reproducibility and transparency\n\n\nFor understanding what you did\nFor the others to understand what you did\nFor you/others to use the same methodology"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#easier-to-update",
+    "href": "presentations/presentation_seminar_intro_examples.html#easier-to-update",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Easier to update",
+    "text": "Easier to update\n\n\nLess room for error when updating data inputs\nAutomatic update of the whole work\nUpdate/change ecoinvent (the background database)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#easier-version-control-with-git",
+    "href": "presentations/presentation_seminar_intro_examples.html#easier-version-control-with-git",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Easier version control with Git",
+    "text": "Easier version control with Git\n\n\nChange-tracking\nBackup\nCollaboration"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#python",
+    "href": "presentations/presentation_seminar_intro_examples.html#python",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Python",
+    "text": "Python"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#python-packages",
+    "href": "presentations/presentation_seminar_intro_examples.html#python-packages",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Python packages",
+    "text": "Python packages\n\n\n\n\nExamples:\n\npandas for data tables manipulation,\nmatplotlib for figures,\n…"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#brightway",
+    "href": "presentations/presentation_seminar_intro_examples.html#brightway",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Brightway",
+    "text": "Brightway"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#code-editor",
+    "href": "presentations/presentation_seminar_intro_examples.html#code-editor",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Code editor",
+    "text": "Code editor\n\n\n\n\nExamples:\n\nJupyter\nSpider\nPyCharm\nVisual Studio Code\n…"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#the-activity-browser",
+    "href": "presentations/presentation_seminar_intro_examples.html#the-activity-browser",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#brightway-1",
+    "href": "presentations/presentation_seminar_intro_examples.html#brightway-1",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Brightway",
+    "text": "Brightway\n\n\nFast calculations\nParameters in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#brightway-2",
+    "href": "presentations/presentation_seminar_intro_examples.html#brightway-2",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Brightway",
+    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective foreground databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#the-activity-browser-1",
+    "href": "presentations/presentation_seminar_intro_examples.html#the-activity-browser-1",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "The Activity Browser",
+    "text": "The Activity Browser\nSimilar to brightway but more user friendly. Advanced tasks:\n\n\nUse of scenarios\nVisualization tools (Sankey diagram)\nPlugin for prospective background databases with premise"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#yes-you-can",
+    "href": "presentations/presentation_seminar_intro_examples.html#yes-you-can",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Yes you can!",
+    "text": "Yes you can!"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#my-initial-workflow",
+    "href": "presentations/presentation_seminar_intro_examples.html#my-initial-workflow",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "My initial workflow",
+    "text": "My initial workflow"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#my-ideal-workflow",
+    "href": "presentations/presentation_seminar_intro_examples.html#my-ideal-workflow",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "My ideal workflow",
+    "text": "My ideal workflow"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#get-help",
+    "href": "presentations/presentation_seminar_intro_examples.html#get-help",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Get help",
+    "text": "Get help\n\n\nFrom your colleagues 👋\nFrom ChatGPT\nFrom the documentation or user manual\nFrom the community:\n\nOn mail distribution lists on groups.io\nOn Stackoverflow\nOn GitHub (for bugs)"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#main-source-of-information",
+    "href": "presentations/presentation_seminar_intro_examples.html#main-source-of-information",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Main source of information",
+    "text": "Main source of information\nGo to the GiHub pages (the AB, brightway) to find updated information or links to:\n\nInstall the tools,\nLearn how to use it,\nFind examples."
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#website-to-gather-tips-and-resources",
+    "href": "presentations/presentation_seminar_intro_examples.html#website-to-gather-tips-and-resources",
+    "title": "Introduction to LCA with the AB and Brightway",
+    "section": "Website to gather tips and resources",
+    "text": "Website to gather tips and resources\nSeminars for ESA as an initial resource.\nYou are welcome to contribute!"
   }
 ]

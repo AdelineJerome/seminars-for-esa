@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.313">
 
-  <title>Welcome! - Introduction to LCA with the AB and Brightway</title>
+  <title>Welcome! - Introduction the Activity Browser and Brightway</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -323,56 +323,18 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to LCA with the AB and Brightway</h1>
+  <h1 class="title">Introduction the Activity Browser and Brightway</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section>
-<section id="why" class="title-slide slide level1 center">
-<h1>Why</h1>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+<p><strong>Brightway</strong>: Python package, developed for LCA</p>
+<p><strong>Activity Browser</strong>: user interface for brightway</p>
+</section>
 
-<img data-src="images/seminar_bright_workflow.svg" style="width:100.0%" class="r-stretch"></section>
-<section id="greater-flexibility" class="slide level2">
-<h2>Greater flexibility</h2>
-<div>
-<ul>
-<li class="fragment">Non-standard LCA methodological choices</li>
-<li class="fragment">Connection to other tools (e.g., IAM, statistics, ML)</li>
-</ul>
-</div>
-</section>
-<section id="reproducibility-and-transparency" class="slide level2">
-<h2>Reproducibility and transparency</h2>
-<div>
-<ul>
-<li class="fragment">For understanding what you did</li>
-<li class="fragment">For the others to understand what you did</li>
-<li class="fragment">For you/others to use the same methodology</li>
-</ul>
-</div>
-</section>
-<section id="easier-to-update" class="slide level2">
-<h2>Easier to update</h2>
-<div>
-<ul>
-<li class="fragment">Less room for error when updating data inputs</li>
-<li class="fragment">Automatic update of the whole work</li>
-<li class="fragment">Update/change ecoinvent (the background database)</li>
-</ul>
-</div>
-</section>
-<section id="easier-version-control-with-git" class="slide level2">
-<h2>Easier version control with Git</h2>
-<div>
-<ul>
-<li class="fragment">Change-tracking</li>
-<li class="fragment">Backup</li>
-<li class="fragment">Collaboration</li>
-</ul>
-</div>
-</section></section>
 <section>
 <section id="what" class="title-slide slide level1 center">
 <h1>What</h1>
@@ -430,6 +392,10 @@
 </div>
 </div>
 </section>
+<section id="code-editor-1" class="slide level2">
+<h2>Code editor</h2>
+
+<img data-src="images/jupyter_lab_view.jpg" style="width:100.0%" class="r-stretch"></section>
 <section id="the-activity-browser" class="slide level2">
 <h2>The Activity Browser</h2>
 
@@ -472,90 +438,17 @@
 <li class="fragment">Plugin for prospective background databases with <em>premise</em></li>
 </ul>
 </div>
-</section></section>
-<section>
-<section id="combine-brightway-and-the-activity-browser" class="title-slide slide level1 center">
-<h1>Combine brightway and the Activity Browser?</h1>
-
 </section>
-<section id="yes-you-can" class="slide level2">
-<h2>Yes you can!</h2>
+<section id="the-activity-browser-2" class="slide level2">
+<h2>The Activity Browser</h2>
 
-<img data-src="images/seminar_bright_combine_bright_ab.svg" style="width:100.0%" class="r-stretch"></section>
-<section id="my-initial-workflow" class="slide level2">
-<h2>My initial workflow</h2>
-
-<img data-src="images/seminar_bright_my_workflow_intermediate.svg" style="width:100.0%" class="r-stretch"></section>
-<section id="my-ideal-workflow" class="slide level2">
-<h2>My ideal workflow</h2>
-
-<img data-src="images/seminar_bright_my_workflow_advanced.svg" style="width:100.0%" class="r-stretch"></section></section>
-<section id="tips-for-easier-work" class="title-slide slide level1 center">
-<h1>Tips for easier work</h1>
-<p>Especially when working with brightway:</p>
-<div>
-<ul>
-<li class="fragment">Document what you do with comments and text (markdown cells)</li>
-<li class="fragment">Use descriptive names for your variables (e.g., not <code>n</code> but <code>transportation_to_factory_distance_km</code>)</li>
-<li class="fragment">Use Google and ChatGPT as somebody probably thought of this calculation step, copy/paste chunks of code!</li>
-<li class="fragment">NEVER update brightway/the AB on your working environment, create a new environment!</li>
-</ul>
-</div>
-</section>
-
-<section>
-<section id="tips-to-get-started" class="title-slide slide level1 center">
-<h1>Tips to get started</h1>
-
-</section>
-<section id="get-help" class="slide level2">
-<h2>Get help</h2>
-<div>
-<ul>
-<li class="fragment">From your colleagues 👋</li>
-<li class="fragment">From ChatGPT</li>
-<li class="fragment">From the documentation or user manual</li>
-<li class="fragment">From the community:
-<ul>
-<li class="fragment">On mail distribution lists on groups.io</li>
-<li class="fragment">On Stackoverflow</li>
-<li class="fragment">On GitHub (for bugs)</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="main-source-of-information" class="slide level2">
-<h2>Main source of information</h2>
-<p>Go to the GiHub pages (<a href="https://github.com/LCA-ActivityBrowser/activity-browser">the AB</a>, <a href="https://github.com/brightway-lca">brightway</a>) to find updated information or links to:</p>
-<ul>
-<li>Install the tools,</li>
-<li>Learn how to use it,</li>
-<li>Find examples.</li>
-</ul>
-</section>
-<section id="website-to-gather-tips-and-resources" class="slide level2">
-<h2>Website to gather tips and resources</h2>
-<p><a href="https://adelinejerome.github.io/seminars-for-esa/">Seminars for ESA</a> as an initial resource.</p>
-<p>You are welcome to contribute!</p>
-</section></section>
-<section id="link-to-the-slides" class="title-slide slide level1 center">
-<h1>Link to the slides</h1>
-<p>Find the slides at <a href="adelinejerome.github.io/seminars-for-esa/seminar_intro.html">adelinejerome.github.io/seminars-for-esa/seminar_intro.html</a></p>
-
-<img data-src="images/qrcode_link_presentation_intro.png" class="r-stretch"></section>
-
+<img data-src="images/ab_view.jpg" style="width:100.0%" class="r-stretch"></section></section>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank you!</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Feedback</p>
-<p><img data-src="images/qrcode_feedback.png"></p>
-</div><div class="column" style="width:50%;">
+<p>Find the slides at <a href="adelinejerome.github.io/seminars-for-esa/seminar_intro.html">adelinejerome.github.io/seminars-for-esa/seminar_intro.html</a></p>
 
-</div>
-</div>
 
-<div class="footer footer-default">
+<img data-src="images/qrcode_link_presentation_intro.png" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>
