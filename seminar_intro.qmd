@@ -6,10 +6,10 @@ title: "Introduction to the AB and Brightway"
 
 The aim of this one-hour presentation is:
 
-- To explain why the Activity Browser and brightway can improve one's workflow when doing LCA,
-- To introduce the Activity Browser and brightway to an audience which is unfamiliar with coding,
-- To show some examples of workflows using both the Activity Browser and brightway for different levels of coding familiarity,
-- And to give some tips on how to get started.
+-   To explain why the Activity Browser and brightway can improve one's workflow when doing LCA,
+-   To introduce the Activity Browser and brightway to an audience which is unfamiliar with coding,
+-   To show some examples of workflows using both the Activity Browser and brightway for different levels of coding familiarity,
+-   And to give some tips on how to get started.
 
 <div>
 
@@ -36,3 +36,15 @@ Because one hour can be daunting, shorter presentations are also available, with
 </div>
 
 > [**Link to the slides**](presentations/presentation_seminar_intro_only.html)
+
+**Examples of workflows combining AB and brightway**
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" height="300" width="500" style="border:2px solid black;" src="presentations/presentation_seminar_intro_examples.html"></iframe>
+```
+
+</div>
+
+> [**Link to the slides**](presentations/presentation_seminar_intro_examples.html)
