@@ -3,6 +3,8 @@ title: "Examples of how to combine the AB and Brightway"
 format: 
     revealjs:
         incremental: false
+        slide-number: c
+        show-slide-number: all
 ---
 
 # Before
@@ -10,12 +12,12 @@ format:
 ::: columns
 ::: {.column width="60%"}
 ::: incremental
-- Time-consuming to update
-- More room for errors
-- Difficult to document the process
-- Not flexible enough for my work
-- Difficult to access old models
-- Complex backup plan for the LCA model
+-   Time-consuming to update
+-   More room for errors
+-   Difficult to document the process
+-   Not flexible enough for my work
+-   Difficult to access old models
+-   Complex backup plan for the LCA model
 :::
 :::
 
@@ -30,12 +32,12 @@ format:
 ::: {.column width="50%"}
 **Activity Browser**
 
-- User friendly
-- Similar to other LCA software tools
+-   User friendly
+-   Similar to other LCA software tools
 
 But...
 
-- Similar disadvantages as before
+-   Similar disadvantages as before
 :::
 
 ::: {.column width="50%"}
@@ -48,26 +50,25 @@ But...
 ::: {.column width="50%"}
 **Activity Browser**
 
-- User friendly
-- Similar to other LCA software tools
+-   User friendly
+-   Similar to other LCA software tools
 
 But...
 
-- Similar disadvantages as before
+-   Similar disadvantages as before
 :::
 
 ::: {.column width="50%"}
 **Brightway**
 
-- Flexible
-- Easy to update and document
+-   Flexible
+-   Easy to update and document
 
 But...
 
-- Not intuitive! 
+-   Not intuitive!
 :::
 :::
-
 
 # Combine brightway and the Activity Browser?
 
@@ -82,7 +83,6 @@ But...
 ## My current workflow
 
 ![](images/seminar_bright_my_workflow_advanced.svg){width="100%"}
-
 
 # Thank you!
 

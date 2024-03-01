@@ -3,6 +3,8 @@ title: "Introduction the Activity Browser and Brightway"
 format: 
     revealjs:
         incremental: false
+        slide-number: c
+        show-slide-number: all
 ---
 
 # Introduction
