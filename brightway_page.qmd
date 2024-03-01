@@ -10,9 +10,9 @@ This section is still in development!
 
 # Installation
 
-1. [Install Python](python.qmd#installation) with Anaconda
-2. Open an "Anaconda prompt" (on Windows, you find it in the Start menu).
-3. Follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/index.html) Brightway.
+1.  [Install Python](python.qmd#installation) with Anaconda
+2.  Open an "Anaconda prompt" (on Windows, you find it in the Start menu).
+3.  Follow the [instructions for installing](https://docs.brightway.dev/en/latest/content/installation/index.html) Brightway.
 
 ::: callout-note
 ## For installing Brightway 2
@@ -28,13 +28,22 @@ Courses are regularly provided by the association [Départ de Sentier](https://w
 
 On this website, there is also a [code-along seminar](seminar_brightway.qmd) to be guided in doing a first LCA with brightway.
 
+# Additional packages
+
+Multiple packages building on brightway exist and provide additional features to the [brightway ecosystem](https://docs.brightway.dev/en/latest/content/other/ecosystem.html). Some examples are listed below:
+
+- [bw2regional](https://github.com/brightway-lca/brightway2-regional?tab=readme-ov-file) for regionalised LCA calculations,
+- [temporalis](https://github.com/brightway-lca/bw_temporalis/) for temporal distributions in the inventory and for characterisation factors,
+- [premise](https://github.com/polca/premise) for generating prospective background databases by coupling ecoinvent and integrated assessment models,
+- [LiAISON](https://github.com/NREL/LiAISON) for automatic linking between foreground and prospective background inventory,
+- [lca_algebraic](https://github.com/oie-mines-paristech/lca_algebraic) for parametric inventories, Monte Carlo analysis and global sensitivity analysis with Sobol indices.
+
 # Examples
 
 ## In the brightway documentation
 
-- [Here](https://docs.brightway.dev/en/latest/content/examples/index.html) for brightway 2.5
-
+-   [Here](https://docs.brightway.dev/en/latest/content/examples/index.html) for brightway 2.5
 
 ## In the literature
 
-- [Notebooks and data](https://doi.org/10.5281/zenodo.7849606) from [Douziech et al. 2023](https://doi.org/10.1111/jiec.13432) for prospective LCA of the energy and heating sector.
+-   [Notebooks and data](https://doi.org/10.5281/zenodo.7849606) from [Douziech et al. 2023](https://doi.org/10.1111/jiec.13432) for prospective LCA of the energy and heating sector.
