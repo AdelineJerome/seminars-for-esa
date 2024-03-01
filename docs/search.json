@@ -193,7 +193,7 @@
     "href": "presentations/presentation_seminar_intro.html#brightway-2",
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "Brightway",
-    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective foreground databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
+    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective background databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
   },
   {
     "objectID": "presentations/presentation_seminar_intro.html#the-activity-browser-1",
@@ -949,7 +949,7 @@
     "href": "presentations/presentation_seminar_intro_only.html#brightway-2",
     "title": "Introduction the Activity Browser and Brightway",
     "section": "Brightway",
-    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective foreground databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
+    "text": "Brightway\nAnd extensions for:\n\n\nRegionalization with bw2regional\nTemporal distributions in the inventory and for characterization factors with temporalis\nProspective background databases based on IAM with premise\nGlobal sensitivity analysis with lca_algebraic\nStill in development: collaborative work on the same LCA model on a server"
   },
   {
     "objectID": "presentations/presentation_seminar_intro_only.html#the-activity-browser-1",

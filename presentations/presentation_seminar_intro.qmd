@@ -121,7 +121,7 @@ And extensions for:
 
 -   Temporal distributions in the inventory and for characterization factors with *temporalis*
 
--   Prospective foreground databases based on IAM with *premise*
+-   Prospective background databases based on IAM with *premise*
 
 -   Global sensitivity analysis with *lca_algebraic*
 
