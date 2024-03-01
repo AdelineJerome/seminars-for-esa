@@ -85,7 +85,7 @@ Examples:
 
 ::: incremental
 -   Fast calculations
--   Parameters in the inventory
+-   Parameters and distributions in the inventory
 -   Uncertainty analysis (Monte-Carlo simulation)
 :::
 

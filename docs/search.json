@@ -186,7 +186,7 @@
     "href": "presentations/presentation_seminar_intro.html#brightway-1",
     "title": "Introduction to LCA with the AB and Brightway",
     "section": "Brightway",
-    "text": "Brightway\n\n\nFast calculations\nParameters in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
+    "text": "Brightway\n\n\nFast calculations\nParameters and distribution in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
   },
   {
     "objectID": "presentations/presentation_seminar_intro.html#brightway-2",
@@ -942,7 +942,7 @@
     "href": "presentations/presentation_seminar_intro_only.html#brightway-1",
     "title": "Introduction the Activity Browser and Brightway",
     "section": "Brightway",
-    "text": "Brightway\n\n\nFast calculations\nParameters in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
+    "text": "Brightway\n\n\nFast calculations\nParameters and distributions in the inventory\nUncertainty analysis (Monte-Carlo simulation)"
   },
   {
     "objectID": "presentations/presentation_seminar_intro_only.html#brightway-2",
@@ -1111,5 +1111,26 @@
     "title": "Examples of how to combine the AB and Brightway",
     "section": "My current workflow",
     "text": "My current workflow"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#my-initial-workflow-1",
+    "href": "presentations/presentation_seminar_intro_examples.html#my-initial-workflow-1",
+    "title": "Examples of how to combine the AB and Brightway",
+    "section": "My initial workflow",
+    "text": "My initial workflow\n\n\n\n\n↘ Time-consuming to update\n↘ More room for errors\n↘ Difficult to document the process\nNot flexible enough for my work\nDifficult to access old models\n❌ Complex backup plan for the LCA model"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_examples.html#my-current-workflow-1",
+    "href": "presentations/presentation_seminar_intro_examples.html#my-current-workflow-1",
+    "title": "Examples of how to combine the AB and Brightway",
+    "section": "My current workflow",
+    "text": "My current workflow\n\n\n\n\nTime-consuming to update\nMore room for errors\nDifficult to document the process\nNot flexible enough for my work\nDifficult to access old models\nComplex backup plan for the LCA model"
+  },
+  {
+    "objectID": "presentations/presentation_seminar_intro_only.html",
+    "href": "presentations/presentation_seminar_intro_only.html",
+    "title": "Introduction the Activity Browser and Brightway",
+    "section": "",
+    "text": "Brightway: Python package, developed for LCA\nActivity Browser: user interface for brightway"
   }
 ]

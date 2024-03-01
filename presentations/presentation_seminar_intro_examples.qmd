@@ -80,9 +80,53 @@ But...
 
 ![](images/seminar_bright_my_workflow_intermediate.svg){width="100%"}
 
+## My initial workflow
+
+::: columns
+::: {.column width="50%"}
+![](images/seminar_bright_my_workflow_intermediate.svg){width="100%"}
+:::
+
+::: {.column width="50%"}
+↘ Time-consuming to update
+
+↘ More room for errors
+
+↘ Difficult to document the process
+
+~~Not flexible enough for my work~~
+
+~~Difficult to access old models~~
+
+❌   Complex backup plan for the LCA model
+:::
+:::
+
+
 ## My current workflow
 
 ![](images/seminar_bright_my_workflow_advanced.svg){width="100%"}
+
+## My current workflow
+::: columns
+::: {.column width="50%"}
+![](images/seminar_bright_my_workflow_advanced.svg){width="100%"}
+:::
+
+::: {.column width="50%"}
+~~Time-consuming to update~~
+
+~~More room for errors~~
+
+~~Difficult to document the process~~
+
+~~Not flexible enough for my work~~
+
+~~Difficult to access old models~~
+
+~~Complex backup plan for the LCA model~~
+:::
+:::
 
 # Thank you!
 
