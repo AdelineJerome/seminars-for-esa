@@ -1,5 +1,5 @@
 ---
-title: "Introduction the Activity Browser and Brightway"
+title: "Introduction to Activity Browser and Brightway"
 format: 
     revealjs:
         incremental: false
