@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Welcome! – brightway2_seminar_solution</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Welcome!</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Welcome!</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/AdelineJerome/seminars-for-esa" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Home</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Programming languages</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../python.html" class="sidebar-item-text sidebar-link">Python</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../rstat.html" class="sidebar-item-text sidebar-link">R and RStudio</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Doing LCA</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ab_page.html" class="sidebar-item-text sidebar-link">LCA with the AB</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../brightway_page.html" class="sidebar-item-text sidebar-link">LCA with Brightway</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../git_page.html" class="sidebar-item-text sidebar-link">Save your work - Git</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Seminars</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seminar_intro.html" class="sidebar-item-text sidebar-link">Introduction to the AB and Brightway</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seminar_ab.html" class="sidebar-item-text sidebar-link">Code-along with the AB</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seminar_brightway.html" class="sidebar-item-text sidebar-link">Code-along with Brightway</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seminar_git.html" class="sidebar-item-text sidebar-link">Introduction to Git</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">More</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contribute.html" class="sidebar-item-text sidebar-link">Contribute</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contact.html" class="sidebar-item-text sidebar-link">Contact</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#importing-packages" id="toc-importing-packages" class="nav-link active" data-scroll-target="#importing-packages">Importing packages</a></li>
+  <li><a href="#set-up-your-project" id="toc-set-up-your-project" class="nav-link" data-scroll-target="#set-up-your-project">Set up your project</a></li>
+  <li><a href="#manage-and-import-databases" id="toc-manage-and-import-databases" class="nav-link" data-scroll-target="#manage-and-import-databases">Manage and import databases</a>
+  <ul class="collapse">
+  <li><a href="#import-the-biosphere-database" id="toc-import-the-biosphere-database" class="nav-link" data-scroll-target="#import-the-biosphere-database">Import the “biosphere” database</a></li>
+  <li><a href="#import-ecoinvent" id="toc-import-ecoinvent" class="nav-link" data-scroll-target="#import-ecoinvent">Import ecoinvent</a></li>
+  <li><a href="#accessing-activities-and-flows" id="toc-accessing-activities-and-flows" class="nav-link" data-scroll-target="#accessing-activities-and-flows">Accessing activities and flows</a></li>
+  </ul></li>
+  <li><a href="#manual-creation-of-a-database" id="toc-manual-creation-of-a-database" class="nav-link" data-scroll-target="#manual-creation-of-a-database">Manual creation of a database</a>
+  <ul class="collapse">
+  <li><a href="#create-the-database" id="toc-create-the-database" class="nav-link" data-scroll-target="#create-the-database">Create the database</a></li>
+  <li><a href="#add-activities" id="toc-add-activities" class="nav-link" data-scroll-target="#add-activities">Add activities</a></li>
+  </ul></li>
+  <li><a href="#first-lca-calculation" id="toc-first-lca-calculation" class="nav-link" data-scroll-target="#first-lca-calculation">First LCA calculation</a>
+  <ul class="collapse">
+  <li><a href="#selection-of-impact-assessment-methods" id="toc-selection-of-impact-assessment-methods" class="nav-link" data-scroll-target="#selection-of-impact-assessment-methods">Selection of impact assessment methods</a></li>
+  <li><a href="#impact-assessment" id="toc-impact-assessment" class="nav-link" data-scroll-target="#impact-assessment">Impact assessment</a></li>
+  <li><a href="#basic-contribution-analysis" id="toc-basic-contribution-analysis" class="nav-link" data-scroll-target="#basic-contribution-analysis">Basic contribution analysis</a></li>
+  <li><a href="#customised-contribution-analysis" id="toc-customised-contribution-analysis" class="nav-link" data-scroll-target="#customised-contribution-analysis">Customised contribution analysis</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  </ul></li>
+  <li><a href="#different-scenarios" id="toc-different-scenarios" class="nav-link" data-scroll-target="#different-scenarios">Different scenarios</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#generation-of-results" id="toc-generation-of-results" class="nav-link" data-scroll-target="#generation-of-results">Generation of results</a></li>
+  <li><a href="#figures-1" id="toc-figures-1" class="nav-link" data-scroll-target="#figures-1">Figures</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<p>This notebook has been developed for a code-along introductory seminar on using <a href="https://docs.brightway.dev/en/latest/">brightway</a>. You can a more complete guide on brightway <a href="https://learn.brightway.dev/en/latest/content/notebooks/BW25_for_beginners.html">here</a>.</p>
+<p>More information on the seminars can be found <a href="https://adelinejerome.github.io/seminars-for-esa/">here</a>.</p>
+<section id="importing-packages" class="level1">
+<h1>Importing packages</h1>
+<p>As <a href="https://adelinejerome.github.io/seminars-for-esa/seminar_intro.html">presented in the introductory seminar</a>, python resources are organised in packages, i.e., groups of objects and functions that can be used. One example is brightway. You have installed the packages in a <a href="https://adelinejerome.github.io/seminars-for-esa/python.html#managing-python-virtual-environments">python environment</a>. But now you must indicate to python that you want to load specific packages that you will be using in your code. You do it with <code>import name-package</code>.</p>
+<p>Later in your code, when you want to use a function from <code>name-package</code>, you will have to write <code>name-package.function</code> which can be a bit long to type if the name of the package is long… So you can decide to import the package with a “nickname”, usually very short, with <code>import name-package as pk</code>. With this, you will only have to write <code>pk.function</code> to use the function <code>function</code> from the package <code>name-package</code>.</p>
+<p>Brightway is not <em>one</em> package but a group of several with different functions. Let’s import them with their respective nickname!</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> bw2data <span class="im">as</span> bd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> bw2io <span class="im">as</span> bi</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> bw2calc <span class="im">as</span> bc</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> bw2analyzer <span class="im">as</span> bwa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Additionally, we import two other packages:</p>
+<ul>
+<li><code>pandas</code> for manipulating tables,</li>
+<li><code>matplotlib</code> for generating figures.</li>
+</ul>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="set-up-your-project" class="level1">
+<h1>Set up your project</h1>
+<p>The structure of information is similar to the Activity Browser. The information is structured in different projects, which contains several databases. To get the list of existing projects, use:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>bd.projects</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>Brightway2 projects manager with 13 objects:
+    ABB case
+    Electric motors
+    Motor case
+    New motor case
+    ab_demo
+    ab_demo_solution
+    brightway2_test
+    brightway_demo
+    default
+    lca_algebraic_handbook
+    lifetime_test
+    motor_case
+    pLCA course
+Use `projects.report()` to get a report on all projects.</code></pre>
+</div>
+</div>
+<p>To see which project is currenly loaded:</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bd.projects.current</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>'default'</code></pre>
+</div>
+</div>
+<p>To load another project or to create a new project if the project name is not already in the list of exiting projects:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bd.projects.set_current(<span class="st">"brightway2_test"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To delete a project, use <code>bd.projects.delete_project</code>but it returns an error if the project does not exist. With the function below, it tries to delete a project but does nothing if an error is returned.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reset_brightway_project(project_name):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        bd.projects.delete_project(project_name, <span class="va">True</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="manage-and-import-databases" class="level1">
+<h1>Manage and import databases</h1>
+<p>To see the list of databases in the current project, use:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bd.databases</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>Databases dictionary with 3 object(s):
+    biosphere3
+    ecoinvent_391_cutoff
+    motor_case</code></pre>
+</div>
+</div>
+<section id="import-the-biosphere-database" class="level2">
+<h2 class="anchored" data-anchor-id="import-the-biosphere-database">Import the “biosphere” database</h2>
+<p>The <em>biosphere</em> database is containing the elementary flows necessary for ecoinvent. To load it as well as the impact assessment methods implemented with ecoinvent, use:</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bi.bw2setup()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Biosphere database already present!!! No setup is needed</code></pre>
+</div>
+</div>
+<p>To search activities in a database or manipulate a database, you need to refer to the database “object”. Here, the biosphere database is saved as <code>biosphere_db</code>.</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>biosphere_db <span class="op">=</span> bd.Database(<span class="st">"biosphere3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="import-ecoinvent" class="level2">
+<h2 class="anchored" data-anchor-id="import-ecoinvent">Import ecoinvent</h2>
+<p>When the biosphere database is imported, the ecoinvent database can be imported as well. The importer uses the folder “datasets” from the extracted files of the .7z file which can be fount on the <a href="https://ecoquery.ecoinvent.org">ecoinvent website</a>. Report the path of this folder below.</p>
+<p><strong>!!!</strong> Be careful that the path is with “/” instead of “\”</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>path_datasets <span class="op">=</span> <span class="st">"C:/Users/jeromea/Downloads/ecoinvent_3.9.1_cutoff_ecoSpold02/datasets"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The name of the imported database will be:</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ei_db_name <span class="op">=</span> <span class="st">"ecoinvent_391_cutoff"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After checking that the same database is not imported twice, the import is done is several steps:</p>
+<ol type="1">
+<li>First, all the datasets are loaded with <code>bi.SingleOutputEcospold2Importer</code>,</li>
+<li>Then, the data are changed based on several “strategies” which are functions to modify the data,</li>
+<li>You can check that things went well with <code>statistics()</code>, especially that there is “0 unlinked exchanges”</li>
+<li>Finally, the database, for now only in the memory for your python session, is saved to your computer with <code>write_database()</code></li>
+</ol>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ei_db_name <span class="kw">in</span> bd.databases:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Database has already been imported."</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    ei_importer <span class="op">=</span> bi.SingleOutputEcospold2Importer(path_datasets, ei_db_name)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    ei_importer.apply_strategies()</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    ei_importer.statistics() </span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    ei_importer.write_database()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Database has already been imported.</code></pre>
+</div>
+</div>
+<p>You can see all the metadata (i.e., the properties for describing the database) of the imported database with:</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>bd.databases[ei_db_name]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>{'overwrite': False,
+ 'format': 'Ecoinvent XML',
+ 'depends': ['biosphere3'],
+ 'backend': 'sqlite',
+ 'number': 21238,
+ 'modified': '2023-12-07T08:54:59.923322',
+ 'searchable': True,
+ 'processed': '2023-12-07T09:00:42.261022'}</code></pre>
+</div>
+</div>
+<p>Again, save the database “object” to easily search and get activities from it:</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ei_db <span class="op">=</span> bd.Database(ei_db_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="accessing-activities-and-flows" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-activities-and-flows">Accessing activities and flows</h2>
+<p>To search for activities in a database, use the function <code>search</code>. This function is linked to a database object, so it is written as <code>bd.Database("database_name").search()</code>. To avoid the long <code>bd.Database("database_name")</code>, the saved dtabase objects are used.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>biosphere_db.search(<span class="st">"Carbon dioxide, fossil"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>['Carbon dioxide, fossil' (kilogram, None, ('air',)),
+ 'Carbon dioxide, fossil' (kilogram, None, ('air', 'urban air close to ground')),
+ 'Carbon dioxide, fossil' (kilogram, None, ('air', 'non-urban air or from high stacks')),
+ 'Carbon dioxide, fossil' (kilogram, None, ('air', 'lower stratosphere + upper troposphere')),
+ 'Carbon dioxide, fossil' (kilogram, None, ('air', 'low population density, long-term')),
+ 'Carbon dioxide, non-fossil' (kilogram, None, ('air', 'urban air close to ground')),
+ 'Carbon dioxide, non-fossil' (kilogram, None, ('air',)),
+ 'Carbon dioxide, non-fossil' (kilogram, None, ('air', 'lower stratosphere + upper troposphere')),
+ 'Carbon dioxide, non-fossil' (kilogram, None, ('air', 'low population density, long-term')),
+ 'Carbon dioxide, non-fossil' (kilogram, None, ('air', 'non-urban air or from high stacks')),
+ 'Carbon dioxide, non-fossil, resource correction' (kilogram, None, ('natural resource', 'in air'))]</code></pre>
+</div>
+</div>
+<p>To return (or “get”) a specific activity object, use <code>bd.Database("database_name").get()</code> for which you can specify the name, location, unit, etc.</p>
+<p>But remember that it can return only one activity! Otherwise, it returns an error. Look for the name, location, etc. with the search function before to know if you catch only one activity.</p>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>code_example <span class="op">=</span> ei_db.search(<span class="st">"transport, passenger car, medium size, petrol, EURO 3 RER"</span>)[<span class="dv">1</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>example_transport <span class="op">=</span> ei_db.get(code_example)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To look at all information stored in the activity (but still not the exchanges), use the function <code>as_dict</code> on the activity object:</p>
+<div class="cell" data-scrolled="true" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>example_transport.as_dict()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>{'comment': 'This dataset represents the service of transport in a passenger car for a journey length of 1vkm and is valid for Europe. Fuel consumption and emissions are for average vehicle use and not representative of a specific driving cycle. The dataset is parametrized with respect to vehicle size, fuel consumption and vehicle lifetime. \nDatasets for three different passenger car categories are available in ecoinvent in view of size: small, medium and large.\nThe category “small” includes passenger cars with engine size up to 1.4 liters. The average weight of this category is estimated to be 1200 kg. \nThe category “medium” includes passenger cars with engine size between 1.4 and 2.0 liters. The average weight of this category is estimated to be 1600 kg. \nThe category “large” includes passenger cars with engine size larger than 2.0 liters. The average weight of this category is estimated to be 2000 kg. \nThe passenger car size influences the amount of both exhaust and non-exhaust emissions. The exhaust emissions caused by the burning of fuel are divided into two groups: fuel dependent emissions (dependent on fuel type and quantity) and Euro class dependent emissions which reflect the emission standards which the vehicle complies with. Three classes of Euro engine type are considered: Euro 3, Euro 4 and Euro 5.  The higher the class (e.g. Euro 5), the lower the emissions and viceversa. The Euro engine regulation is set by the European Commission “in order to limit as much as possible the negative impact of road vehicles on the environment and health” (European Commission 2012). This dataset considers a medium petrol passenger car of Euro 3 class. Also included within the direct exchanges to the environment are the fuel evaporation emissions from the fuel tank, relevant to petrol vehicles only. \nNone\nNon-exhaust emissions are those resulting from tyre, brake and road wear. These emissions are considered as by-products. \nTechnology:  Transport in a passenger car with internal combustion engine, fueled by petrol. The size is small, with engine size up to 2.0 litres and average weight of 1600 kg.  \nTechnology classifications are based on those used widely within the works of the European Environment Agency, particularly in the Emissions Inventory Guidebook. The Tremove model - which is also used to generate fuel consumption and emission factors for the datasets presented here - follows this classification system.',
+ 'classifications': [('ISIC rev.4 ecoinvent',
+   '4922:Other passenger land transport'),
+  ('CPC', '64119: Other land transportation services of passengers, n.e.c.')],
+ 'activity type': 'ordinary transforming activity',
+ 'activity': 'b3feb9fe-03bc-5abe-9aa5-b9d588502cbd',
+ 'database': 'ecoinvent_391_cutoff',
+ 'filename': 'b3feb9fe-03bc-5abe-9aa5-b9d588502cbd_3bf68190-17bd-4506-84da-3ef2bcb1b624.spold',
+ 'location': 'RER',
+ 'name': 'transport, passenger car, medium size, petrol, EURO 3',
+ 'synonyms': [],
+ 'parameters': [{'description': 'annual total vkm',
+   'id': 'b08278ed-9947-45bf-84fc-45bfc472bd8b',
+   'unit': 'kilometer',
+   'comment': 'Based on Tremove (2009)',
+   'amount': 210326000000.0,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 26.0719245449185,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'annual_vkm'},
+  {'description': 'co2 emissions per kg petrol',
+   'id': '510bbb41-fb4a-4ed6-8f09-064cb1a92a45',
+   'unit': 'kilogram',
+   'comment': 'Constant for all petrol vehicles',
+   'amount': 3.18,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 1.15688119679209,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'co2_kg_petrol'},
+  {'description': 'emissions from brake friction',
+   'id': '963f7f42-4768-4a18-8d60-669973652be8',
+   'unit': 'kg/kg vehicle',
+   'comment': 'Average (small, medium and large weight class) emissions produced per kg vehicle. \n\nCalculation of non-exhaust emissions (tyre, brake and road wear emissions as well as petrol evaporation emissions) are based on: Ntziachristos, L., Boulter, P. (2009). EMEP/EEA air pollutant emissions inventory guidebook 2009: Road vehicle tyre and brake wear; Road surface wear. Copenhagen, European Environment Agency\n',
+   'amount': 4.45e-09,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': -19.2303617407683,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'brake_wear_emissions'},
+  {'description': 'emissions from road abrasion',
+   'id': '4fe50f59-7759-4db2-8d35-c63314f2deba',
+   'unit': 'kg/kg vehicle',
+   'comment': 'Average (small, medium and large weight class) emissions produced per kg vehicle. \n\nCalculation of non-exhaust emissions (tyre, brake and road wear emissions as well as petrol evaporation emissions) are based on: Ntziachristos, L., Boulter, P. (2009). EMEP/EEA air pollutant emissions inventory guidebook 2009: Road vehicle tyre and brake wear; Road surface wear. Copenhagen, European Environment Agency\n',
+   'amount': 9.79e-09,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': -18.441904380404,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'road_wear_emissions'},
+  {'description': 'emissions from tyre abrasion',
+   'id': 'ca5b7cf8-faad-4893-beab-2f41513db7c4',
+   'unit': 'kg/kg vehicle',
+   'comment': 'Average (small, medium and large weight class) emissions produced per kg vehicle. \n\nCalculation of non-exhaust emissions (tyre, brake and road wear emissions as well as petrol evaporation emissions) are based on: Ntziachristos, L., Boulter, P. (2009). EMEP/EEA air pollutant emissions inventory guidebook 2009: Road vehicle tyre and brake wear; Road surface wear. Copenhagen, European Environment Agency\n',
+   'amount': 5.725e-08,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': -16.6758381945121,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'tyre_wear_emissions'},
+  {'description': 'fuel consumption constant',
+   'id': 'c8f2fb31-30d9-4a68-b879-d0167305d4da',
+   'unit': 'dimensionless',
+   'comment': 'Determined from analysing the fuel consumption for vehicles in the Tremove model (2009)',
+   'amount': 2.9288e-05,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': -10.4383326821463,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'fc_constant'},
+  {'description': 'fuel consumption of basis vehicle',
+   'id': 'd69aa7c9-1110-4ec8-a4ad-b5f307fedaf6',
+   'unit': 'dimensionless',
+   'comment': 'Fuel consumption as derived from the source data for each vehicle type, size and emissions standard',
+   'amount': 0.06667,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': -2.70800020235217,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'fc_basis_vehicle'},
+  {'description': 'gross vehicle weight',
+   'id': '01dbd027-f8ea-4218-81db-a028439db747',
+   'unit': 'kilogram',
+   'comment': 'Weight of vehicle and passengers',
+   'amount': 1697.2,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 7.43673511332817,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'gross_vehicle_weight'},
+  {'description': 'lifetime of the vehicle',
+   'id': '297dd1cd-575a-4da8-990f-cbfca6a66d3e',
+   'unit': 'kilometer',
+   'comment': 'Distance capacity in the assumed vehicle lifetime.\n\nReference: Spielmann (2007) ecoinvent report 14. Ecoinvent centre, Dübendorf.',
+   'amount': 150000.0,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 11.9183905730784,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'vehicle_lifetime_km'},
+  {'description': 'passenger load factor',
+   'id': '4ad25793-1808-4e8d-a344-bd7ba8b2ce1f',
+   'unit': 'kilogram',
+   'comment': 'Number of passengers multiplied by 60 kg per passenger',
+   'amount': 97.2,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 4.57677071146639,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'LF_passengers'},
+  {'description': 'passengers',
+   'id': '2722dba2-e390-4b43-994c-eb4c338dcb7b',
+   'unit': 'unit',
+   'comment': 'Average number of passengers in passenger car 1.62',
+   'amount': 1.62,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 0.482426149244293,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'passengers'},
+  {'description': 'scaling factor',
+   'id': '291598b5-efd9-424c-b185-42fa2b1aa8b9',
+   'unit': 'dimensionless',
+   'comment': 'The mass of a vehicle influences a range of different exchanges. These are fuel consumption (and thus fuel dependant emissions), non-exhaust emissions and vehicle and road infrastructures. For the infrastructres a scaling factor is used to extrapolate the values appropriate to the basis vehicle. The scaling factor is given by vehicle weight divided by the basis vehicle weight (1240kg).',
+   'amount': 1.29032258064516,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 0.254892249628789,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'scaling_factor'},
+  {'description': 'so2 emissions per kg petrol',
+   'id': 'e5f70abe-ea97-4348-bfa8-15a784660fda',
+   'unit': 'kilogram',
+   'comment': 'Constant for all petrol vehicles',
+   'amount': 2e-05,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': -10.8197782844103,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'so2_kg_petrol'},
+  {'description': 'weight of the basis vehicle',
+   'id': 'cffc5607-d071-4a68-b6fb-b01e7c85290d',
+   'unit': 'kg/unit',
+   'comment': 'The basis vehicle is the one on which the original life cycle inventory was conducted. It is representative of a VW Golf.',
+   'amount': 1240.0,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 7.12286665859908,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'basis_vehicle_weight'},
+  {'description': 'weight of the vehicle',
+   'id': '9cd30d63-8c02-47ee-9621-31a92d15bb72',
+   'unit': 'kg/unit',
+   'comment': 'Empty vehicle weight (curb weight) according to each vehicle class used: small cars (&lt;1.4 litres) 1200kg; \nmedium size cars (1.4 - 2.0 litres) 1600kg; \nlarge size cars (&gt;2.0 litres) 2000kg',
+   'amount': 1600.0,
+   'pedigree': {'reliability': 2,
+    'completeness': 2,
+    'temporal correlation': 2,
+    'geographical correlation': 1,
+    'further technological correlation': 1},
+   'uncertainty type': 2,
+   'loc': 7.37775890822787,
+   'scale': 0.03872983346207417,
+   'scale without pedigree': 0.02449489742783178,
+   'name': 'vehicle_weight'}],
+ 'authors': {'data entry': {'name': 'Andrew Simons',
+   'email': 'andrew.simons@3sp.ch'},
+  'data generator': {'name': 'Andrew Simons',
+   'email': 'andrew.simons@3sp.ch'}},
+ 'type': 'process',
+ 'reference product': 'transport, passenger car, medium size, petrol, EURO 3',
+ 'flow': '3bf68190-17bd-4506-84da-3ef2bcb1b624',
+ 'unit': 'kilometer',
+ 'production amount': 1.0,
+ 'code': 'f47975feec24d99acfd8fd14ecc84c49'}</code></pre>
+</div>
+</div>
+<p>To look at the exchanges, you can go throught them with a list:</p>
+<div class="cell" data-scrolled="true" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>[ex <span class="cf">for</span> ex <span class="kw">in</span> example_transport.exchanges()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>[Exchange: 1.0 kilometer 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: -7.55254e-06 kilogram 'market for brake wear emissions, passenger car' (kilogram, GLO, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 8.6021505376344e-06 unit 'maintenance, passenger car' (unit, RER, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.0106666666666667 kilogram 'market for passenger car, petrol/natural gas' (kilogram, GLO, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.0682165984485006 kilogram 'market for petrol, low-sulfur' (kilogram, Europe without Switzerland, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.001300195151499404 kilogram 'market for petrol, low-sulfur' (kilogram, CH, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.0009113964 meter-year 'market for road' (meter-year, GLO, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.000265427119835466 meter-year 'market for road maintenance' (meter-year, RER, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: -1.6615588e-05 kilogram 'market for road wear emissions, passenger car' (kilogram, GLO, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: -9.71647e-05 kilogram 'market for tyre wear emissions, passenger car' (kilogram, GLO, None) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 2.952e-08 kilogram '1-Pentene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 7.417e-06 kilogram '2-Methylpentane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 2.013e-07 kilogram 'Acetaldehyde' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.637e-07 kilogram 'Acetone' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 5.099e-08 kilogram 'Acrolein' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 2.085503808e-06 kilogram 'Ammonia' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 5.904e-08 kilogram 'Benzaldehyde' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 4.043e-06 kilogram 'Benzene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 7.606e-06 kilogram 'Butane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 6.95167936e-10 kilogram 'Cadmium II' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.221063403648 kilogram 'Carbon dioxide, fossil' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 0.001467 kilogram 'Carbon monoxide, fossil' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 3.47583968e-09 kilogram 'Chromium III' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 6.95167936e-12 kilogram 'Chromium VI' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.1817854912e-07 kilogram 'Copper ion' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 3.059e-07 kilogram 'Cyclohexane (for all cycloalkanes)' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 9.037183168e-06 kilogram 'Dinitrogen monoxide' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.174e-06 kilogram 'Ethane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 2.645e-08 kilogram 'Ethylene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.959e-06 kilogram 'Ethylene oxide' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 4.562e-07 kilogram 'Formaldehyde' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.986e-07 kilogram 'Heptane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 4.321e-07 kilogram 'Hexane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.042751904e-10 kilogram 'Lead II' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 4.866175552e-12 kilogram 'Mercury II' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 3.177e-05 kilogram 'Methane, fossil' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.342e-08 kilogram 'Methyl ethyl ketone' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 6.855e-05 kilogram 'NMVOC, non-methane volatile organic compounds' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 4.866175552e-09 kilogram 'Nickel II' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 7.481e-05 kilogram 'Nitrogen oxides' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 2.41918441728e-09 kilogram 'PAH, polycyclic aromatic hydrocarbons' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.029e-06 kilogram 'Particulate Matter, &lt; 2.5 um' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 8.745e-06 kilogram 'Pentane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 5.623e-06 kilogram 'Propane' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.481e-07 kilogram 'Propene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.025e-06 kilogram 'Propylene oxide' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 6.95167936e-10 kilogram 'Selenium IV' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 2.711e-07 kilogram 'Styrene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 1.390335872e-06 kilogram 'Sulfur dioxide' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 7.583e-06 kilogram 'Toluene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 6.95167936e-08 kilogram 'Zinc II' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 3.273e-06 kilogram 'm-Xylene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;,
+ Exchange: 7.842e-07 kilogram 'o-Xylene' (kilogram, None, ('air', 'urban air close to ground')) to 'transport, passenger car, medium size, petrol, EURO 3' (kilometer, RER, None)&gt;]</code></pre>
+</div>
+</div>
+<p>This example is good to understand the three types of exchanges:</p>
+<ul>
+<li><strong>production</strong>: for the main output of the activity, the product that is produced with this activity,</li>
+<li><strong>technosphere</strong>: the inputs from the technosphere, i.e., from other activities in the dtabases in the project,</li>
+<li><strong>biosphere</strong>: the emissions and natural resources of elementary flows, from the biosphere database.</li>
+</ul>
+<p>Specifying the type of exchange is necessary when creating new ones.</p>
+<p>Below are some examples of exchanges. Here of a production exchange:</p>
+<div class="cell" data-scrolled="true" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(example_transport.exchanges())[<span class="dv">0</span>].as_dict()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>{'flow': '3bf68190-17bd-4506-84da-3ef2bcb1b624',
+ 'type': 'production',
+ 'name': 'transport, passenger car, medium size, petrol, EURO 3',
+ 'classifications': {'CPC': ['64119: Other land transportation services of passengers, n.e.c.']},
+ 'production volume': 210326000000.0,
+ 'properties': {'carbon allocation': {'amount': 0.0, 'unit': 'kg'},
+  'carbon content': {'amount': 0.0, 'unit': 'dimensionless'},
+  'price': {'amount': 0.1762454815541633,
+   'unit': 'EUR2005',
+   'comment': 'Calculated based on inputs: The price of the product has been calculated as a sum of the values of the material and energy inputs for this product. This value is therefore a rough estimation. It may underestimate the real price since there are additional expenses when producing any product. These expences can include for example labour costs, treatment of waste materials and profit for the producer. Please consider carefully whether this level of data quality is acceptable for your application.'}},
+ 'activity': 'b3feb9fe-03bc-5abe-9aa5-b9d588502cbd',
+ 'unit': 'kilometer',
+ 'amount': 1.0,
+ 'uncertainty type': 0,
+ 'loc': 1.0,
+ 'input': ('ecoinvent_391_cutoff', 'f47975feec24d99acfd8fd14ecc84c49'),
+ 'output': ('ecoinvent_391_cutoff', 'f47975feec24d99acfd8fd14ecc84c49')}</code></pre>
+</div>
+</div>
+<p>Here of a technosphere exchange:</p>
+<div class="cell" data-scrolled="true" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(example_transport.exchanges())[<span class="dv">1</span>].as_dict()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>{'flow': '5b975ec7-3bbe-46a1-88a0-d475a87a6eab',
+ 'type': 'technosphere',
+ 'name': 'brake wear emissions, passenger car',
+ 'classifications': {'CPC': ['49129: Other parts and accessories n.e.c. of motor vehicles (including brakes, gear boxes, axles, road wheels, suspen[…]']},
+ 'production volume': 0.0,
+ 'properties': {'carbon allocation': {'amount': 0.0, 'unit': 'kg'},
+  'carbon content': {'amount': 0.0, 'unit': 'dimensionless'},
+  'price': {'amount': 0.0,
+   'unit': 'EUR2005',
+   'comment': 'Waste products are assigned a price of zero as they are assumed to require further treatment.'}},
+ 'activity': '4fcfcee4-2e07-5d48-86e9-9e569ff7a3b5',
+ 'unit': 'kilogram',
+ 'comment': 'Quantity of emissions based on values from Ntziachristos, L., Boulter, P. (2009) EMEP/EEA air pollutant emissions inventory guidebook 2009: Road vehicle tyre and brake wear; Road surface wear. Copenhagen, European Environment Agency. Quantities given in the source assumed to represent medium sized vehicles. Quantities for small and large vehicles taken from the bounds of the ranges given.',
+ 'amount': -7.55254e-06,
+ 'pedigree': {'reliability': 2,
+  'completeness': 2,
+  'temporal correlation': 2,
+  'geographical correlation': 1,
+  'further technological correlation': 1},
+ 'uncertainty type': 2,
+ 'loc': -11.793626627440092,
+ 'scale': 0.03872983346207417,
+ 'scale without pedigree': 0.02449489742783178,
+ 'input': ('ecoinvent_391_cutoff', 'ca8816e4f3b0da5483a65d625084b13a'),
+ 'output': ('ecoinvent_391_cutoff', 'f47975feec24d99acfd8fd14ecc84c49')}</code></pre>
+</div>
+</div>
+<p>And here of a biosphere exchange:</p>
+<div class="cell" data-scrolled="true" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(example_transport.exchanges())[<span class="dv">10</span>].as_dict()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>{'flow': '8cbaa905-41b0-4327-8403-bf1c8eb25429',
+ 'type': 'biosphere',
+ 'name': '1-Pentene',
+ 'classifications': {'CPC': []},
+ 'production volume': 0.0,
+ 'properties': {'carbon allocation': {'amount': 0.856284505178628,
+   'unit': 'kg'},
+  'carbon content': {'amount': 0.856284505178628, 'unit': 'dimensionless'},
+  'carbon content, fossil': {'amount': 0.856284505178628,
+   'unit': 'dimensionless'},
+  'carbon content, non-fossil': {'amount': 0.0, 'unit': 'dimensionless'},
+  'dry mass': {'amount': 1.0, 'unit': 'kg'},
+  'water content': {'amount': 0.0, 'unit': 'dimensionless'},
+  'water in wet mass': {'amount': 0.0, 'unit': 'kg'},
+  'wet mass': {'amount': 1.0, 'unit': 'kg'}},
+ 'unit': 'kilogram',
+ 'comment': 'Emissions dependent on engine Euro class (Euro 3, Euro 4 and Euro 5).',
+ 'amount': 2.952e-08,
+ 'pedigree': {'reliability': 2,
+  'completeness': 2,
+  'temporal correlation': 5,
+  'geographical correlation': 1,
+  'further technological correlation': 1},
+ 'uncertainty type': 2,
+ 'loc': -17.33819783721414,
+ 'scale': 0.20322401432901577,
+ 'scale without pedigree': 0.02449489742783178,
+ 'input': ('biosphere3', '8cbaa905-41b0-4327-8403-bf1c8eb25429'),
+ 'output': ('ecoinvent_391_cutoff', 'f47975feec24d99acfd8fd14ecc84c49')}</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="manual-creation-of-a-database" class="level1">
+<h1>Manual creation of a database</h1>
+<p>Now that we know enough about databases, activities and exchanges, let’s create our own database.</p>
+<section id="create-the-database" class="level2">
+<h2 class="anchored" data-anchor-id="create-the-database">Create the database</h2>
+<p>As errors can happen but as everything is available to re-write the database, it is convenient sometimes to re-start from zero. Here is a function to delete a database if it exists in the current project:</p>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reset_brightway_database(db_name):</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> db_name <span class="kw">in</span> bd.databases:</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">del</span> bd.databases[db_name]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To create a new database, create a database “object” with a name, and then save it on your computer with <code>register</code>:</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>name_motor_db <span class="op">=</span> <span class="st">"motor_case"</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>reset_brightway_database(name_motor_db)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>motor_db <span class="op">=</span> bd.Database(name_motor_db)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>motor_db.register()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s check that it was created:</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>bd.databases</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<pre><code>Databases dictionary with 3 object(s):
+    biosphere3
+    ecoinvent_391_cutoff
+    motor_case</code></pre>
+</div>
+</div>
+</section>
+<section id="add-activities" class="level2">
+<h2 class="anchored" data-anchor-id="add-activities">Add activities</h2>
+<p>As for databases, it is convenient to be able to delete an activity to re-start from zero. Here is a function for that:</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reset_activity(act_name, database<span class="op">=</span>motor_db):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> activity <span class="kw">in</span> [act <span class="cf">for</span> act <span class="kw">in</span> motor_db <span class="cf">if</span> act[<span class="st">'name'</span>]<span class="op">==</span>act_name]:</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>        activity.delete()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In a database saved as a database “object” <code>database_object</code>, a new activity is created with the function <code>new_activity</code>and then saved on your computer with <code>save()</code>.</p>
+<p>An activity needs necessarily:</p>
+<ul>
+<li>A name,</li>
+<li>A unique code, i.e., you can have several activities with the same name, but the computer needs a different code to distinguish them,</li>
+<li>A unit.</li>
+</ul>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># act_motor_production = motor_db.new_activity(</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co">#     name = "motor production",</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     code = "motor production",</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     unit = "unit",</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co">#     location = "GLO"</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co"># act_motor_production.save()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, exchanges can be added with the function <code>new_exchange</code> and <code>save()</code>to store it on your computer. The necessary information for an exchange are:</p>
+<ul>
+<li>An input, i.e., the activity from which the input comes from, or the activity in the biosphere database for an input/output of elementary flow,</li>
+<li>An amount (the unit is defined by the input),</li>
+<li>A type of exchange, i.e., production, technosphere or biosphere.</li>
+</ul>
+<p>You can have several exchanges from the same input, with the same value, so it can happen that you add the same exchange twice. To avoid that, here is a function that:</p>
+<ul>
+<li>Delete the activity if it exists,</li>
+<li>Create an activity with a code that is the same as the name,</li>
+<li>Add technosphere exchanges based on a list of (input, amount).</li>
+</ul>
+<p>That will be enough for us in this example.</p>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_new_activity(act_name, unit, exchanges, database<span class="op">=</span>motor_db):</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    reset_activity(act_name, database)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    act_new <span class="op">=</span> motor_db.new_activity(</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>        name <span class="op">=</span> act_name,</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>        code <span class="op">=</span> act_name,</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>        unit <span class="op">=</span> unit</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    act_new.save()</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="bu">input</span>, amount <span class="kw">in</span> exchanges:</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>        act_new.new_exchange(</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">input</span> <span class="op">=</span> <span class="bu">input</span>,</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>            amount <span class="op">=</span> amount,</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>            <span class="bu">type</span> <span class="op">=</span> <span class="st">"technosphere"</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>        ).save()</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    act_new.save()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Inputs from ecoinvent</strong></p>
+<p>First, let get the necessary activities from ecoinvent:</p>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>code_steel_unalloyed <span class="op">=</span> ei_db.search(<span class="st">"market for steel, unalloyed GLO"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>act_steel_unalloyed <span class="op">=</span> ei_db.get(code_steel_unalloyed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>code_steel_low_alloyed <span class="op">=</span> ei_db.search(<span class="st">"market for steel, low-alloyed GLO"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>act_steel_low_alloyed <span class="op">=</span> ei_db.get(code_steel_low_alloyed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>code_copper <span class="op">=</span> ei_db.search(<span class="st">"market for copper, cathode GLO"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>act_copper <span class="op">=</span> ei_db.get(code_copper)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>code_insulation <span class="op">=</span> ei_db.search(<span class="st">"market for epoxy resin, liquid RER"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>act_insulation <span class="op">=</span> ei_db.get(code_insulation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>code_elec <span class="op">=</span> ei_db.search(<span class="st">"market for electricity, high voltage SE"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>act_elec <span class="op">=</span> ei_db.get(code_elec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>code_incineration_insulation <span class="op">=</span> ei_db.search(<span class="st">"treatment of waste plastic, mixture, municipal incineration with fly ash extraction CH"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>act_incineration_insulation <span class="op">=</span> ei_db.get(code_incineration_insulation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>code_incineration_copper <span class="op">=</span> ei_db.search(<span class="st">"treatment of copper in car shredder residue, municipal incineration with fly ash extraction CH"</span>)[<span class="dv">0</span>][<span class="st">"code"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>act_incineration_copper <span class="op">=</span> ei_db.get(code_incineration_copper)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Parameters</strong></p>
+<p>Then the value of different parameters useful to create the activities.</p>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>qt_steel_unalloyed <span class="op">=</span> <span class="dv">26600</span> <span class="co">#kg</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>qt_steel_low_alloyed <span class="op">=</span> <span class="dv">4100</span> <span class="co">#kg</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>qt_copper <span class="op">=</span> <span class="dv">3600</span> <span class="co">#kg</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>qt_insulation <span class="op">=</span> <span class="dv">400</span> <span class="co">#kg</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>weight_motor <span class="op">=</span> qt_steel_unalloyed <span class="op">+</span> qt_steel_low_alloyed <span class="op">+</span> qt_copper <span class="op">+</span> qt_insulation</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>output_power <span class="op">=</span> <span class="dv">16000</span> <span class="co">#kW</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>op_hours <span class="op">=</span> <span class="dv">8400</span> <span class="co">#hours per year</span></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>lifetime <span class="op">=</span> <span class="dv">20</span> <span class="co">#years</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>efficiency <span class="op">=</span> <span class="fl">0.973</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Activities creation</strong></p>
+<p>With our own function <code>create_new_activity</code>, creating an activity looks like that:</p>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_motor_production(qt_steel_unalloyed<span class="op">=</span>qt_steel_unalloyed, qt_steel_low_alloyed<span class="op">=</span>qt_steel_low_alloyed, qt_copper<span class="op">=</span>qt_copper, qt_insulation<span class="op">=</span>qt_insulation):</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    create_new_activity(</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"motor production"</span>,</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"unit"</span>,</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>            (act_steel_unalloyed, qt_steel_unalloyed),</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>            (act_steel_low_alloyed, qt_steel_low_alloyed),</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>            (act_copper, qt_copper),</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>            (act_insulation, qt_insulation),</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>            (act_elec, <span class="dv">3600</span>)</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When activity creation is scattered in the code, it is practical to turn it as functions. When each activity creation is under a function, a last function can call all of them in the right order. Then, you are sure that all your created database is updated.</p>
+<p>In the creation functions, you can also add input parameters to be able to change them quickly.</p>
+<p>Let’s do this for all activities in the life cycle of a motor.</p>
+<div class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_motor_testing():</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    create_new_activity(</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"motor testing"</span>,</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"unit"</span>,</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>            (motor_db.get(<span class="st">"motor production"</span>), <span class="dv">1</span>),</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>            (act_elec, <span class="dv">16000</span>)</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_motor_use(lifetime<span class="op">=</span>lifetime, efficiency<span class="op">=</span>efficiency):</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>    create_new_activity(</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"motor use"</span>,</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"unit"</span>,</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>            (motor_db.get(<span class="st">"motor testing"</span>), <span class="dv">1</span>),</span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>            (act_elec, output_power<span class="op">*</span>op_hours<span class="op">*</span>lifetime<span class="op">*</span>(<span class="dv">1</span><span class="op">/</span>efficiency<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_motor_treatment(weight_motor<span class="op">=</span>weight_motor, qt_insulation<span class="op">=</span>qt_insulation, qt_copper<span class="op">=</span>qt_copper):</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>    create_new_activity(</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">"motor EoL treatment"</span>,</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"unit"</span>,</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>            (motor_db.get(<span class="st">"motor use"</span>), <span class="dv">1</span>),</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>            (act_elec, <span class="fl">0.041</span><span class="op">*</span>weight_motor),</span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>            (act_incineration_insulation, <span class="op">-</span>qt_insulation),</span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>            (act_incineration_copper, <span class="op">-</span><span class="fl">0.04</span><span class="op">*</span>qt_copper)</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And now a function to call all the functions which creates activities:</p>
+<div class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_motor_system(</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>    qt_steel_unalloyed<span class="op">=</span>qt_steel_unalloyed, </span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>    qt_steel_low_alloyed<span class="op">=</span>qt_steel_low_alloyed, </span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>    qt_copper<span class="op">=</span>qt_copper, </span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>    qt_insulation<span class="op">=</span>qt_insulation, </span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>    lifetime<span class="op">=</span>lifetime, </span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>    efficiency<span class="op">=</span>efficiency, </span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>    weight_motor<span class="op">=</span>weight_motor</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a>    create_motor_production(qt_steel_unalloyed<span class="op">=</span>qt_steel_unalloyed, qt_steel_low_alloyed<span class="op">=</span>qt_steel_low_alloyed, qt_copper<span class="op">=</span>qt_copper, qt_insulation<span class="op">=</span>qt_insulation)</span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>    create_motor_testing()</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a>    create_motor_use(lifetime<span class="op">=</span>lifetime, efficiency<span class="op">=</span>efficiency)</span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a>    create_motor_treatment(weight_motor<span class="op">=</span>weight_motor, qt_insulation<span class="op">=</span>qt_insulation, qt_copper<span class="op">=</span>qt_copper)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>create_motor_system()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To check the activities in the database:</p>
+<div class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>[act <span class="cf">for</span> act <span class="kw">in</span> motor_db]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<pre><code>['motor testing' (unit, GLO, None),
+ 'motor use' (unit, GLO, None),
+ 'motor EoL treatment' (unit, GLO, None),
+ 'motor production' (unit, GLO, None)]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="first-lca-calculation" class="level1">
+<h1>First LCA calculation</h1>
+<section id="selection-of-impact-assessment-methods" class="level2">
+<h2 class="anchored" data-anchor-id="selection-of-impact-assessment-methods">Selection of impact assessment methods</h2>
+<p>Impact assessment methods have been imported with the biosphere database. The list of all available methods is accessible with:</p>
+<div class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>bd.methods</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<pre><code>Methods dictionary with 762 objects, including:
+    ('CML v4.8 2016', 'acidification', 'acidification (incl. fate, average Europe total, A&amp;B)')
+    ('CML v4.8 2016', 'climate change', 'global warming potential (GWP100)')
+    ('CML v4.8 2016', 'ecotoxicity: freshwater', 'freshwater aquatic ecotoxicity (FAETP inf)')
+    ('CML v4.8 2016', 'ecotoxicity: marine', 'marine aquatic ecotoxicity (MAETP inf)')
+    ('CML v4.8 2016', 'ecotoxicity: terrestrial', 'terrestrial ecotoxicity (TETP inf)')
+    ('CML v4.8 2016', 'energy resources: non-renewable', 'abiotic depletion potential (ADP): fossil fuels')
+    ('CML v4.8 2016', 'eutrophication', 'eutrophication (fate not incl.)')
+    ('CML v4.8 2016', 'human toxicity', 'human toxicity (HTP inf)')
+    ('CML v4.8 2016', 'material resources: metals/minerals', 'abiotic depletion potential (ADP): elements (ultimate reserves)')
+    ('CML v4.8 2016', 'ozone depletion', 'ozone layer depletion (ODP steady state)')
+Use `list(this object)` to get the complete list.</code></pre>
+</div>
+</div>
+<p>For searching in the list of methods, use conditions in the list:</p>
+<div class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>[method <span class="cf">for</span> method <span class="kw">in</span> bd.methods <span class="cf">if</span> <span class="st">"climate change"</span> <span class="kw">in</span> <span class="bu">str</span>(method) <span class="kw">and</span> <span class="st">"EF v3.1"</span> <span class="kw">in</span> <span class="bu">str</span>(method)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
+<pre><code>[('EF v3.1 no LT',
+  'climate change no LT',
+  'global warming potential (GWP100) no LT'),
+ ('EF v3.1 no LT',
+  'climate change: biogenic no LT',
+  'global warming potential (GWP100) no LT'),
+ ('EF v3.1 no LT',
+  'climate change: fossil no LT',
+  'global warming potential (GWP100) no LT'),
+ ('EF v3.1 no LT',
+  'climate change: land use and land use change no LT',
+  'global warming potential (GWP100) no LT'),
+ ('EF v3.1', 'climate change', 'global warming potential (GWP100)'),
+ ('EF v3.1', 'climate change: biogenic', 'global warming potential (GWP100)'),
+ ('EF v3.1', 'climate change: fossil', 'global warming potential (GWP100)'),
+ ('EF v3.1',
+  'climate change: land use and land use change',
+  'global warming potential (GWP100)'),
+ ('EF v3.1 EN15804', 'climate change', 'global warming potential (GWP100)'),
+ ('EF v3.1 EN15804',
+  'climate change: biogenic',
+  'global warming potential (GWP100)'),
+ ('EF v3.1 EN15804',
+  'climate change: fossil',
+  'global warming potential (GWP100)'),
+ ('EF v3.1 EN15804',
+  'climate change: land use and land use change',
+  'global warming potential (GWP100)')]</code></pre>
+</div>
+</div>
+<p>Methods can be selected when knowing the tuple for their name:</p>
+<div class="cell" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>gw_method <span class="op">=</span> (<span class="st">'EF v3.1'</span>, <span class="st">'climate change'</span>, <span class="st">'global warming potential (GWP100)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Or by selecting the items in a list:</p>
+<div class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>csi_method <span class="op">=</span> [method <span class="cf">for</span> method <span class="kw">in</span> bd.methods <span class="cf">if</span> <span class="st">"Crustal"</span> <span class="kw">in</span> <span class="bu">str</span>(method)][<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="impact-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="impact-assessment">Impact assessment</h2>
+<p>The impact assessment is divided in several steps. First, the functional unit is defined as a dictionary {activity: amount}.</p>
+<div class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>functional_unit <span class="op">=</span> {motor_db.get(<span class="st">"motor EoL treatment"</span>): <span class="dv">1</span><span class="op">/</span>lifetime}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then an LCA “object” is created by specifying the functional unit and the impact assessment method (only one):</p>
+<div class="cell" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>lca <span class="op">=</span> bc.LCA(demand<span class="op">=</span>functional_unit, method<span class="op">=</span>gw_method)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The inventory is calculated:</p>
+<div class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>lca.lci()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And finally the impact assessment:</p>
+<div class="cell" data-execution_count="58">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>lca.lcia()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The score can be accessed with:</p>
+<div class="cell" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>lca.score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="59">
+<pre><code>126133.2219074139</code></pre>
+</div>
+</div>
+<p>And the method can be accessed with <code>lca.method</code>. So here is the score with the unit:</p>
+<div class="cell" data-execution_count="60">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="sc">{:.2e}</span><span class="st">"</span>.<span class="bu">format</span>(lca.score) <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> bd.methods.get(lca.method)[<span class="st">"unit"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.26e+05 kg CO2-Eq</code></pre>
+</div>
+</div>
+<p>To calculate another impact category, use:</p>
+<div class="cell" data-execution_count="61">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>lca.switch_method(csi_method)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The inventory does not need to be recalculated. Only the impact assessment:</p>
+<div class="cell" data-execution_count="62">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>lca.lcia()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="sc">{:.2e}</span><span class="st">"</span>.<span class="bu">format</span>(lca.score) <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> bd.methods.get(lca.method)[<span class="st">"unit"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.42e+07 kg Si-Eq</code></pre>
+</div>
+</div>
+<p>Here is a function to calculate the impact for several impact categories and return the results in a table:</p>
+<div class="cell" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lca_results(fu, list_methods):</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>    list_units <span class="op">=</span> [bd.methods.get(method)[<span class="st">"unit"</span>] <span class="cf">for</span> method <span class="kw">in</span> list_methods]</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>    lca <span class="op">=</span> bc.LCA(demand<span class="op">=</span>fu, method<span class="op">=</span>list_methods[<span class="dv">0</span>])</span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>    lca.lci()</span>
+<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a>    lca.lcia()</span>
+<span id="cb83-6"><a href="#cb83-6" aria-hidden="true" tabindex="-1"></a>    list_scores <span class="op">=</span> [lca.score]</span>
+<span id="cb83-7"><a href="#cb83-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> method <span class="kw">in</span> list_methods[<span class="dv">1</span>:]:</span>
+<span id="cb83-8"><a href="#cb83-8" aria-hidden="true" tabindex="-1"></a>        lca.switch_method(method)</span>
+<span id="cb83-9"><a href="#cb83-9" aria-hidden="true" tabindex="-1"></a>        lca.lcia()</span>
+<span id="cb83-10"><a href="#cb83-10" aria-hidden="true" tabindex="-1"></a>        list_scores.append(lca.score)</span>
+<span id="cb83-11"><a href="#cb83-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame({<span class="st">"score"</span>: list_scores, <span class="st">"unit"</span>: list_units, <span class="st">"method"</span>: list_methods})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here is a test:</p>
+<div class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>functional_unit <span class="op">=</span> {motor_db.get(<span class="st">"motor EoL treatment"</span>): <span class="dv">1</span><span class="op">/</span>lifetime}</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>lca_results(functional_unit, [gw_method, csi_method])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="65">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>score</th>
+      <th>unit</th>
+      <th>method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.261332e+05</td>
+      <td>kg CO2-Eq</td>
+      <td>(EF v3.1, climate change, global warming poten...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.419240e+07</td>
+      <td>kg Si-Eq</td>
+      <td>(Crustal Scarcity Indicator 2020, material res...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="basic-contribution-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="basic-contribution-analysis">Basic contribution analysis</h2>
+<p>Brightway provides functions for contribution analysis with the top processes:</p>
+<div class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>bwa.ContributionAnalysis().annotated_top_processes(lca, limit <span class="op">=</span> <span class="dv">5</span>)</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="co">#(lca score, supply amount, activity name)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
+<pre><code>[(3225884.4388409015,
+  11.024895197370894,
+  'uranium production, in yellowcake, in-situ leaching' (kilogram, GLO, None)),
+ (1895348.3536409396,
+  143.55897281048678,
+  'copper mine operation and beneficiation, sulfide ore' (kilogram, RoW, None)),
+ (1885859.7735508422,
+  8.163895494344217,
+  'uranium mine operation, underground' (kilogram, RNA, None)),
+ (1780238.9379032813,
+  7.706662418828517,
+  'uranium mine operation, underground' (kilogram, RoW, None)),
+ (1693698.450124781,
+  120.28203978155202,
+  'copper mine operation and beneficiation, sulfide ore' (kilogram, CL, None))]</code></pre>
+</div>
+</div>
+<p>And with the top contributing elementary flows:</p>
+<div class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co">#bwa.ContributionAnalysis().annotated_top_emissions(lca)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The cut-off can be expressed in terms of number of processes/flows or in terms of percentages.</p>
+</section>
+<section id="customised-contribution-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="customised-contribution-analysis">Customised contribution analysis</h2>
+<p>Here I provide functions for contribution analysis for the processes in the created database:</p>
+<div class="cell" data-execution_count="68">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> table_recursive_multi_calculation_dbparent_cut(activity, lcia_methods, amount<span class="op">=</span><span class="dv">1</span>, level<span class="op">=</span><span class="dv">0</span>, max_level<span class="op">=</span><span class="dv">3</span>, db_parent<span class="op">=</span><span class="va">None</span>, db_cut<span class="op">=</span>[<span class="st">'ecoinvent'</span>], act_parent<span class="op">=</span>{<span class="st">"name"</span>: <span class="va">None</span>}):</span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns a table (DataFrame) with the contribution tree for a given activity and various LCIA methods.</span></span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co">    The contribution tree does not contain sub-activities if the activity is from a database in db_cut (to avoid </span></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="co">    having details on ecoinvent datasets and to stay in my own model) and has the maximum level max_level.</span></span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Columns for the returned table: level, activity, activity parent, database parent, and str(method) for all LCIA method explored.</span></span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a>    lca_score <span class="op">=</span> lca_results({activity: amount}, lcia_methods)</span>
+<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a>    table <span class="op">=</span> pd.DataFrame([[level, activity[<span class="st">"name"</span>], act_parent[<span class="st">"name"</span>], db_parent]<span class="op">+</span> <span class="bu">list</span>(lca_score[<span class="st">"score"</span>])], columns<span class="op">=</span>[<span class="st">"level"</span>, <span class="st">"activity"</span>, <span class="st">"activity parent"</span>, <span class="st">"database parent"</span>]<span class="op">+</span>[<span class="bu">str</span>(m) <span class="cf">for</span> m <span class="kw">in</span> lcia_methods])</span>
+<span id="cb88-11"><a href="#cb88-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> level <span class="op">&lt;</span> max_level:</span>
+<span id="cb88-12"><a href="#cb88-12" aria-hidden="true" tabindex="-1"></a>        db_parent <span class="op">=</span> activity[<span class="st">'database'</span>]</span>
+<span id="cb88-13"><a href="#cb88-13" aria-hidden="true" tabindex="-1"></a>        go_forward <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb88-14"><a href="#cb88-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> stop_word <span class="kw">in</span> db_cut:</span>
+<span id="cb88-15"><a href="#cb88-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> stop_word <span class="kw">in</span> db_parent:</span>
+<span id="cb88-16"><a href="#cb88-16" aria-hidden="true" tabindex="-1"></a>                go_forward <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb88-17"><a href="#cb88-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> go_forward:</span>
+<span id="cb88-18"><a href="#cb88-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> exc <span class="kw">in</span> activity.technosphere():</span>
+<span id="cb88-19"><a href="#cb88-19" aria-hidden="true" tabindex="-1"></a>                table <span class="op">=</span> pd.concat([table, table_recursive_multi_calculation_dbparent_cut(</span>
+<span id="cb88-20"><a href="#cb88-20" aria-hidden="true" tabindex="-1"></a>                    activity<span class="op">=</span>exc.<span class="bu">input</span>, </span>
+<span id="cb88-21"><a href="#cb88-21" aria-hidden="true" tabindex="-1"></a>                    lcia_methods<span class="op">=</span>lcia_methods, </span>
+<span id="cb88-22"><a href="#cb88-22" aria-hidden="true" tabindex="-1"></a>                    amount<span class="op">=</span>amount <span class="op">*</span> exc[<span class="st">'amount'</span>], </span>
+<span id="cb88-23"><a href="#cb88-23" aria-hidden="true" tabindex="-1"></a>                    level<span class="op">=</span>level <span class="op">+</span> <span class="dv">1</span>, </span>
+<span id="cb88-24"><a href="#cb88-24" aria-hidden="true" tabindex="-1"></a>                    max_level<span class="op">=</span>max_level,</span>
+<span id="cb88-25"><a href="#cb88-25" aria-hidden="true" tabindex="-1"></a>                    db_parent <span class="op">=</span> db_parent,</span>
+<span id="cb88-26"><a href="#cb88-26" aria-hidden="true" tabindex="-1"></a>                    act_parent <span class="op">=</span> activity</span>
+<span id="cb88-27"><a href="#cb88-27" aria-hidden="true" tabindex="-1"></a>                )], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb88-28"><a href="#cb88-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> table_recursive_multi_calculation_dbcut(activity, lcia_methods, amount<span class="op">=</span><span class="dv">1</span>, level<span class="op">=</span><span class="dv">0</span>, max_level<span class="op">=</span><span class="dv">3</span>, db_activity<span class="op">=</span><span class="st">'motor_case'</span>, db_cut<span class="op">=</span>[<span class="st">'ecoinvent'</span>, <span class="st">'biosphere'</span>]):</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns a table (DataFrame) with the contribution tree for a given activity and various LCIA methods.</span></span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a><span class="co">    The contribution tree does not contain activities if they are from a database in db_cut (to avoid </span></span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="co">    having details on ecoinvent datasets and to stay in my own model) and has the maximum level max_level.</span></span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Columns for the returned table: level, activity, database, and str(method) for all LCIA method explored.</span></span>
+<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb89-9"><a href="#cb89-9" aria-hidden="true" tabindex="-1"></a>    lca_score <span class="op">=</span> lca_results({activity: amount}, lcia_methods)</span>
+<span id="cb89-10"><a href="#cb89-10" aria-hidden="true" tabindex="-1"></a>    table <span class="op">=</span> pd.DataFrame([[level, activity[<span class="st">"name"</span>], db_activity]<span class="op">+</span> <span class="bu">list</span>(lca_score[<span class="st">"score"</span>])], columns<span class="op">=</span>[<span class="st">"level"</span>, <span class="st">"activity"</span>, <span class="st">"database"</span>]<span class="op">+</span>[<span class="bu">str</span>(m) <span class="cf">for</span> m <span class="kw">in</span> lcia_methods])</span>
+<span id="cb89-11"><a href="#cb89-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> level <span class="op">&lt;</span> max_level:</span>
+<span id="cb89-12"><a href="#cb89-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> exc <span class="kw">in</span> activity.technosphere():</span>
+<span id="cb89-13"><a href="#cb89-13" aria-hidden="true" tabindex="-1"></a>            db_exc <span class="op">=</span> exc.<span class="bu">input</span>[<span class="st">'database'</span>]</span>
+<span id="cb89-14"><a href="#cb89-14" aria-hidden="true" tabindex="-1"></a>            go_forward <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb89-15"><a href="#cb89-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> stop_word <span class="kw">in</span> db_cut:</span>
+<span id="cb89-16"><a href="#cb89-16" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> stop_word <span class="kw">in</span> db_exc:</span>
+<span id="cb89-17"><a href="#cb89-17" aria-hidden="true" tabindex="-1"></a>                    go_forward <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb89-18"><a href="#cb89-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> go_forward:</span>
+<span id="cb89-19"><a href="#cb89-19" aria-hidden="true" tabindex="-1"></a>                table <span class="op">=</span> pd.concat([table, table_recursive_multi_calculation_dbcut(</span>
+<span id="cb89-20"><a href="#cb89-20" aria-hidden="true" tabindex="-1"></a>                    activity<span class="op">=</span>exc.<span class="bu">input</span>, </span>
+<span id="cb89-21"><a href="#cb89-21" aria-hidden="true" tabindex="-1"></a>                    lcia_methods<span class="op">=</span>lcia_methods, </span>
+<span id="cb89-22"><a href="#cb89-22" aria-hidden="true" tabindex="-1"></a>                    amount<span class="op">=</span>amount <span class="op">*</span> exc[<span class="st">'amount'</span>], </span>
+<span id="cb89-23"><a href="#cb89-23" aria-hidden="true" tabindex="-1"></a>                    level<span class="op">=</span>level <span class="op">+</span> <span class="dv">1</span>, </span>
+<span id="cb89-24"><a href="#cb89-24" aria-hidden="true" tabindex="-1"></a>                    max_level<span class="op">=</span>max_level,</span>
+<span id="cb89-25"><a href="#cb89-25" aria-hidden="true" tabindex="-1"></a>                    db_activity <span class="op">=</span> db_exc</span>
+<span id="cb89-26"><a href="#cb89-26" aria-hidden="true" tabindex="-1"></a>                )], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb89-27"><a href="#cb89-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>table_recursive_multi_calculation_dbcut(</span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>    activity <span class="op">=</span> motor_db.get(<span class="st">"motor EoL treatment"</span>), </span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>    lcia_methods<span class="op">=</span>[gw_method, csi_method], </span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>    amount <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>lifetime,</span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>    max_level <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="70">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>level</th>
+      <th>activity</th>
+      <th>database</th>
+      <th>('EF v3.1', 'climate change', 'global warming potential (GWP100)')</th>
+      <th>('Crustal Scarcity Indicator 2020', 'material resources: metals/minerals', 'crustal scarcity potential (CSP)')</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>motor EoL treatment</td>
+      <td>motor_case</td>
+      <td>126133.221907</td>
+      <td>2.419240e+07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>motor use</td>
+      <td>motor_case</td>
+      <td>126083.222261</td>
+      <td>2.419194e+07</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>motor testing</td>
+      <td>motor_case</td>
+      <td>4162.943986</td>
+      <td>6.111411e+06</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>motor production</td>
+      <td>motor_case</td>
+      <td>4136.791334</td>
+      <td>6.107533e+06</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>table_recursive_multi_calculation_dbparent_cut(</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>    activity <span class="op">=</span> motor_db.get(<span class="st">"motor EoL treatment"</span>), </span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>    lcia_methods<span class="op">=</span>[gw_method, csi_method], </span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a>    amount <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>lifetime,</span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a>    max_level <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="71">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>level</th>
+      <th>activity</th>
+      <th>activity parent</th>
+      <th>database parent</th>
+      <th>('EF v3.1', 'climate change', 'global warming potential (GWP100)')</th>
+      <th>('Crustal Scarcity Indicator 2020', 'material resources: metals/minerals', 'crustal scarcity potential (CSP)')</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>motor EoL treatment</td>
+      <td>None</td>
+      <td>None</td>
+      <td>126133.221907</td>
+      <td>2.419240e+07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>motor use</td>
+      <td>motor EoL treatment</td>
+      <td>motor_case</td>
+      <td>126083.222261</td>
+      <td>2.419194e+07</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>motor testing</td>
+      <td>motor use</td>
+      <td>motor_case</td>
+      <td>4162.943986</td>
+      <td>6.111411e+06</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>motor production</td>
+      <td>motor testing</td>
+      <td>motor_case</td>
+      <td>4136.791334</td>
+      <td>6.107533e+06</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>market for electricity, high voltage</td>
+      <td>motor testing</td>
+      <td>motor_case</td>
+      <td>26.152652</td>
+      <td>3.878385e+03</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>market for electricity, high voltage</td>
+      <td>motor use</td>
+      <td>motor_case</td>
+      <td>121920.278369</td>
+      <td>1.808053e+07</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1</td>
+      <td>market for electricity, high voltage</td>
+      <td>motor EoL treatment</td>
+      <td>motor_case</td>
+      <td>2.325461</td>
+      <td>3.448611e+02</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>treatment of waste plastic, mixture, municipal...</td>
+      <td>motor EoL treatment</td>
+      <td>motor_case</td>
+      <td>47.394643</td>
+      <td>7.412927e+01</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>treatment of copper in car shredder residue, m...</td>
+      <td>motor EoL treatment</td>
+      <td>motor_case</td>
+      <td>0.279543</td>
+      <td>3.811270e+01</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<p>Here is a way to generate a box plot figure.</p>
+<div class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>own_colors <span class="op">=</span> {</span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"motor production"</span>:<span class="st">"#1f78b4"</span>, <span class="co">#blue</span></span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"motor use"</span>:<span class="st">"#969696"</span>, <span class="co">#gray</span></span>
+<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"motor EoL treatment"</span>: <span class="st">"#41ae76"</span>, <span class="co">#green</span></span>
+<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"motor testing"</span>:<span class="st">"#fff7bc"</span> <span class="co">#yellow</span></span>
+<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>table_results <span class="op">=</span> table_recursive_multi_calculation_dbcut(</span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>    activity <span class="op">=</span> motor_db.get(<span class="st">"motor EoL treatment"</span>), </span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>    lcia_methods<span class="op">=</span>[gw_method, csi_method], </span>
+<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a>    amount <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>lifetime,</span>
+<span id="cb93-5"><a href="#cb93-5" aria-hidden="true" tabindex="-1"></a>    max_level <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb93-6"><a href="#cb93-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> basic_bar_chart(table_results, legend_x_axis, own_colors<span class="op">=</span>own_colors):</span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>    table_figure <span class="op">=</span> table_results.set_index(table_results[<span class="st">"activity"</span>])</span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>    number_methods <span class="op">=</span> table_figure.shape[<span class="dv">1</span>] <span class="op">-</span> <span class="dv">3</span></span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, number_methods)</span>
+<span id="cb94-6"><a href="#cb94-6" aria-hidden="true" tabindex="-1"></a>    x_axis <span class="op">=</span> [<span class="dv">0</span>]</span>
+<span id="cb94-7"><a href="#cb94-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-8"><a href="#cb94-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n_fig, method <span class="kw">in</span> <span class="bu">enumerate</span>(table_figure.columns[<span class="dv">3</span>:]):</span>
+<span id="cb94-9"><a href="#cb94-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> activity <span class="kw">in</span> table_figure.index:</span>
+<span id="cb94-10"><a href="#cb94-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n_fig <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb94-11"><a href="#cb94-11" aria-hidden="true" tabindex="-1"></a>                ax[n_fig].bar(</span>
+<span id="cb94-12"><a href="#cb94-12" aria-hidden="true" tabindex="-1"></a>                    x_axis, </span>
+<span id="cb94-13"><a href="#cb94-13" aria-hidden="true" tabindex="-1"></a>                    table_figure.loc[activity, method], </span>
+<span id="cb94-14"><a href="#cb94-14" aria-hidden="true" tabindex="-1"></a>                    label<span class="op">=</span>activity, </span>
+<span id="cb94-15"><a href="#cb94-15" aria-hidden="true" tabindex="-1"></a>                    color<span class="op">=</span>own_colors[activity]</span>
+<span id="cb94-16"><a href="#cb94-16" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb94-17"><a href="#cb94-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb94-18"><a href="#cb94-18" aria-hidden="true" tabindex="-1"></a>                ax[n_fig].bar(</span>
+<span id="cb94-19"><a href="#cb94-19" aria-hidden="true" tabindex="-1"></a>                    x_axis, </span>
+<span id="cb94-20"><a href="#cb94-20" aria-hidden="true" tabindex="-1"></a>                    table_figure.loc[activity, method], </span>
+<span id="cb94-21"><a href="#cb94-21" aria-hidden="true" tabindex="-1"></a>                    color<span class="op">=</span>own_colors[activity]</span>
+<span id="cb94-22"><a href="#cb94-22" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb94-23"><a href="#cb94-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb94-24"><a href="#cb94-24" aria-hidden="true" tabindex="-1"></a>    fig.tight_layout()</span>
+<span id="cb94-25"><a href="#cb94-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n_fig <span class="kw">in</span> <span class="bu">range</span>(number_methods):</span>
+<span id="cb94-26"><a href="#cb94-26" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].grid(<span class="va">True</span>, axis<span class="op">=</span><span class="st">'y'</span>, linewidth<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb94-27"><a href="#cb94-27" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].set_xticks(x_axis)</span>
+<span id="cb94-28"><a href="#cb94-28" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].set_xticklabels([legend_x_axis[n_fig]], fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb94-29"><a href="#cb94-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb94-30"><a href="#cb94-30" aria-hidden="true" tabindex="-1"></a>    fig.legend(loc<span class="op">=</span><span class="st">'lower center'</span>, ncol<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb94-31"><a href="#cb94-31" aria-hidden="true" tabindex="-1"></a>    plt.subplots_adjust(bottom<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb94-32"><a href="#cb94-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb94-33"><a href="#cb94-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="75">
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>basic_bar_chart(</span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>    table_results,</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"GW"</span>, <span class="st">"CSI"</span>]</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="brightway2_seminar_solution_files/figure-html/cell-76-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="different-scenarios" class="level1">
+<h1>Different scenarios</h1>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<div class="cell" data-execution_count="76">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>data_low_efficiency <span class="op">=</span> {</span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_unalloyed"</span>: <span class="dv">26600</span>, <span class="co">#kg</span></span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_low_alloyed"</span>: <span class="dv">4100</span>, <span class="co">#kg</span></span>
+<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_copper"</span>: <span class="dv">3600</span>, <span class="co">#kg</span></span>
+<span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_insulation"</span>: <span class="dv">400</span>, <span class="co">#kg</span></span>
+<span id="cb96-6"><a href="#cb96-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"weight_motor"</span>: <span class="dv">26600</span><span class="op">+</span><span class="dv">4100</span><span class="op">+</span><span class="dv">3600</span><span class="op">+</span><span class="dv">400</span>, <span class="co">#kg</span></span>
+<span id="cb96-7"><a href="#cb96-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lifetime"</span>: <span class="dv">20</span>, <span class="co">#years</span></span>
+<span id="cb96-8"><a href="#cb96-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"efficiency"</span>: <span class="fl">0.973</span></span>
+<span id="cb96-9"><a href="#cb96-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="77">
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>data_high_efficiency <span class="op">=</span> {</span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_unalloyed"</span>: <span class="dv">18000</span>, <span class="co">#kg</span></span>
+<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_low_alloyed"</span>: <span class="dv">9200</span>, <span class="co">#kg</span></span>
+<span id="cb97-4"><a href="#cb97-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_copper"</span>: <span class="dv">3800</span>, <span class="co">#kg</span></span>
+<span id="cb97-5"><a href="#cb97-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_insulation"</span>: <span class="dv">300</span>, <span class="co">#kg</span></span>
+<span id="cb97-6"><a href="#cb97-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"weight_motor"</span>: <span class="dv">18000</span><span class="op">+</span><span class="dv">9200</span><span class="op">+</span><span class="dv">3800</span><span class="op">+</span><span class="dv">300</span>, <span class="co">#kg</span></span>
+<span id="cb97-7"><a href="#cb97-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lifetime"</span>: <span class="dv">20</span>, <span class="co">#years</span></span>
+<span id="cb97-8"><a href="#cb97-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"efficiency"</span>: <span class="fl">0.9835</span></span>
+<span id="cb97-9"><a href="#cb97-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="78">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>data_repair_low_efficiency <span class="op">=</span> {</span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_unalloyed"</span>: <span class="dv">26600</span>, <span class="co">#kg</span></span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_low_alloyed"</span>: <span class="dv">4100</span>, <span class="co">#kg</span></span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_copper"</span>: <span class="dv">3600</span><span class="op">*</span><span class="fl">1.5</span>, <span class="co">#kg</span></span>
+<span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_insulation"</span>: <span class="dv">400</span><span class="op">*</span><span class="fl">1.5</span>, <span class="co">#kg</span></span>
+<span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"weight_motor"</span>: <span class="dv">26600</span><span class="op">+</span><span class="dv">4100</span><span class="op">+</span><span class="dv">3600</span><span class="op">*</span><span class="fl">1.5</span><span class="op">+</span><span class="dv">400</span><span class="op">*</span><span class="fl">1.5</span>, <span class="co">#kg</span></span>
+<span id="cb98-7"><a href="#cb98-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lifetime"</span>: <span class="dv">40</span>, <span class="co">#years</span></span>
+<span id="cb98-8"><a href="#cb98-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"efficiency"</span>: <span class="fl">0.973</span></span>
+<span id="cb98-9"><a href="#cb98-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="79">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>data_repair_high_efficiency <span class="op">=</span> {</span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_unalloyed"</span>: <span class="dv">18000</span>, <span class="co">#kg</span></span>
+<span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_steel_low_alloyed"</span>: <span class="dv">9200</span>, <span class="co">#kg</span></span>
+<span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_copper"</span>: <span class="dv">3800</span><span class="op">*</span><span class="fl">1.5</span>, <span class="co">#kg</span></span>
+<span id="cb99-5"><a href="#cb99-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"qt_insulation"</span>: <span class="dv">300</span><span class="op">*</span><span class="fl">1.5</span>, <span class="co">#kg</span></span>
+<span id="cb99-6"><a href="#cb99-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"weight_motor"</span>: <span class="dv">18000</span><span class="op">+</span><span class="dv">9200</span><span class="op">+</span><span class="dv">3800</span><span class="op">*</span><span class="fl">1.5</span><span class="op">+</span><span class="dv">300</span><span class="op">*</span><span class="fl">1.5</span>, <span class="co">#kg</span></span>
+<span id="cb99-7"><a href="#cb99-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lifetime"</span>: <span class="dv">40</span>, <span class="co">#years</span></span>
+<span id="cb99-8"><a href="#cb99-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"efficiency"</span>: <span class="fl">0.9835</span></span>
+<span id="cb99-9"><a href="#cb99-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="generation-of-results" class="level2">
+<h2 class="anchored" data-anchor-id="generation-of-results">Generation of results</h2>
+<div class="cell" data-execution_count="80">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>dict_scenarios <span class="op">=</span> {</span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"low efficiency"</span>: data_low_efficiency, </span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"high efficiency"</span>: data_high_efficiency, </span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"repair low efficiency"</span>: data_repair_low_efficiency, </span>
+<span id="cb100-5"><a href="#cb100-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"repair high efficiency"</span>: data_repair_high_efficiency</span>
+<span id="cb100-6"><a href="#cb100-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="81">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> return_table_results_scenarios(dict_scenarios, methods<span class="op">=</span>[gw_method, csi_method]):</span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>    results_table <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, data <span class="kw">in</span> dict_scenarios.items():</span>
+<span id="cb101-4"><a href="#cb101-4" aria-hidden="true" tabindex="-1"></a>        create_motor_system(<span class="op">**</span>data)</span>
+<span id="cb101-5"><a href="#cb101-5" aria-hidden="true" tabindex="-1"></a>        functional_unit <span class="op">=</span> {motor_db.get(<span class="st">"motor EoL treatment"</span>): <span class="dv">1</span><span class="op">/</span>data[<span class="st">"lifetime"</span>]}</span>
+<span id="cb101-6"><a href="#cb101-6" aria-hidden="true" tabindex="-1"></a>        results_table_scenario <span class="op">=</span> lca_results(functional_unit, methods)</span>
+<span id="cb101-7"><a href="#cb101-7" aria-hidden="true" tabindex="-1"></a>        results_table_scenario[<span class="st">"scenario"</span>] <span class="op">=</span> name</span>
+<span id="cb101-8"><a href="#cb101-8" aria-hidden="true" tabindex="-1"></a>        results_table <span class="op">=</span> pd.concat([results_table, results_table_scenario], ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb101-9"><a href="#cb101-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="82">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>table_results_scenarios <span class="op">=</span> return_table_results_scenarios(dict_scenarios)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="83">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>table_results_scenarios</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="83">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>score</th>
+      <th>unit</th>
+      <th>method</th>
+      <th>scenario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.261332e+05</td>
+      <td>kg CO2-Eq</td>
+      <td>(EF v3.1, climate change, global warming poten...</td>
+      <td>low efficiency</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.419240e+07</td>
+      <td>kg Si-Eq</td>
+      <td>(Crustal Scarcity Indicator 2020, material res...</td>
+      <td>low efficiency</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7.768787e+04</td>
+      <td>kg CO2-Eq</td>
+      <td>(EF v3.1, climate change, global warming poten...</td>
+      <td>high efficiency</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.736572e+07</td>
+      <td>kg Si-Eq</td>
+      <td>(Crustal Scarcity Indicator 2020, material res...</td>
+      <td>high efficiency</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.243726e+05</td>
+      <td>kg CO2-Eq</td>
+      <td>(EF v3.1, climate change, global warming poten...</td>
+      <td>repair low efficiency</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2.258877e+07</td>
+      <td>kg Si-Eq</td>
+      <td>(Crustal Scarcity Indicator 2020, material res...</td>
+      <td>repair low efficiency</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.605343e+04</td>
+      <td>kg CO2-Eq</td>
+      <td>(EF v3.1, climate change, global warming poten...</td>
+      <td>repair high efficiency</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1.567980e+07</td>
+      <td>kg Si-Eq</td>
+      <td>(Crustal Scarcity Indicator 2020, material res...</td>
+      <td>repair high efficiency</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="figures-1" class="level2">
+<h2 class="anchored" data-anchor-id="figures-1">Figures</h2>
+<div class="cell" data-execution_count="84">
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> figure_comparison_scenarios(table_results_scenarios, legend_x_axis):</span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>    number_methods <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, number_methods)</span>
+<span id="cb104-5"><a href="#cb104-5" aria-hidden="true" tabindex="-1"></a>    x_axis <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(dict_scenarios))]</span>
+<span id="cb104-6"><a href="#cb104-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-7"><a href="#cb104-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> index <span class="kw">in</span> table_results_scenarios.index:</span>
+<span id="cb104-8"><a href="#cb104-8" aria-hidden="true" tabindex="-1"></a>        ax[index<span class="op">%</span><span class="dv">2</span>].bar(x_axis[index<span class="op">//</span><span class="dv">2</span>], table_results_scenarios.loc[index, <span class="st">"score"</span>])</span>
+<span id="cb104-9"><a href="#cb104-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb104-10"><a href="#cb104-10" aria-hidden="true" tabindex="-1"></a>    fig.tight_layout()</span>
+<span id="cb104-11"><a href="#cb104-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n_fig <span class="kw">in</span> <span class="bu">range</span>(number_methods):</span>
+<span id="cb104-12"><a href="#cb104-12" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].grid(<span class="va">True</span>, axis<span class="op">=</span><span class="st">'y'</span>, linewidth<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb104-13"><a href="#cb104-13" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].set_xticks(x_axis)</span>
+<span id="cb104-14"><a href="#cb104-14" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].set_xticklabels(legend_x_axis, rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb104-15"><a href="#cb104-15" aria-hidden="true" tabindex="-1"></a>        ax[n_fig].set_ylabel(table_results_scenarios.loc[n_fig, <span class="st">"unit"</span>])</span>
+<span id="cb104-16"><a href="#cb104-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-17"><a href="#cb104-17" aria-hidden="true" tabindex="-1"></a>    plt.subplots_adjust(wspace<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb104-18"><a href="#cb104-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb104-19"><a href="#cb104-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="85">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>figure_comparison_scenarios(table_results_scenarios, <span class="bu">list</span>(dict_scenarios.keys()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="brightway2_seminar_solution_files/figure-html/cell-86-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
